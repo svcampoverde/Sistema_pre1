@@ -81,29 +81,31 @@ namespace Presentacion.ModuloProducto
         {
             try
             {
-                if (Validar())
-                {
-                    var productoexist = await _productoService.ObtenerProductoName(txtProducto.Text);
-                    AtributoDto dto = new AtributoDto();
-                    int idatributo = dto.Id;
-                if (productoexist != null && idatributo > 0)
-                {
-                    var idproducto = productoexist.Id;
+                //if (Validar())
+                //{
+                //    var productoexist = await _productoService.ObtenerProductoName(txtProducto.Text);
+                //    AtributoDto dto = new AtributoDto();
+                //    int idatributo = dto.Id;
+                //if (productoexist != null && idatributo > 0)
+                //{
+                //    var idproducto = productoexist.Id;
 
-                        productoexist.Descripcion = txtDescripcionproducto.Text;
-                        productoexist.Precio = Convert.ToDecimal(txtpreciovent.Text);
-                        productoexist.IdCategoriaProducto = cmbCatproducto.SelectedIndex;
-                        productoexist.IdTipoProducto = cmbtipoProducto.SelectedIndex;
+                //        productoexist.Descripcion = txtDescripcionproducto.Text;
+                //        productoexist.Precio = Convert.ToDecimal(txtpreciovent.Text);
+                //        productoexist.IdCategoriaProducto = cmbCatproducto.SelectedIndex;
+                //        productoexist.IdTipoProducto = cmbtipoProducto.SelectedIndex;
                
-                    await _productoService.ActualizarProducto(idproducto, productoexist);
-                        dto.Nombre= txtTamanio.Text; 
-                        dto.Unidades= txtPeso.Text;
-                        await _atributo.ActualizarAtributo(dto.Id, dto);
-                }
-                else
+                //    await _productoService.ActualizarProducto(idproducto, productoexist);
+                //        dto.Nombre= txtTamanio.Text; 
+                //        dto.Unidades= txtPeso.Text;
+                //        await _atributo.ActualizarAtributo(dto.Id, dto);
+                //}
+               // else
+               if(Validar())
                 {
                     ProductoRequest pro = new ProductoRequest()
                     {
+                        
                         Nombre = txtProducto.Text,
                         Descripcion = txtDescripcionproducto.Text,
                         Precio = Convert.ToDecimal(txtpreciovent.Text),
@@ -116,9 +118,10 @@ namespace Presentacion.ModuloProducto
 
                     AtributoRequest request = new AtributoRequest()
                     {
+                        
                         Nombre = txtPeso.Text,
                         Unidades = txtTamanio.Text,
-                        IdCategoriaAtributo = idpro,
+                       // IdCategoriaAtributo = idpro,
                         
                     };
                     AtributoDto atribut = await _atributo.RegistrarAtributo(request);
@@ -152,7 +155,7 @@ namespace Presentacion.ModuloProducto
                         MessageBox.Show("Producto y atributos registrados con éxito.");
 
                         MessageBox.Show("registro guardado con exito");
-                }
+                //}
                 }
             }
             catch (ExceptionSistema ex)
@@ -178,10 +181,10 @@ namespace Presentacion.ModuloProducto
                         InventarioRequest inv = new InventarioRequest()
                         {
                             Digitador = txtUsmodificado.Text,
-                            TipoMaterial = cmbTipomaterial.Text,
+                            TipoMaterial = cmbTipomaterial.Texts,
                             Ubicacion = txtUbicacion.Text,
                             Cantidad = Convert.ToInt32(txtCantidad.Text),
-                            EstadoProducto = cmbEstproducto.Text,
+                            EstadoProducto = cmbEstproducto.Texts,
                             PrecioCompra = Convert.ToDecimal(txtprecosto.Text),
                             PrecioVenta = Convert.ToDecimal(txtpreciovent.Text),
                             ProductoId = productoId
