@@ -1,7 +1,9 @@
 ﻿using LogicDeNegocio;
+using LogicDeNegocio.Dtos;
 using LogicDeNegocio.Interfaces;
 
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,7 +17,7 @@ namespace Presentacion.ModuloUsuario
         private IUnityContainer _container;
         private readonly IUsuarioService _service;
         private readonly IPersonaService _personaService;
-        private int Id;
+         int Id;
         public FrmBuscarUsuario(IUnityContainer container, FrmIPrincipal mdip, IUsuarioService service, IPersonaService personaService)
         {
             InitializeComponent();
@@ -35,11 +37,32 @@ namespace Presentacion.ModuloUsuario
             llenarDatagrid("");
             txtBuscar.TextChanged += new EventHandler(txtBuscar_TextChanged);
         }
-        private async void llenarDatagrid(string datos)
+        private async void llenarDatagrid(string cedula)
         {
             try
             {
-                dtgUsuario.DataSource = await _personaService.BuscarPersona(datos);
+                List<UsuarioDto> list = await _service.ObtenerUsuarios(cedula);
+                dtgUsuario.Rows.Clear();
+                // dtgUsuario.DataSource = await _personaService.BuscarPersona(datos);
+                int cont = 0;
+
+                foreach (UsuarioDto usuario in list)
+                {
+                    dtgUsuario.Rows.Add(1);
+                    dtgUsuario.Rows[cont].Cells[0].Value = usuario.Id.ToString();
+                    dtgUsuario.Rows[cont].Cells[1].Value = usuario.Cedula.ToString();
+                    dtgUsuario.Rows[cont].Cells[2].Value = usuario.Nombre.ToString();
+                    dtgUsuario.Rows[cont].Cells[3].Value = usuario.Apellido.ToString();
+                    dtgUsuario.Rows[cont].Cells[4].Value = usuario.Genero.ToString();
+                    dtgUsuario.Rows[cont].Cells[5].Value = usuario.Telefono.ToString();
+                    dtgUsuario.Rows[cont].Cells[6].Value = usuario.Celular.ToString();
+                    dtgUsuario.Rows[cont].Cells[7].Value = usuario.NombreUsuario.ToString();
+                    dtgUsuario.Rows[cont].Cells[8].Value = usuario.RolUsuario.ToString();
+                    dtgUsuario.Rows[cont].Cells[9].Value = usuario.Correo.ToString();
+                    dtgUsuario.Rows[cont].Cells[10].Value = usuario.Direccion.ToString();
+                    dtgUsuario.Rows[cont].Cells[11].Value = usuario.CiudadDescripcion.ToString();
+                    cont++;
+                }
             }
             catch (ExceptionSistema ex)
             {

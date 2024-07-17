@@ -57,7 +57,6 @@ namespace Presentacion.ModuloEmpresa
             {
                 if (Validar())
                 {
-                    // temp.InsertarTipEmpresa(temp);
                     TipoEmpresaRequest tipo = new TipoEmpresaRequest()
                     { Codigo = txtTipempresa.Text, Descripcion = txtTipempresa.Text };
                     await _tipoEmpresaService.RegistrarTipoEmpresa(tipo);

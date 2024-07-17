@@ -79,7 +79,7 @@ namespace LogicDeNegocio.Services
             {
                 var query = from e in context.Empresas
                             join tpem in context.TipoEmpresas on e.IdTipoEmpresa equals tpem.Id
-                            where e.Activo == true// && (string.IsNullOrEmpty(emp) || e.Descripcion.Contains(emp))
+                            where e.Activo == true
                             select new
                             {
                                 e.Id,

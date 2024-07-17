@@ -58,8 +58,26 @@ namespace LogicDeNegocio.Services
 
             return producto.Id; // Devolver el ID generado
         }
+        public async Task<ProductoDto> ObtenerProductoName(string nombre)
+        {
+            using (var context = _dbContextFactory())
+            {
+                var query = context.Productos.AsQueryable();
 
-    public async Task<ProductoDto> ActualizarProducto(int id, ProductoRequest request)
+                if (!string.IsNullOrEmpty(nombre))
+                {
+                    query = query.Where(p => p.Nombre.ToLower().Contains(nombre.ToLower()));
+                }
+
+                var producto = await query
+                                        .ProjectTo<ProductoDto>(_mapper.ConfigurationProvider)
+                                        .FirstOrDefaultAsync();
+
+                return producto;
+            }
+
+        }
+        public async Task<ProductoDto> ActualizarProducto(int id, ProductoRequest request)
         {
             using (var context = _dbContextFactory())
             {

@@ -29,17 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInventario));
             this.pnlRegInv = new ReaLTaiizor.Controls.Panel();
+            this.cmbtipoProducto = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.labelEdit19 = new ReaLTaiizor.Controls.LabelEdit();
+            this.btnedpecificaciones = new ReaLTaiizor.Controls.Button();
+            this.txtPeso = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.labelEdit28 = new ReaLTaiizor.Controls.LabelEdit();
+            this.txtTamanio = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.labelEdit29 = new ReaLTaiizor.Controls.LabelEdit();
+            this.txtUbicacion = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.labelEdit20 = new ReaLTaiizor.Controls.LabelEdit();
+            this.cmbEstproducto = new Presentacion.btnpersonalizados.PersonComboBox();
             this.txtEspecificacion = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit22 = new ReaLTaiizor.Controls.LabelEdit();
-            this.labelEdit19 = new ReaLTaiizor.Controls.LabelEdit();
             this.txtpreciovent = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit18 = new ReaLTaiizor.Controls.LabelEdit();
             this.ptbleftrinv = new System.Windows.Forms.PictureBox();
+            this.cmbCatproducto = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.cmbTipomaterial = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.btnGuardarprove = new Presentacion.btnpersonalizados.Botonper();
             this.txtprecosto = new ReaLTaiizor.Controls.TextBoxEdit();
             this.txtCantidad = new ReaLTaiizor.Controls.TextBoxEdit();
             this.txtDescripcionproducto = new ReaLTaiizor.Controls.TextBoxEdit();
@@ -73,6 +85,7 @@
             this.labelEdit17 = new ReaLTaiizor.Controls.LabelEdit();
             this.ptbMinv = new System.Windows.Forms.PictureBox();
             this.panel1 = new ReaLTaiizor.Controls.Panel();
+            this.personComboBox3 = new Presentacion.btnpersonalizados.PersonComboBox();
             this.textBoxEdit5 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit9 = new ReaLTaiizor.Controls.LabelEdit();
             this.textBoxEdit6 = new ReaLTaiizor.Controls.TextBoxEdit();
@@ -83,6 +96,8 @@
             this.labelEdit12 = new ReaLTaiizor.Controls.LabelEdit();
             this.textBoxEdit9 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit13 = new ReaLTaiizor.Controls.LabelEdit();
+            this.personComboBox4 = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.personComboBox6 = new Presentacion.btnpersonalizados.PersonComboBox();
             this.textBoxEdit10 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.textBoxEdit11 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.textBoxEdit18 = new ReaLTaiizor.Controls.TextBoxEdit();
@@ -96,18 +111,8 @@
             this.labelEdit25 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit26 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit27 = new ReaLTaiizor.Controls.LabelEdit();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.personComboBox3 = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.personComboBox4 = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.personComboBox6 = new Presentacion.btnpersonalizados.PersonComboBox();
             this.btnActualizarinv = new Presentacion.btnpersonalizados.Botonper();
-            this.cmbtipoProducto = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.cmbEstproducto = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.cmbCatproducto = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.cmbTipomaterial = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.btnGuardarprove = new Presentacion.btnpersonalizados.Botonper();
-            this.labelEdit20 = new ReaLTaiizor.Controls.LabelEdit();
-            this.txtUbicacion = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.pnlRegInv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbleftrinv)).BeginInit();
             this.pnlListInv.SuspendLayout();
@@ -121,13 +126,18 @@
             // pnlRegInv
             // 
             this.pnlRegInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.pnlRegInv.Controls.Add(this.cmbtipoProducto);
+            this.pnlRegInv.Controls.Add(this.labelEdit19);
+            this.pnlRegInv.Controls.Add(this.btnedpecificaciones);
+            this.pnlRegInv.Controls.Add(this.txtPeso);
+            this.pnlRegInv.Controls.Add(this.labelEdit28);
+            this.pnlRegInv.Controls.Add(this.txtTamanio);
+            this.pnlRegInv.Controls.Add(this.labelEdit29);
             this.pnlRegInv.Controls.Add(this.txtUbicacion);
             this.pnlRegInv.Controls.Add(this.labelEdit20);
-            this.pnlRegInv.Controls.Add(this.cmbtipoProducto);
             this.pnlRegInv.Controls.Add(this.cmbEstproducto);
             this.pnlRegInv.Controls.Add(this.txtEspecificacion);
             this.pnlRegInv.Controls.Add(this.labelEdit22);
-            this.pnlRegInv.Controls.Add(this.labelEdit19);
             this.pnlRegInv.Controls.Add(this.txtpreciovent);
             this.pnlRegInv.Controls.Add(this.labelEdit18);
             this.pnlRegInv.Controls.Add(this.ptbleftrinv);
@@ -149,13 +159,178 @@
             this.pnlRegInv.Controls.Add(this.labelEdit1);
             this.pnlRegInv.Controls.Add(this.labelEdit30);
             this.pnlRegInv.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.pnlRegInv.Location = new System.Drawing.Point(0, 12);
+            this.pnlRegInv.Location = new System.Drawing.Point(23, 12);
             this.pnlRegInv.Name = "pnlRegInv";
             this.pnlRegInv.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlRegInv.Size = new System.Drawing.Size(869, 537);
+            this.pnlRegInv.Size = new System.Drawing.Size(906, 624);
             this.pnlRegInv.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.pnlRegInv.TabIndex = 1;
             this.pnlRegInv.Text = "panel2";
+            // 
+            // cmbtipoProducto
+            // 
+            this.cmbtipoProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbtipoProducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbtipoProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbtipoProducto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbtipoProducto.BorderRadius = 0;
+            this.cmbtipoProducto.BorderSize = 0;
+            this.cmbtipoProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbtipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbtipoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbtipoProducto.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbtipoProducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbtipoProducto.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbtipoProducto.Location = new System.Drawing.Point(611, 79);
+            this.cmbtipoProducto.MinimumSize = new System.Drawing.Size(200, 42);
+            this.cmbtipoProducto.Name = "cmbtipoProducto";
+            this.cmbtipoProducto.Size = new System.Drawing.Size(228, 42);
+            this.cmbtipoProducto.TabIndex = 131;
+            this.cmbtipoProducto.Texts = "";
+            // 
+            // labelEdit19
+            // 
+            this.labelEdit19.AutoSize = true;
+            this.labelEdit19.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit19.ForeColor = System.Drawing.Color.White;
+            this.labelEdit19.Location = new System.Drawing.Point(473, 90);
+            this.labelEdit19.Name = "labelEdit19";
+            this.labelEdit19.Size = new System.Drawing.Size(132, 20);
+            this.labelEdit19.TabIndex = 130;
+            this.labelEdit19.Text = "Tipo de producto:";
+            // 
+            // btnedpecificaciones
+            // 
+            this.btnedpecificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnedpecificaciones.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.btnedpecificaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnedpecificaciones.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnedpecificaciones.EnteredColor = System.Drawing.Color.Transparent;
+            this.btnedpecificaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnedpecificaciones.Image = null;
+            this.btnedpecificaciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnedpecificaciones.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnedpecificaciones.Location = new System.Drawing.Point(22, 270);
+            this.btnedpecificaciones.Name = "btnedpecificaciones";
+            this.btnedpecificaciones.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnedpecificaciones.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnedpecificaciones.Size = new System.Drawing.Size(208, 42);
+            this.btnedpecificaciones.TabIndex = 129;
+            this.btnedpecificaciones.Text = "Agregar especificaciones";
+            this.btnedpecificaciones.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.btnedpecificaciones.Click += new System.EventHandler(this.btnedpecificaciones_Click);
+            // 
+            // txtPeso
+            // 
+            this.txtPeso.BackColor = System.Drawing.Color.Transparent;
+            this.txtPeso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPeso.ForeColor = System.Drawing.Color.White;
+            this.txtPeso.Image = null;
+            this.txtPeso.Location = new System.Drawing.Point(115, 222);
+            this.txtPeso.MaxLength = 32767;
+            this.txtPeso.Multiline = false;
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.ReadOnly = false;
+            this.txtPeso.Size = new System.Drawing.Size(92, 42);
+            this.txtPeso.TabIndex = 128;
+            this.txtPeso.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPeso.UseSystemPasswordChar = false;
+            // 
+            // labelEdit28
+            // 
+            this.labelEdit28.AutoSize = true;
+            this.labelEdit28.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit28.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit28.ForeColor = System.Drawing.Color.White;
+            this.labelEdit28.Location = new System.Drawing.Point(44, 232);
+            this.labelEdit28.Name = "labelEdit28";
+            this.labelEdit28.Size = new System.Drawing.Size(49, 20);
+            this.labelEdit28.TabIndex = 127;
+            this.labelEdit28.Text = "Peso:";
+            // 
+            // txtTamanio
+            // 
+            this.txtTamanio.BackColor = System.Drawing.Color.Transparent;
+            this.txtTamanio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtTamanio.ForeColor = System.Drawing.Color.White;
+            this.txtTamanio.Image = null;
+            this.txtTamanio.Location = new System.Drawing.Point(611, 223);
+            this.txtTamanio.MaxLength = 32767;
+            this.txtTamanio.Multiline = false;
+            this.txtTamanio.Name = "txtTamanio";
+            this.txtTamanio.ReadOnly = false;
+            this.txtTamanio.Size = new System.Drawing.Size(228, 42);
+            this.txtTamanio.TabIndex = 126;
+            this.txtTamanio.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTamanio.UseSystemPasswordChar = false;
+            // 
+            // labelEdit29
+            // 
+            this.labelEdit29.AutoSize = true;
+            this.labelEdit29.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit29.ForeColor = System.Drawing.Color.White;
+            this.labelEdit29.Location = new System.Drawing.Point(511, 232);
+            this.labelEdit29.Name = "labelEdit29";
+            this.labelEdit29.Size = new System.Drawing.Size(71, 20);
+            this.labelEdit29.TabIndex = 125;
+            this.labelEdit29.Text = "Tamaño:";
+            // 
+            // txtUbicacion
+            // 
+            this.txtUbicacion.BackColor = System.Drawing.Color.Transparent;
+            this.txtUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUbicacion.ForeColor = System.Drawing.Color.White;
+            this.txtUbicacion.Image = null;
+            this.txtUbicacion.Location = new System.Drawing.Point(323, 428);
+            this.txtUbicacion.MaxLength = 32767;
+            this.txtUbicacion.Multiline = false;
+            this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.ReadOnly = false;
+            this.txtUbicacion.Size = new System.Drawing.Size(137, 42);
+            this.txtUbicacion.TabIndex = 102;
+            this.txtUbicacion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUbicacion.UseSystemPasswordChar = false;
+            // 
+            // labelEdit20
+            // 
+            this.labelEdit20.AutoSize = true;
+            this.labelEdit20.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit20.ForeColor = System.Drawing.Color.White;
+            this.labelEdit20.Location = new System.Drawing.Point(243, 441);
+            this.labelEdit20.Name = "labelEdit20";
+            this.labelEdit20.Size = new System.Drawing.Size(83, 20);
+            this.labelEdit20.TabIndex = 101;
+            this.labelEdit20.Text = "Ubicacion:";
+            // 
+            // cmbEstproducto
+            // 
+            this.cmbEstproducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbEstproducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbEstproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbEstproducto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbEstproducto.BorderRadius = 0;
+            this.cmbEstproducto.BorderSize = 0;
+            this.cmbEstproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbEstproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbEstproducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbEstproducto.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbEstproducto.Items.AddRange(new object[] {
+            "Nuevo",
+            "Medio uso",
+            "Dañado",
+            "Viejo",
+            "Desuso"});
+            this.cmbEstproducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbEstproducto.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbEstproducto.Location = new System.Drawing.Point(606, 371);
+            this.cmbEstproducto.MinimumSize = new System.Drawing.Size(200, 42);
+            this.cmbEstproducto.Name = "cmbEstproducto";
+            this.cmbEstproducto.Size = new System.Drawing.Size(228, 42);
+            this.cmbEstproducto.TabIndex = 99;
+            this.cmbEstproducto.Texts = "";
             // 
             // txtEspecificacion
             // 
@@ -163,12 +338,12 @@
             this.txtEspecificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEspecificacion.ForeColor = System.Drawing.Color.White;
             this.txtEspecificacion.Image = null;
-            this.txtEspecificacion.Location = new System.Drawing.Point(622, 276);
+            this.txtEspecificacion.Location = new System.Drawing.Point(606, 419);
             this.txtEspecificacion.MaxLength = 32767;
-            this.txtEspecificacion.Multiline = true;
+            this.txtEspecificacion.Multiline = false;
             this.txtEspecificacion.Name = "txtEspecificacion";
             this.txtEspecificacion.ReadOnly = false;
-            this.txtEspecificacion.Size = new System.Drawing.Size(228, 80);
+            this.txtEspecificacion.Size = new System.Drawing.Size(228, 42);
             this.txtEspecificacion.TabIndex = 98;
             this.txtEspecificacion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtEspecificacion.UseSystemPasswordChar = false;
@@ -179,23 +354,11 @@
             this.labelEdit22.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit22.ForeColor = System.Drawing.Color.White;
-            this.labelEdit22.Location = new System.Drawing.Point(484, 292);
+            this.labelEdit22.Location = new System.Drawing.Point(522, 432);
             this.labelEdit22.Name = "labelEdit22";
-            this.labelEdit22.Size = new System.Drawing.Size(132, 20);
+            this.labelEdit22.Size = new System.Drawing.Size(50, 20);
             this.labelEdit22.TabIndex = 97;
-            this.labelEdit22.Text = "Especificaciones:";
-            // 
-            // labelEdit19
-            // 
-            this.labelEdit19.AutoSize = true;
-            this.labelEdit19.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEdit19.ForeColor = System.Drawing.Color.White;
-            this.labelEdit19.Location = new System.Drawing.Point(15, 285);
-            this.labelEdit19.Name = "labelEdit19";
-            this.labelEdit19.Size = new System.Drawing.Size(132, 20);
-            this.labelEdit19.TabIndex = 91;
-            this.labelEdit19.Text = "Tipo de producto:";
+            this.labelEdit22.Text = "Color:";
             // 
             // txtpreciovent
             // 
@@ -203,7 +366,7 @@
             this.txtpreciovent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtpreciovent.ForeColor = System.Drawing.Color.White;
             this.txtpreciovent.Image = null;
-            this.txtpreciovent.Location = new System.Drawing.Point(143, 222);
+            this.txtpreciovent.Location = new System.Drawing.Point(611, 175);
             this.txtpreciovent.MaxLength = 32767;
             this.txtpreciovent.Multiline = false;
             this.txtpreciovent.Name = "txtpreciovent";
@@ -219,7 +382,7 @@
             this.labelEdit18.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit18.ForeColor = System.Drawing.Color.White;
-            this.labelEdit18.Location = new System.Drawing.Point(24, 231);
+            this.labelEdit18.Location = new System.Drawing.Point(500, 186);
             this.labelEdit18.Name = "labelEdit18";
             this.labelEdit18.Size = new System.Drawing.Size(100, 20);
             this.labelEdit18.TabIndex = 89;
@@ -235,13 +398,81 @@
             this.ptbleftrinv.TabIndex = 88;
             this.ptbleftrinv.TabStop = false;
             // 
+            // cmbCatproducto
+            // 
+            this.cmbCatproducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbCatproducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCatproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbCatproducto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbCatproducto.BorderRadius = 0;
+            this.cmbCatproducto.BorderSize = 0;
+            this.cmbCatproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbCatproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbCatproducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbCatproducto.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbCatproducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbCatproducto.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbCatproducto.Location = new System.Drawing.Point(611, 127);
+            this.cmbCatproducto.MinimumSize = new System.Drawing.Size(200, 42);
+            this.cmbCatproducto.Name = "cmbCatproducto";
+            this.cmbCatproducto.Size = new System.Drawing.Size(228, 42);
+            this.cmbCatproducto.TabIndex = 80;
+            this.cmbCatproducto.Texts = "";
+            // 
+            // cmbTipomaterial
+            // 
+            this.cmbTipomaterial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTipomaterial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbTipomaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbTipomaterial.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTipomaterial.BorderRadius = 0;
+            this.cmbTipomaterial.BorderSize = 0;
+            this.cmbTipomaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbTipomaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbTipomaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbTipomaterial.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTipomaterial.Items.AddRange(new object[] {
+            "Plastico",
+            "Aluminio",
+            "Madera",
+            "Acero",
+            "Hierro"});
+            this.cmbTipomaterial.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbTipomaterial.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbTipomaterial.Location = new System.Drawing.Point(606, 324);
+            this.cmbTipomaterial.MinimumSize = new System.Drawing.Size(200, 42);
+            this.cmbTipomaterial.Name = "cmbTipomaterial";
+            this.cmbTipomaterial.Size = new System.Drawing.Size(228, 42);
+            this.cmbTipomaterial.TabIndex = 79;
+            this.cmbTipomaterial.Texts = "";
+            // 
+            // btnGuardarprove
+            // 
+            this.btnGuardarprove.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardarprove.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardarprove.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardarprove.BorderRadius = 20;
+            this.btnGuardarprove.BorderSize = 0;
+            this.btnGuardarprove.FlatAppearance.BorderSize = 0;
+            this.btnGuardarprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarprove.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarprove.Location = new System.Drawing.Point(364, 521);
+            this.btnGuardarprove.Name = "btnGuardarprove";
+            this.btnGuardarprove.Size = new System.Drawing.Size(150, 40);
+            this.btnGuardarprove.TabIndex = 78;
+            this.btnGuardarprove.Text = "Guardar";
+            this.btnGuardarprove.TextColor = System.Drawing.Color.White;
+            this.btnGuardarprove.UseVisualStyleBackColor = false;
+            this.btnGuardarprove.Click += new System.EventHandler(this.btnGuardarprove_Click);
+            // 
             // txtprecosto
             // 
             this.txtprecosto.BackColor = System.Drawing.Color.Transparent;
             this.txtprecosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtprecosto.ForeColor = System.Drawing.Color.White;
             this.txtprecosto.Image = null;
-            this.txtprecosto.Location = new System.Drawing.Point(351, 222);
+            this.txtprecosto.Location = new System.Drawing.Point(136, 428);
             this.txtprecosto.MaxLength = 32767;
             this.txtprecosto.Multiline = false;
             this.txtprecosto.Name = "txtprecosto";
@@ -257,7 +488,7 @@
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCantidad.ForeColor = System.Drawing.Color.White;
             this.txtCantidad.Image = null;
-            this.txtCantidad.Location = new System.Drawing.Point(142, 327);
+            this.txtCantidad.Location = new System.Drawing.Point(136, 380);
             this.txtCantidad.MaxLength = 32767;
             this.txtCantidad.Multiline = false;
             this.txtCantidad.Name = "txtCantidad";
@@ -273,7 +504,7 @@
             this.txtDescripcionproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtDescripcionproducto.ForeColor = System.Drawing.Color.White;
             this.txtDescripcionproducto.Image = null;
-            this.txtDescripcionproducto.Location = new System.Drawing.Point(143, 127);
+            this.txtDescripcionproducto.Location = new System.Drawing.Point(115, 127);
             this.txtDescripcionproducto.MaxLength = 32767;
             this.txtDescripcionproducto.Multiline = true;
             this.txtDescripcionproducto.Name = "txtDescripcionproducto";
@@ -290,7 +521,7 @@
             this.txtUsmodificado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtUsmodificado.ForeColor = System.Drawing.Color.White;
             this.txtUsmodificado.Image = null;
-            this.txtUsmodificado.Location = new System.Drawing.Point(622, 79);
+            this.txtUsmodificado.Location = new System.Drawing.Point(136, 326);
             this.txtUsmodificado.MaxLength = 32767;
             this.txtUsmodificado.Multiline = false;
             this.txtUsmodificado.Name = "txtUsmodificado";
@@ -311,10 +542,11 @@
             this.txtProducto.Multiline = false;
             this.txtProducto.Name = "txtProducto";
             this.txtProducto.ReadOnly = false;
-            this.txtProducto.Size = new System.Drawing.Size(263, 42);
+            this.txtProducto.Size = new System.Drawing.Size(235, 42);
             this.txtProducto.TabIndex = 62;
             this.txtProducto.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtProducto.UseSystemPasswordChar = false;
+            this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
             // 
             // labelEdit8
             // 
@@ -322,7 +554,7 @@
             this.labelEdit8.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit8.ForeColor = System.Drawing.Color.White;
-            this.labelEdit8.Location = new System.Drawing.Point(511, 236);
+            this.labelEdit8.Location = new System.Drawing.Point(500, 140);
             this.labelEdit8.Name = "labelEdit8";
             this.labelEdit8.Size = new System.Drawing.Size(82, 20);
             this.labelEdit8.TabIndex = 61;
@@ -334,7 +566,7 @@
             this.labelEdit7.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit7.ForeColor = System.Drawing.Color.White;
-            this.labelEdit7.Location = new System.Drawing.Point(250, 231);
+            this.labelEdit7.Location = new System.Drawing.Point(33, 441);
             this.labelEdit7.Name = "labelEdit7";
             this.labelEdit7.Size = new System.Drawing.Size(100, 20);
             this.labelEdit7.TabIndex = 60;
@@ -346,7 +578,7 @@
             this.labelEdit6.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit6.ForeColor = System.Drawing.Color.White;
-            this.labelEdit6.Location = new System.Drawing.Point(26, 161);
+            this.labelEdit6.Location = new System.Drawing.Point(25, 165);
             this.labelEdit6.Name = "labelEdit6";
             this.labelEdit6.Size = new System.Drawing.Size(96, 20);
             this.labelEdit6.TabIndex = 59;
@@ -358,7 +590,7 @@
             this.labelEdit5.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit5.ForeColor = System.Drawing.Color.White;
-            this.labelEdit5.Location = new System.Drawing.Point(499, 136);
+            this.labelEdit5.Location = new System.Drawing.Point(478, 333);
             this.labelEdit5.Name = "labelEdit5";
             this.labelEdit5.Size = new System.Drawing.Size(125, 20);
             this.labelEdit5.TabIndex = 58;
@@ -370,7 +602,7 @@
             this.labelEdit4.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit4.ForeColor = System.Drawing.Color.White;
-            this.labelEdit4.Location = new System.Drawing.Point(468, 184);
+            this.labelEdit4.Location = new System.Drawing.Point(447, 381);
             this.labelEdit4.Name = "labelEdit4";
             this.labelEdit4.Size = new System.Drawing.Size(153, 20);
             this.labelEdit4.TabIndex = 57;
@@ -382,7 +614,7 @@
             this.labelEdit3.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit3.ForeColor = System.Drawing.Color.White;
-            this.labelEdit3.Location = new System.Drawing.Point(24, 336);
+            this.labelEdit3.Location = new System.Drawing.Point(27, 393);
             this.labelEdit3.Name = "labelEdit3";
             this.labelEdit3.Size = new System.Drawing.Size(77, 20);
             this.labelEdit3.TabIndex = 56;
@@ -394,7 +626,7 @@
             this.labelEdit2.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit2.ForeColor = System.Drawing.Color.White;
-            this.labelEdit2.Location = new System.Drawing.Point(499, 90);
+            this.labelEdit2.Location = new System.Drawing.Point(27, 333);
             this.labelEdit2.Name = "labelEdit2";
             this.labelEdit2.Size = new System.Drawing.Size(117, 20);
             this.labelEdit2.TabIndex = 55;
@@ -472,15 +704,15 @@
             this.dtgInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtgInventario.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dtgInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idempresa,
@@ -494,28 +726,28 @@
             this.estadop,
             this.btnEditar,
             this.btnEliminar});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgInventario.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgInventario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgInventario.EnableHeadersVisualStyles = false;
             this.dtgInventario.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtgInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtgInventario.Location = new System.Drawing.Point(36, 80);
             this.dtgInventario.Name = "dtgInventario";
             this.dtgInventario.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgInventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgInventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgInventario.RowHeadersVisible = false;
             this.dtgInventario.RowHeadersWidth = 40;
             this.dtgInventario.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
@@ -689,6 +921,27 @@
             this.panel1.TabIndex = 87;
             this.panel1.Text = "panel2";
             // 
+            // personComboBox3
+            // 
+            this.personComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.personComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.personComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.personComboBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.personComboBox3.BorderRadius = 0;
+            this.personComboBox3.BorderSize = 0;
+            this.personComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.personComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.personComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.personComboBox3.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.personComboBox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.personComboBox3.ListTextColor = System.Drawing.Color.DimGray;
+            this.personComboBox3.Location = new System.Drawing.Point(616, 182);
+            this.personComboBox3.MinimumSize = new System.Drawing.Size(200, 42);
+            this.personComboBox3.Name = "personComboBox3";
+            this.personComboBox3.Size = new System.Drawing.Size(228, 42);
+            this.personComboBox3.TabIndex = 125;
+            this.personComboBox3.Texts = "";
+            // 
             // textBoxEdit5
             // 
             this.textBoxEdit5.BackColor = System.Drawing.Color.Transparent;
@@ -828,6 +1081,48 @@
             this.labelEdit13.Size = new System.Drawing.Size(100, 20);
             this.labelEdit13.TabIndex = 115;
             this.labelEdit13.Text = "Precio venta:";
+            // 
+            // personComboBox4
+            // 
+            this.personComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.personComboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.personComboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.personComboBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.personComboBox4.BorderRadius = 0;
+            this.personComboBox4.BorderSize = 0;
+            this.personComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.personComboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.personComboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.personComboBox4.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.personComboBox4.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.personComboBox4.ListTextColor = System.Drawing.Color.DimGray;
+            this.personComboBox4.Location = new System.Drawing.Point(616, 231);
+            this.personComboBox4.MinimumSize = new System.Drawing.Size(200, 42);
+            this.personComboBox4.Name = "personComboBox4";
+            this.personComboBox4.Size = new System.Drawing.Size(228, 42);
+            this.personComboBox4.TabIndex = 114;
+            this.personComboBox4.Texts = "";
+            // 
+            // personComboBox6
+            // 
+            this.personComboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.personComboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.personComboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.personComboBox6.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.personComboBox6.BorderRadius = 0;
+            this.personComboBox6.BorderSize = 0;
+            this.personComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.personComboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.personComboBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.personComboBox6.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.personComboBox6.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.personComboBox6.ListTextColor = System.Drawing.Color.DimGray;
+            this.personComboBox6.Location = new System.Drawing.Point(616, 135);
+            this.personComboBox6.MinimumSize = new System.Drawing.Size(200, 42);
+            this.personComboBox6.Name = "personComboBox6";
+            this.personComboBox6.Size = new System.Drawing.Size(228, 42);
+            this.personComboBox6.TabIndex = 113;
+            this.personComboBox6.Texts = "";
             // 
             // textBoxEdit10
             // 
@@ -1005,73 +1300,6 @@
             this.labelEdit27.TabIndex = 100;
             this.labelEdit27.Text = "Nombre de producto:";
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // personComboBox3
-            // 
-            this.personComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.personComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.personComboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.personComboBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.personComboBox3.BorderRadius = 0;
-            this.personComboBox3.BorderSize = 0;
-            this.personComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.personComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.personComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.personComboBox3.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.personComboBox3.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.personComboBox3.ListTextColor = System.Drawing.Color.DimGray;
-            this.personComboBox3.Location = new System.Drawing.Point(616, 182);
-            this.personComboBox3.MinimumSize = new System.Drawing.Size(200, 42);
-            this.personComboBox3.Name = "personComboBox3";
-            this.personComboBox3.Size = new System.Drawing.Size(228, 42);
-            this.personComboBox3.TabIndex = 125;
-            this.personComboBox3.Texts = "";
-            // 
-            // personComboBox4
-            // 
-            this.personComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.personComboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.personComboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.personComboBox4.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.personComboBox4.BorderRadius = 0;
-            this.personComboBox4.BorderSize = 0;
-            this.personComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.personComboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.personComboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.personComboBox4.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.personComboBox4.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.personComboBox4.ListTextColor = System.Drawing.Color.DimGray;
-            this.personComboBox4.Location = new System.Drawing.Point(616, 231);
-            this.personComboBox4.MinimumSize = new System.Drawing.Size(200, 42);
-            this.personComboBox4.Name = "personComboBox4";
-            this.personComboBox4.Size = new System.Drawing.Size(228, 42);
-            this.personComboBox4.TabIndex = 114;
-            this.personComboBox4.Texts = "";
-            // 
-            // personComboBox6
-            // 
-            this.personComboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.personComboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.personComboBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.personComboBox6.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.personComboBox6.BorderRadius = 0;
-            this.personComboBox6.BorderSize = 0;
-            this.personComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.personComboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.personComboBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.personComboBox6.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.personComboBox6.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.personComboBox6.ListTextColor = System.Drawing.Color.DimGray;
-            this.personComboBox6.Location = new System.Drawing.Point(616, 135);
-            this.personComboBox6.MinimumSize = new System.Drawing.Size(200, 42);
-            this.personComboBox6.Name = "personComboBox6";
-            this.personComboBox6.Size = new System.Drawing.Size(228, 42);
-            this.personComboBox6.TabIndex = 113;
-            this.personComboBox6.Texts = "";
-            // 
             // btnActualizarinv
             // 
             this.btnActualizarinv.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -1091,149 +1319,9 @@
             this.btnActualizarinv.TextColor = System.Drawing.Color.White;
             this.btnActualizarinv.UseVisualStyleBackColor = false;
             // 
-            // cmbtipoProducto
+            // errorProvider1
             // 
-            this.cmbtipoProducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbtipoProducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbtipoProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbtipoProducto.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbtipoProducto.BorderRadius = 0;
-            this.cmbtipoProducto.BorderSize = 0;
-            this.cmbtipoProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbtipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbtipoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbtipoProducto.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbtipoProducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbtipoProducto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbtipoProducto.Location = new System.Drawing.Point(142, 270);
-            this.cmbtipoProducto.MinimumSize = new System.Drawing.Size(200, 42);
-            this.cmbtipoProducto.Name = "cmbtipoProducto";
-            this.cmbtipoProducto.Size = new System.Drawing.Size(228, 42);
-            this.cmbtipoProducto.TabIndex = 100;
-            this.cmbtipoProducto.Texts = "";
-            // 
-            // cmbEstproducto
-            // 
-            this.cmbEstproducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbEstproducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbEstproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbEstproducto.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbEstproducto.BorderRadius = 0;
-            this.cmbEstproducto.BorderSize = 0;
-            this.cmbEstproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbEstproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbEstproducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbEstproducto.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbEstproducto.Items.AddRange(new object[] {
-            "Nuevo",
-            "Medio uso",
-            "Dañado",
-            "Viejo",
-            "Desuso"});
-            this.cmbEstproducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbEstproducto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbEstproducto.Location = new System.Drawing.Point(622, 174);
-            this.cmbEstproducto.MinimumSize = new System.Drawing.Size(200, 42);
-            this.cmbEstproducto.Name = "cmbEstproducto";
-            this.cmbEstproducto.Size = new System.Drawing.Size(228, 42);
-            this.cmbEstproducto.TabIndex = 99;
-            this.cmbEstproducto.Texts = "";
-            // 
-            // cmbCatproducto
-            // 
-            this.cmbCatproducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbCatproducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbCatproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbCatproducto.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbCatproducto.BorderRadius = 0;
-            this.cmbCatproducto.BorderSize = 0;
-            this.cmbCatproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbCatproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbCatproducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbCatproducto.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbCatproducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbCatproducto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbCatproducto.Location = new System.Drawing.Point(622, 223);
-            this.cmbCatproducto.MinimumSize = new System.Drawing.Size(200, 42);
-            this.cmbCatproducto.Name = "cmbCatproducto";
-            this.cmbCatproducto.Size = new System.Drawing.Size(228, 42);
-            this.cmbCatproducto.TabIndex = 80;
-            this.cmbCatproducto.Texts = "";
-            // 
-            // cmbTipomaterial
-            // 
-            this.cmbTipomaterial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbTipomaterial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbTipomaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbTipomaterial.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTipomaterial.BorderRadius = 0;
-            this.cmbTipomaterial.BorderSize = 0;
-            this.cmbTipomaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbTipomaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbTipomaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbTipomaterial.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTipomaterial.Items.AddRange(new object[] {
-            "Plastico",
-            "Aluminio",
-            "Madera",
-            "Acero",
-            "Hierro"});
-            this.cmbTipomaterial.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbTipomaterial.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbTipomaterial.Location = new System.Drawing.Point(622, 127);
-            this.cmbTipomaterial.MinimumSize = new System.Drawing.Size(200, 42);
-            this.cmbTipomaterial.Name = "cmbTipomaterial";
-            this.cmbTipomaterial.Size = new System.Drawing.Size(228, 42);
-            this.cmbTipomaterial.TabIndex = 79;
-            this.cmbTipomaterial.Texts = "";
-            // 
-            // btnGuardarprove
-            // 
-            this.btnGuardarprove.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnGuardarprove.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnGuardarprove.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGuardarprove.BorderRadius = 20;
-            this.btnGuardarprove.BorderSize = 0;
-            this.btnGuardarprove.FlatAppearance.BorderSize = 0;
-            this.btnGuardarprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarprove.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarprove.Location = new System.Drawing.Point(351, 449);
-            this.btnGuardarprove.Name = "btnGuardarprove";
-            this.btnGuardarprove.Size = new System.Drawing.Size(150, 40);
-            this.btnGuardarprove.TabIndex = 78;
-            this.btnGuardarprove.Text = "Guardar";
-            this.btnGuardarprove.TextColor = System.Drawing.Color.White;
-            this.btnGuardarprove.UseVisualStyleBackColor = false;
-            this.btnGuardarprove.Click += new System.EventHandler(this.btnGuardarprove_Click);
-            // 
-            // labelEdit20
-            // 
-            this.labelEdit20.AutoSize = true;
-            this.labelEdit20.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEdit20.ForeColor = System.Drawing.Color.White;
-            this.labelEdit20.Location = new System.Drawing.Point(26, 394);
-            this.labelEdit20.Name = "labelEdit20";
-            this.labelEdit20.Size = new System.Drawing.Size(83, 20);
-            this.labelEdit20.TabIndex = 101;
-            this.labelEdit20.Text = "Ubicacion:";
-            // 
-            // txtUbicacion
-            // 
-            this.txtUbicacion.BackColor = System.Drawing.Color.Transparent;
-            this.txtUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtUbicacion.ForeColor = System.Drawing.Color.White;
-            this.txtUbicacion.Image = null;
-            this.txtUbicacion.Location = new System.Drawing.Point(143, 381);
-            this.txtUbicacion.MaxLength = 32767;
-            this.txtUbicacion.Multiline = false;
-            this.txtUbicacion.Name = "txtUbicacion";
-            this.txtUbicacion.ReadOnly = false;
-            this.txtUbicacion.Size = new System.Drawing.Size(117, 42);
-            this.txtUbicacion.TabIndex = 102;
-            this.txtUbicacion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtUbicacion.UseSystemPasswordChar = false;
+            this.errorProvider1.ContainerControl = this;
             // 
             // FrmInventario
             // 
@@ -1245,6 +1333,7 @@
             this.Controls.Add(this.pnlRegInv);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmInventario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmInventario";
             this.Load += new System.EventHandler(this.FrmInventario_Load);
             this.pnlRegInv.ResumeLayout(false);
@@ -1299,7 +1388,6 @@
         private System.Windows.Forms.PictureBox ptbleftrinv;
         private ReaLTaiizor.Controls.TextBoxEdit txtpreciovent;
         private ReaLTaiizor.Controls.LabelEdit labelEdit18;
-        private ReaLTaiizor.Controls.LabelEdit labelEdit19;
         private ReaLTaiizor.Controls.TextBoxEdit txtEspecificacion;
         private ReaLTaiizor.Controls.LabelEdit labelEdit22;
         private btnpersonalizados.PersonComboBox cmbEstproducto;
@@ -1333,9 +1421,15 @@
         private ReaLTaiizor.Controls.LabelEdit labelEdit25;
         private ReaLTaiizor.Controls.LabelEdit labelEdit26;
         private ReaLTaiizor.Controls.LabelEdit labelEdit27;
-        private btnpersonalizados.PersonComboBox cmbtipoProducto;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private ReaLTaiizor.Controls.TextBoxEdit txtUbicacion;
         private ReaLTaiizor.Controls.LabelEdit labelEdit20;
+        private ReaLTaiizor.Controls.TextBoxEdit txtPeso;
+        private ReaLTaiizor.Controls.LabelEdit labelEdit28;
+        private ReaLTaiizor.Controls.TextBoxEdit txtTamanio;
+        private ReaLTaiizor.Controls.LabelEdit labelEdit29;
+        private ReaLTaiizor.Controls.Button btnedpecificaciones;
+        private btnpersonalizados.PersonComboBox cmbtipoProducto;
+        private ReaLTaiizor.Controls.LabelEdit labelEdit19;
     }
 }

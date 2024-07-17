@@ -13,6 +13,9 @@ namespace LogicDeNegocio.Interfaces
         Task<EmpleadoDto> ActualizarEmpleado(int id, EmpleadoRequest request);
 
         Task EliminarEmpleado(int id);
+        Task<List<EmpleadoDto>> ObtenerEmpleados(string emp);
+        Task<EmpleadoDto> ObtenerEmpleadoPorId(int id);
+        Task ActualizarPersonaYEmpleado(int id, PersonaRequest personaRequest, EmpleadoRequest empleadoRequest);
 
         Task<List<EmpleadoDto>> ObtenerTodasEmpleados();
     }

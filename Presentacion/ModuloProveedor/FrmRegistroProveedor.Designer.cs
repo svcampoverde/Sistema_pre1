@@ -28,21 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroProveedor));
             this.pnlRegprovedor = new System.Windows.Forms.Panel();
             this.labelEdit14 = new ReaLTaiizor.Controls.LabelEdit();
-            this.txtCuenta = new ReaLTaiizor.Controls.TextBoxEdit();
             this.ptbleftm = new System.Windows.Forms.PictureBox();
             this.labelEdit15 = new ReaLTaiizor.Controls.LabelEdit();
             this.txtnumCuenta = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit13 = new ReaLTaiizor.Controls.LabelEdit();
-            this.textBoxEdit3 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.btnGuardarprove = new Presentacion.btnpersonalizados.Botonper();
-            this.cmbServicio = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.cmbGenero = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.cmbServiciopro = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.cmbGeneropro = new Presentacion.btnpersonalizados.PersonComboBox();
             this.cmbCiudad = new Presentacion.btnpersonalizados.PersonComboBox();
             this.txtDireccion = new ReaLTaiizor.Controls.TextBoxEdit();
             this.txtCelular = new ReaLTaiizor.Controls.TextBoxEdit();
@@ -57,7 +55,6 @@
             this.labelEdit5 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit4 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit3 = new ReaLTaiizor.Controls.LabelEdit();
-            this.txtEmpresa = new ReaLTaiizor.Controls.TextBoxEdit();
             this.txtCorreo = new ReaLTaiizor.Controls.TextBoxEdit();
             this.txtApellido = new ReaLTaiizor.Controls.TextBoxEdit();
             this.txtNombre = new ReaLTaiizor.Controls.TextBoxEdit();
@@ -66,12 +63,10 @@
             this.labelEdit1 = new ReaLTaiizor.Controls.LabelEdit();
             this.pnlMproveedor = new System.Windows.Forms.Panel();
             this.labelEdit16 = new ReaLTaiizor.Controls.LabelEdit();
-            this.textBoxEdit2 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelEdit17 = new ReaLTaiizor.Controls.LabelEdit();
             this.textBoxEdit5 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit18 = new ReaLTaiizor.Controls.LabelEdit();
-            this.textBoxEdit6 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.btnActualizarprov = new Presentacion.btnpersonalizados.Botonper();
             this.personComboBox1 = new Presentacion.btnpersonalizados.PersonComboBox();
             this.personComboBox2 = new Presentacion.btnpersonalizados.PersonComboBox();
@@ -89,7 +84,6 @@
             this.labelEdit26 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit27 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit28 = new ReaLTaiizor.Controls.LabelEdit();
-            this.textBoxEdit10 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.textBoxEdit11 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.textBoxEdit12 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.textBoxEdit13 = new ReaLTaiizor.Controls.TextBoxEdit();
@@ -116,6 +110,11 @@
             this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnEliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnBproveedor = new ReaLTaiizor.Controls.Button();
+            this.cmbEmpresap = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.cmbBancoProveedor = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.cmbCuentaproveedor = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.cmbFpagoproveedor = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.labelEdit31 = new ReaLTaiizor.Controls.LabelEdit();
             this.pnlRegprovedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbleftm)).BeginInit();
             this.pnlMproveedor.SuspendLayout();
@@ -128,16 +127,20 @@
             // pnlRegprovedor
             // 
             this.pnlRegprovedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.pnlRegprovedor.Controls.Add(this.pnlListEmp);
+            this.pnlRegprovedor.Controls.Add(this.labelEdit31);
+            this.pnlRegprovedor.Controls.Add(this.cmbFpagoproveedor);
+            this.pnlRegprovedor.Controls.Add(this.cmbEmpresap);
+            this.pnlRegprovedor.Controls.Add(this.cmbBancoProveedor);
+            this.pnlRegprovedor.Controls.Add(this.cmbCuentaproveedor);
             this.pnlRegprovedor.Controls.Add(this.labelEdit14);
-            this.pnlRegprovedor.Controls.Add(this.txtCuenta);
             this.pnlRegprovedor.Controls.Add(this.ptbleftm);
             this.pnlRegprovedor.Controls.Add(this.labelEdit15);
             this.pnlRegprovedor.Controls.Add(this.txtnumCuenta);
             this.pnlRegprovedor.Controls.Add(this.labelEdit13);
-            this.pnlRegprovedor.Controls.Add(this.textBoxEdit3);
             this.pnlRegprovedor.Controls.Add(this.btnGuardarprove);
-            this.pnlRegprovedor.Controls.Add(this.cmbServicio);
-            this.pnlRegprovedor.Controls.Add(this.cmbGenero);
+            this.pnlRegprovedor.Controls.Add(this.cmbServiciopro);
+            this.pnlRegprovedor.Controls.Add(this.cmbGeneropro);
             this.pnlRegprovedor.Controls.Add(this.cmbCiudad);
             this.pnlRegprovedor.Controls.Add(this.txtDireccion);
             this.pnlRegprovedor.Controls.Add(this.txtCelular);
@@ -152,16 +155,15 @@
             this.pnlRegprovedor.Controls.Add(this.labelEdit5);
             this.pnlRegprovedor.Controls.Add(this.labelEdit4);
             this.pnlRegprovedor.Controls.Add(this.labelEdit3);
-            this.pnlRegprovedor.Controls.Add(this.txtEmpresa);
             this.pnlRegprovedor.Controls.Add(this.txtCorreo);
             this.pnlRegprovedor.Controls.Add(this.txtApellido);
             this.pnlRegprovedor.Controls.Add(this.txtNombre);
             this.pnlRegprovedor.Controls.Add(this.txtCedula);
             this.pnlRegprovedor.Controls.Add(this.labelEdit2);
             this.pnlRegprovedor.Controls.Add(this.labelEdit1);
-            this.pnlRegprovedor.Location = new System.Drawing.Point(756, 373);
+            this.pnlRegprovedor.Location = new System.Drawing.Point(12, 12);
             this.pnlRegprovedor.Name = "pnlRegprovedor";
-            this.pnlRegprovedor.Size = new System.Drawing.Size(706, 558);
+            this.pnlRegprovedor.Size = new System.Drawing.Size(706, 581);
             this.pnlRegprovedor.TabIndex = 1;
             // 
             // labelEdit14
@@ -175,22 +177,6 @@
             this.labelEdit14.Size = new System.Drawing.Size(65, 20);
             this.labelEdit14.TabIndex = 90;
             this.labelEdit14.Text = "Cuenta:";
-            // 
-            // txtCuenta
-            // 
-            this.txtCuenta.BackColor = System.Drawing.Color.Transparent;
-            this.txtCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCuenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.txtCuenta.Image = null;
-            this.txtCuenta.Location = new System.Drawing.Point(118, 385);
-            this.txtCuenta.MaxLength = 32767;
-            this.txtCuenta.Multiline = false;
-            this.txtCuenta.Name = "txtCuenta";
-            this.txtCuenta.ReadOnly = false;
-            this.txtCuenta.Size = new System.Drawing.Size(200, 42);
-            this.txtCuenta.TabIndex = 89;
-            this.txtCuenta.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCuenta.UseSystemPasswordChar = false;
             // 
             // ptbleftm
             // 
@@ -242,22 +228,6 @@
             this.labelEdit13.TabIndex = 85;
             this.labelEdit13.Text = "Banco:";
             // 
-            // textBoxEdit3
-            // 
-            this.textBoxEdit3.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxEdit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxEdit3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.textBoxEdit3.Image = null;
-            this.textBoxEdit3.Location = new System.Drawing.Point(451, 337);
-            this.textBoxEdit3.MaxLength = 32767;
-            this.textBoxEdit3.Multiline = false;
-            this.textBoxEdit3.Name = "textBoxEdit3";
-            this.textBoxEdit3.ReadOnly = false;
-            this.textBoxEdit3.Size = new System.Drawing.Size(202, 42);
-            this.textBoxEdit3.TabIndex = 84;
-            this.textBoxEdit3.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxEdit3.UseSystemPasswordChar = false;
-            // 
             // btnGuardarprove
             // 
             this.btnGuardarprove.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -268,7 +238,7 @@
             this.btnGuardarprove.FlatAppearance.BorderSize = 0;
             this.btnGuardarprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarprove.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarprove.Location = new System.Drawing.Point(288, 482);
+            this.btnGuardarprove.Location = new System.Drawing.Point(281, 507);
             this.btnGuardarprove.Name = "btnGuardarprove";
             this.btnGuardarprove.Size = new System.Drawing.Size(150, 40);
             this.btnGuardarprove.TabIndex = 77;
@@ -277,51 +247,51 @@
             this.btnGuardarprove.UseVisualStyleBackColor = false;
             this.btnGuardarprove.Click += new System.EventHandler(this.btnGuardarprove_Click);
             // 
-            // cmbServicio
+            // cmbServiciopro
             // 
-            this.cmbServicio.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbServicio.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbServicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbServicio.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbServicio.BorderRadius = 0;
-            this.cmbServicio.BorderSize = 0;
-            this.cmbServicio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbServicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbServicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbServicio.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbServicio.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbServicio.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbServicio.Location = new System.Drawing.Point(453, 289);
-            this.cmbServicio.MinimumSize = new System.Drawing.Size(200, 42);
-            this.cmbServicio.Name = "cmbServicio";
-            this.cmbServicio.Size = new System.Drawing.Size(200, 42);
-            this.cmbServicio.TabIndex = 76;
-            this.cmbServicio.Texts = "";
+            this.cmbServiciopro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbServiciopro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbServiciopro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbServiciopro.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbServiciopro.BorderRadius = 0;
+            this.cmbServiciopro.BorderSize = 0;
+            this.cmbServiciopro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbServiciopro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbServiciopro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbServiciopro.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbServiciopro.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbServiciopro.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbServiciopro.Location = new System.Drawing.Point(453, 289);
+            this.cmbServiciopro.MinimumSize = new System.Drawing.Size(200, 42);
+            this.cmbServiciopro.Name = "cmbServiciopro";
+            this.cmbServiciopro.Size = new System.Drawing.Size(200, 42);
+            this.cmbServiciopro.TabIndex = 76;
+            this.cmbServiciopro.Texts = "";
             // 
-            // cmbGenero
+            // cmbGeneropro
             // 
-            this.cmbGenero.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbGenero.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbGenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbGenero.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbGenero.BorderRadius = 0;
-            this.cmbGenero.BorderSize = 0;
-            this.cmbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbGenero.IconColor = System.Drawing.Color.MediumPurple;
-            this.cmbGenero.Items.AddRange(new object[] {
+            this.cmbGeneropro.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbGeneropro.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbGeneropro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbGeneropro.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbGeneropro.BorderRadius = 0;
+            this.cmbGeneropro.BorderSize = 0;
+            this.cmbGeneropro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbGeneropro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbGeneropro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbGeneropro.IconColor = System.Drawing.Color.MediumPurple;
+            this.cmbGeneropro.Items.AddRange(new object[] {
             "Masculino",
             "Femenino",
             "Otro"});
-            this.cmbGenero.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbGenero.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbGenero.Location = new System.Drawing.Point(116, 193);
-            this.cmbGenero.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbGenero.Name = "cmbGenero";
-            this.cmbGenero.Size = new System.Drawing.Size(200, 42);
-            this.cmbGenero.TabIndex = 75;
-            this.cmbGenero.Texts = "";
+            this.cmbGeneropro.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbGeneropro.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbGeneropro.Location = new System.Drawing.Point(116, 193);
+            this.cmbGeneropro.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbGeneropro.Name = "cmbGeneropro";
+            this.cmbGeneropro.Size = new System.Drawing.Size(200, 42);
+            this.cmbGeneropro.TabIndex = 75;
+            this.cmbGeneropro.Texts = "";
             // 
             // cmbCiudad
             // 
@@ -512,23 +482,6 @@
             this.labelEdit3.TabIndex = 59;
             this.labelEdit3.Text = "Nombre:";
             // 
-            // txtEmpresa
-            // 
-            this.txtEmpresa.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtEmpresa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.txtEmpresa.Image = null;
-            this.txtEmpresa.Location = new System.Drawing.Point(118, 337);
-            this.txtEmpresa.MaxLength = 32767;
-            this.txtEmpresa.Multiline = false;
-            this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.ReadOnly = false;
-            this.txtEmpresa.Size = new System.Drawing.Size(200, 42);
-            this.txtEmpresa.TabIndex = 58;
-            this.txtEmpresa.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtEmpresa.UseSystemPasswordChar = false;
-            this.txtEmpresa.TextChanged += new System.EventHandler(this.txtEmpresa_TextChanged);
-            // 
             // txtCorreo
             // 
             this.txtCorreo.BackColor = System.Drawing.Color.Transparent;
@@ -621,12 +574,10 @@
             // 
             this.pnlMproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
             this.pnlMproveedor.Controls.Add(this.labelEdit16);
-            this.pnlMproveedor.Controls.Add(this.textBoxEdit2);
             this.pnlMproveedor.Controls.Add(this.pictureBox1);
             this.pnlMproveedor.Controls.Add(this.labelEdit17);
             this.pnlMproveedor.Controls.Add(this.textBoxEdit5);
             this.pnlMproveedor.Controls.Add(this.labelEdit18);
-            this.pnlMproveedor.Controls.Add(this.textBoxEdit6);
             this.pnlMproveedor.Controls.Add(this.btnActualizarprov);
             this.pnlMproveedor.Controls.Add(this.personComboBox1);
             this.pnlMproveedor.Controls.Add(this.personComboBox2);
@@ -644,17 +595,17 @@
             this.pnlMproveedor.Controls.Add(this.labelEdit26);
             this.pnlMproveedor.Controls.Add(this.labelEdit27);
             this.pnlMproveedor.Controls.Add(this.labelEdit28);
-            this.pnlMproveedor.Controls.Add(this.textBoxEdit10);
             this.pnlMproveedor.Controls.Add(this.textBoxEdit11);
             this.pnlMproveedor.Controls.Add(this.textBoxEdit12);
             this.pnlMproveedor.Controls.Add(this.textBoxEdit13);
             this.pnlMproveedor.Controls.Add(this.textBoxEdit14);
             this.pnlMproveedor.Controls.Add(this.labelEdit29);
             this.pnlMproveedor.Controls.Add(this.labelEdit30);
-            this.pnlMproveedor.Location = new System.Drawing.Point(12, 373);
+            this.pnlMproveedor.Location = new System.Drawing.Point(744, 385);
             this.pnlMproveedor.Name = "pnlMproveedor";
             this.pnlMproveedor.Size = new System.Drawing.Size(706, 558);
             this.pnlMproveedor.TabIndex = 2;
+            this.pnlMproveedor.Visible = false;
             // 
             // labelEdit16
             // 
@@ -667,22 +618,6 @@
             this.labelEdit16.Size = new System.Drawing.Size(65, 20);
             this.labelEdit16.TabIndex = 90;
             this.labelEdit16.Text = "Cuenta:";
-            // 
-            // textBoxEdit2
-            // 
-            this.textBoxEdit2.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxEdit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxEdit2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.textBoxEdit2.Image = null;
-            this.textBoxEdit2.Location = new System.Drawing.Point(118, 385);
-            this.textBoxEdit2.MaxLength = 32767;
-            this.textBoxEdit2.Multiline = false;
-            this.textBoxEdit2.Name = "textBoxEdit2";
-            this.textBoxEdit2.ReadOnly = false;
-            this.textBoxEdit2.Size = new System.Drawing.Size(200, 42);
-            this.textBoxEdit2.TabIndex = 89;
-            this.textBoxEdit2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxEdit2.UseSystemPasswordChar = false;
             // 
             // pictureBox1
             // 
@@ -733,22 +668,6 @@
             this.labelEdit18.Size = new System.Drawing.Size(59, 20);
             this.labelEdit18.TabIndex = 85;
             this.labelEdit18.Text = "Banco:";
-            // 
-            // textBoxEdit6
-            // 
-            this.textBoxEdit6.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxEdit6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxEdit6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.textBoxEdit6.Image = null;
-            this.textBoxEdit6.Location = new System.Drawing.Point(451, 337);
-            this.textBoxEdit6.MaxLength = 32767;
-            this.textBoxEdit6.Multiline = false;
-            this.textBoxEdit6.Name = "textBoxEdit6";
-            this.textBoxEdit6.ReadOnly = false;
-            this.textBoxEdit6.Size = new System.Drawing.Size(202, 42);
-            this.textBoxEdit6.TabIndex = 84;
-            this.textBoxEdit6.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxEdit6.UseSystemPasswordChar = false;
             // 
             // btnActualizarprov
             // 
@@ -1003,22 +922,6 @@
             this.labelEdit28.TabIndex = 59;
             this.labelEdit28.Text = "Nombre:";
             // 
-            // textBoxEdit10
-            // 
-            this.textBoxEdit10.BackColor = System.Drawing.Color.Transparent;
-            this.textBoxEdit10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxEdit10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.textBoxEdit10.Image = null;
-            this.textBoxEdit10.Location = new System.Drawing.Point(118, 337);
-            this.textBoxEdit10.MaxLength = 32767;
-            this.textBoxEdit10.Multiline = false;
-            this.textBoxEdit10.Name = "textBoxEdit10";
-            this.textBoxEdit10.ReadOnly = false;
-            this.textBoxEdit10.Size = new System.Drawing.Size(200, 42);
-            this.textBoxEdit10.TabIndex = 58;
-            this.textBoxEdit10.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxEdit10.UseSystemPasswordChar = false;
-            // 
             // textBoxEdit11
             // 
             this.textBoxEdit11.BackColor = System.Drawing.Color.Transparent;
@@ -1114,10 +1017,11 @@
             this.pnlListEmp.Controls.Add(this.txtBproveedor);
             this.pnlListEmp.Controls.Add(this.dtgEmpresa);
             this.pnlListEmp.Controls.Add(this.btnBproveedor);
-            this.pnlListEmp.Location = new System.Drawing.Point(12, 27);
+            this.pnlListEmp.Location = new System.Drawing.Point(160, 9);
             this.pnlListEmp.Name = "pnlListEmp";
-            this.pnlListEmp.Size = new System.Drawing.Size(1349, 340);
+            this.pnlListEmp.Size = new System.Drawing.Size(1397, 236);
             this.pnlListEmp.TabIndex = 87;
+            this.pnlListEmp.Visible = false;
             // 
             // ptbadd
             // 
@@ -1155,15 +1059,15 @@
             this.dtgEmpresa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtgEmpresa.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dtgEmpresa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgEmpresa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idproveedor,
@@ -1181,28 +1085,28 @@
             this.direccion,
             this.btnEditar,
             this.btnEliminar});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgEmpresa.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtgEmpresa.EnableHeadersVisualStyles = false;
             this.dtgEmpresa.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtgEmpresa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtgEmpresa.Location = new System.Drawing.Point(36, 80);
             this.dtgEmpresa.Name = "dtgEmpresa";
             this.dtgEmpresa.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dtgEmpresa.RowHeadersVisible = false;
             this.dtgEmpresa.RowHeadersWidth = 40;
             this.dtgEmpresa.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
@@ -1211,7 +1115,7 @@
             this.dtgEmpresa.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(1);
             this.dtgEmpresa.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dtgEmpresa.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgEmpresa.Size = new System.Drawing.Size(1282, 246);
+            this.dtgEmpresa.Size = new System.Drawing.Size(1282, 179);
             this.dtgEmpresa.TabIndex = 81;
             // 
             // idproveedor
@@ -1342,12 +1246,119 @@
             this.btnBproveedor.Text = "Buscar";
             this.btnBproveedor.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
+            // cmbEmpresap
+            // 
+            this.cmbEmpresap.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbEmpresap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbEmpresap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbEmpresap.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbEmpresap.BorderRadius = 0;
+            this.cmbEmpresap.BorderSize = 0;
+            this.cmbEmpresap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbEmpresap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbEmpresap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbEmpresap.IconColor = System.Drawing.Color.MediumPurple;
+            this.cmbEmpresap.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Otro"});
+            this.cmbEmpresap.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbEmpresap.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbEmpresap.Location = new System.Drawing.Point(118, 337);
+            this.cmbEmpresap.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbEmpresap.Name = "cmbEmpresap";
+            this.cmbEmpresap.Size = new System.Drawing.Size(200, 42);
+            this.cmbEmpresap.TabIndex = 91;
+            this.cmbEmpresap.Texts = "";
+            // 
+            // cmbBancoProveedor
+            // 
+            this.cmbBancoProveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbBancoProveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbBancoProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbBancoProveedor.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbBancoProveedor.BorderRadius = 0;
+            this.cmbBancoProveedor.BorderSize = 0;
+            this.cmbBancoProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbBancoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbBancoProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbBancoProveedor.IconColor = System.Drawing.Color.MediumPurple;
+            this.cmbBancoProveedor.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Otro"});
+            this.cmbBancoProveedor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbBancoProveedor.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbBancoProveedor.Location = new System.Drawing.Point(453, 337);
+            this.cmbBancoProveedor.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbBancoProveedor.Name = "cmbBancoProveedor";
+            this.cmbBancoProveedor.Size = new System.Drawing.Size(200, 42);
+            this.cmbBancoProveedor.TabIndex = 92;
+            this.cmbBancoProveedor.Texts = "";
+            // 
+            // cmbCuentaproveedor
+            // 
+            this.cmbCuentaproveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbCuentaproveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCuentaproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbCuentaproveedor.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbCuentaproveedor.BorderRadius = 0;
+            this.cmbCuentaproveedor.BorderSize = 0;
+            this.cmbCuentaproveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbCuentaproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbCuentaproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbCuentaproveedor.IconColor = System.Drawing.Color.MediumPurple;
+            this.cmbCuentaproveedor.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Otro"});
+            this.cmbCuentaproveedor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbCuentaproveedor.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbCuentaproveedor.Location = new System.Drawing.Point(118, 385);
+            this.cmbCuentaproveedor.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbCuentaproveedor.Name = "cmbCuentaproveedor";
+            this.cmbCuentaproveedor.Size = new System.Drawing.Size(200, 42);
+            this.cmbCuentaproveedor.TabIndex = 93;
+            this.cmbCuentaproveedor.Texts = "";
+            // 
+            // cmbFpagoproveedor
+            // 
+            this.cmbFpagoproveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbFpagoproveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbFpagoproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbFpagoproveedor.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbFpagoproveedor.BorderRadius = 0;
+            this.cmbFpagoproveedor.BorderSize = 0;
+            this.cmbFpagoproveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbFpagoproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbFpagoproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbFpagoproveedor.IconColor = System.Drawing.Color.MediumPurple;
+            this.cmbFpagoproveedor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbFpagoproveedor.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbFpagoproveedor.Location = new System.Drawing.Point(116, 433);
+            this.cmbFpagoproveedor.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbFpagoproveedor.Name = "cmbFpagoproveedor";
+            this.cmbFpagoproveedor.Size = new System.Drawing.Size(200, 42);
+            this.cmbFpagoproveedor.TabIndex = 94;
+            this.cmbFpagoproveedor.Texts = "";
+            // 
+            // labelEdit31
+            // 
+            this.labelEdit31.AutoSize = true;
+            this.labelEdit31.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit31.ForeColor = System.Drawing.Color.White;
+            this.labelEdit31.Location = new System.Drawing.Point(50, 442);
+            this.labelEdit31.Name = "labelEdit31";
+            this.labelEdit31.Size = new System.Drawing.Size(67, 20);
+            this.labelEdit31.TabIndex = 95;
+            this.labelEdit31.Text = "F. pago:";
+            // 
             // FrmRegistroProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1462, 1055);
-            this.Controls.Add(this.pnlListEmp);
             this.Controls.Add(this.pnlMproveedor);
             this.Controls.Add(this.pnlRegprovedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1370,8 +1381,8 @@
         #endregion
         private System.Windows.Forms.Panel pnlRegprovedor;
         private btnpersonalizados.Botonper btnGuardarprove;
-        private btnpersonalizados.PersonComboBox cmbServicio;
-        private btnpersonalizados.PersonComboBox cmbGenero;
+        private btnpersonalizados.PersonComboBox cmbServiciopro;
+        private btnpersonalizados.PersonComboBox cmbGeneropro;
         private btnpersonalizados.PersonComboBox cmbCiudad;
         private ReaLTaiizor.Controls.TextBoxEdit txtDireccion;
         private ReaLTaiizor.Controls.TextBoxEdit txtCelular;
@@ -1386,7 +1397,6 @@
         private ReaLTaiizor.Controls.LabelEdit labelEdit5;
         private ReaLTaiizor.Controls.LabelEdit labelEdit4;
         private ReaLTaiizor.Controls.LabelEdit labelEdit3;
-        private ReaLTaiizor.Controls.TextBoxEdit txtEmpresa;
         private ReaLTaiizor.Controls.TextBoxEdit txtCorreo;
         private ReaLTaiizor.Controls.TextBoxEdit txtApellido;
         private ReaLTaiizor.Controls.TextBoxEdit txtNombre;
@@ -1396,18 +1406,14 @@
         private ReaLTaiizor.Controls.LabelEdit labelEdit15;
         private ReaLTaiizor.Controls.TextBoxEdit txtnumCuenta;
         private ReaLTaiizor.Controls.LabelEdit labelEdit13;
-        private ReaLTaiizor.Controls.TextBoxEdit textBoxEdit3;
         private System.Windows.Forms.PictureBox ptbleftm;
         private ReaLTaiizor.Controls.LabelEdit labelEdit14;
-        private ReaLTaiizor.Controls.TextBoxEdit txtCuenta;
         private System.Windows.Forms.Panel pnlMproveedor;
         private ReaLTaiizor.Controls.LabelEdit labelEdit16;
-        private ReaLTaiizor.Controls.TextBoxEdit textBoxEdit2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private ReaLTaiizor.Controls.LabelEdit labelEdit17;
         private ReaLTaiizor.Controls.TextBoxEdit textBoxEdit5;
         private ReaLTaiizor.Controls.LabelEdit labelEdit18;
-        private ReaLTaiizor.Controls.TextBoxEdit textBoxEdit6;
         private btnpersonalizados.Botonper btnActualizarprov;
         private btnpersonalizados.PersonComboBox personComboBox1;
         private btnpersonalizados.PersonComboBox personComboBox2;
@@ -1425,7 +1431,6 @@
         private ReaLTaiizor.Controls.LabelEdit labelEdit26;
         private ReaLTaiizor.Controls.LabelEdit labelEdit27;
         private ReaLTaiizor.Controls.LabelEdit labelEdit28;
-        private ReaLTaiizor.Controls.TextBoxEdit textBoxEdit10;
         private ReaLTaiizor.Controls.TextBoxEdit textBoxEdit11;
         private ReaLTaiizor.Controls.TextBoxEdit textBoxEdit12;
         private ReaLTaiizor.Controls.TextBoxEdit textBoxEdit13;
@@ -1452,5 +1457,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnEliminar;
+        private btnpersonalizados.PersonComboBox cmbEmpresap;
+        private btnpersonalizados.PersonComboBox cmbBancoProveedor;
+        private btnpersonalizados.PersonComboBox cmbCuentaproveedor;
+        private ReaLTaiizor.Controls.LabelEdit labelEdit31;
+        private btnpersonalizados.PersonComboBox cmbFpagoproveedor;
     }
 }

@@ -78,6 +78,53 @@ namespace LogicDeNegocio.Personas
                 throw new Exception("Ocurrió un error inesperado al registrar el usuario.", ex);
             }
         }
+        public async Task<List<UsuarioDto>> ObtenerUsuarios(string cedula)
+        {
+            using (var context = _dbContextFactory())
+            {
+                var query = from p in context.Personas
+                            join us in context.Usuarios on p.Id equals us.IdPersona
+                            join ciu in context.Ciudades on p.IdCiudad equals ciu.Id
+                            join r in context.Roles on us.IdRol equals r.Id
+                            where p.Activo == true
+                            select new
+                            {
+                                us.Id,
+                                p.Cedula,
+                                p.Nombre,
+                                p.Apellido,
+                                p.Genero,
+                                p.Telefono,
+                                p.Celular,
+                                p.Correo,
+                                p.Direccion,
+                                Ciudaddescripcion = ciu.Nombre,
+                                Usuarios = us.NombreUsuario,
+                                RolUsuario = r.Descripcion,
+                            };
+                if (!string.IsNullOrEmpty(cedula))
+                {
+                    query = query.Where(e => e.Cedula.Contains(cedula));
+                }
+                var datos = await query.ToListAsync();
+                return datos.Select(d => new UsuarioDto
+                {
+                    Id = d.Id,
+                    Cedula = d.Cedula,
+                    Nombre = d.Nombre,
+                    Apellido = d.Apellido,
+                    Celular = d.Celular,
+                    Telefono = d.Telefono,
+                    Genero = d.Genero,
+                    Correo = d.Correo,
+                    Direccion = d.Direccion,
+                    CiudadDescripcion = d.Ciudaddescripcion,
+                    Usuarios = d.Usuarios,
+                    RolUsuario = d.RolUsuario,
+                }).ToList();
+
+            }
+        }
 
         public async Task<UsuarioDto> ActualizarUsuarioAsync(int id, UsuarioRequest request)
         {

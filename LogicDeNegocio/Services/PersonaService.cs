@@ -36,7 +36,11 @@ namespace LogicDeNegocio.Services
                 var entidad = _mapper.Map<Persona>(request);
                 await context.Personas.AddAsync(entidad);
                 await context.SaveChangesAsync();
-                return _mapper.Map<PersonaDto>(entidad);
+
+                var idperson = _mapper.Map<PersonaDto>(entidad);
+                idperson.Id = entidad.Id;
+                return idperson;
+                //  return _mapper.Map<PersonaDto>(entidad);
             }
         }
 

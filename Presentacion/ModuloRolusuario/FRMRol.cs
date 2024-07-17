@@ -62,7 +62,7 @@ namespace Presentacion.ModuloRolusuario
             {
                 if (Validar())
                 {
-                    RolRequest r = new RolRequest() { Descripcion = txtRol.Text };
+                    RolRequest r = new RolRequest() { Codigo=txtRol.Text, Descripcion = txtRol.Text };
                     await _olService.RegistrarRol(r);
                     MessageBox.Show("Registro de provincia realizado con éxito");
                     Limpiar();

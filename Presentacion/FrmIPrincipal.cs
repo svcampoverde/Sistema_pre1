@@ -178,14 +178,15 @@ namespace Presentacion
             int topPanelHeight = panelHeader.Height;
 
             // Ajustar el formulario hijo para que no se superponga con los paneles
-            activarForm.Location = new Point(leftPanelWidth, topPanelHeight);
-            activarForm.Size = new Size(this.ClientSize.Width - leftPanelWidth, this.ClientSize.Height - topPanelHeight);
+            //activarForm.Location = new Point(leftPanelWidth, topPanelHeight);
+            //activarForm.Size = new Size(this.ClientSize.Width - leftPanelWidth, this.ClientSize.Height - topPanelHeight);
 
-            activarForm.FormBorderStyle = FormBorderStyle.None;
-            activarForm.ControlBox = false;
-            activarForm.MinimizeBox = false;
-            activarForm.MaximizeBox = false;
+            //activarForm.FormBorderStyle = FormBorderStyle.None;
+            //activarForm.ControlBox = false;
+            //activarForm.MinimizeBox = false;
+            //activarForm.MaximizeBox = false;
             activarForm.Show();
+            AdjustMdiSize(activarForm);
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
