@@ -1,5 +1,6 @@
 ﻿using LogicDeNegocio;
 using Presentacion.ModuloPresupuesto;
+using Presentacion.ModuloRolusuario;
 using Presentacion.ModuloUsuario;
 using System;
 using System.Collections.Generic;
@@ -303,7 +304,8 @@ namespace Presentacion
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            // Implementación para el botón Usuario si es necesario
+            //this.Close();
+            OpenChildForm<FrmUsuario>();
         }
     }
 }

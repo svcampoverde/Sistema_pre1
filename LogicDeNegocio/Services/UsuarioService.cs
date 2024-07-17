@@ -99,7 +99,7 @@ namespace LogicDeNegocio.Personas
                                 p.Correo,
                                 p.Direccion,
                                 Ciudaddescripcion = ciu.Nombre,
-                                Usuarios = us.NombreUsuario,
+                                us.NombreUsuario,
                                 RolUsuario = r.Descripcion,
                             };
                 if (!string.IsNullOrEmpty(cedula))
@@ -119,10 +119,33 @@ namespace LogicDeNegocio.Personas
                     Correo = d.Correo,
                     Direccion = d.Direccion,
                     CiudadDescripcion = d.Ciudaddescripcion,
-                    Usuarios = d.Usuarios,
+                    NombreUsuario = d.NombreUsuario,
                     RolUsuario = d.RolUsuario,
                 }).ToList();
 
+            }
+        }
+        public async Task<UsuarioDto> ObtenerUsuarioPorId(int id)
+        {
+            using (var context = _dbContextFactory())
+            {
+                // Buscar la entidad del empleado por su ID
+                var entidad = await context.Usuarios.FindAsync(id);
+
+                if (entidad == null)
+                {
+                    _logger.LogWarning($"Empleado con ID {id} no encontrado.");
+                    throw new KeyNotFoundException($"Empleado con ID {id} no encontrado.");
+                }
+
+                // Mapear la entidad del empleado al DTO
+                var usuarioDto = new UsuarioDto
+                {
+                    Id = entidad.Id,
+                    IdPersona = entidad.IdPersona,
+                };
+
+                return usuarioDto;
             }
         }
 
@@ -130,12 +153,12 @@ namespace LogicDeNegocio.Personas
         {
             _logger.LogInformation("Inicio del método ActualizarUsuarioAsync.");
 
-            var validationResult = await _validator.ValidateAsync(request);
-            if (!validationResult.IsValid)
-            {
-                _logger.LogWarning("Errores de validación: {Errors}", validationResult.Errors);
-                throw new ValidationException(validationResult.Errors);
-            }
+         //   var validationResult = await _validator.ValidateAsync(request);
+            //if (!validationResult.IsValid)
+            //{
+            //    _logger.LogWarning("Errores de validación: {Errors}", validationResult.Errors);
+            //    throw new ValidationException(validationResult.Errors);
+            //}
 
             try
             {
@@ -177,7 +200,21 @@ namespace LogicDeNegocio.Personas
                 throw new Exception("Ocurrió un error inesperado al actualizar el usuario.", ex);
             }
         }
+        public async Task EliminarUsuario(int id)
+        {
+            using (var context = _dbContextFactory())
+            {
+                var entidad = await context.Usuarios.FindAsync(id);
+                if (entidad == null)
+                {
+                    _logger.LogWarning("Usuario no encontrado.");
+                    throw new KeyNotFoundException($"Empleado con ID {id} no encontrado.");
+                }
 
+                context.Usuarios.Remove(entidad);
+                await context.SaveChangesAsync();
+            }
+        }
         public async Task<bool> CambiarClaveAsync(int id, string nuevaClave)
         {
             _logger.LogInformation("Inicio del método CambiarClaveAsync.");

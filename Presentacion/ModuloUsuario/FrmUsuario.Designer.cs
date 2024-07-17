@@ -31,12 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUsuario));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlRegUss = new ReaLTaiizor.Controls.Panel();
             this.ptbvolver = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new Presentacion.btnpersonalizados.Botonper();
@@ -66,21 +63,8 @@
             this.labelEdit2 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit1 = new ReaLTaiizor.Controls.LabelEdit();
             this.pnlLisUss = new ReaLTaiizor.Controls.Panel();
-            this.ptbaddU = new System.Windows.Forms.PictureBox();
             this.dtgUsuario = new System.Windows.Forms.DataGridView();
-            this.Idusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnEliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ptbaddU = new System.Windows.Forms.PictureBox();
             this.btnBuscarU = new ReaLTaiizor.Controls.Button();
             this.txtBuscarUs = new ReaLTaiizor.Controls.TextBoxEdit();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -108,11 +92,25 @@
             this.txtMcedula = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit25 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit26 = new ReaLTaiizor.Controls.LabelEdit();
+            this.idusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rolusuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ciudad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnEliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlRegUss.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbvolver)).BeginInit();
             this.pnlLisUss.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbaddU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbaddU)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.pnlMuser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMvolver)).BeginInit();
@@ -557,28 +555,17 @@
             // pnlLisUss
             // 
             this.pnlLisUss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.pnlLisUss.Controls.Add(this.ptbaddU);
             this.pnlLisUss.Controls.Add(this.dtgUsuario);
+            this.pnlLisUss.Controls.Add(this.ptbaddU);
             this.pnlLisUss.Controls.Add(this.btnBuscarU);
             this.pnlLisUss.Controls.Add(this.txtBuscarUs);
             this.pnlLisUss.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
             this.pnlLisUss.Location = new System.Drawing.Point(12, 12);
             this.pnlLisUss.Name = "pnlLisUss";
             this.pnlLisUss.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlLisUss.Size = new System.Drawing.Size(1331, 464);
+            this.pnlLisUss.Size = new System.Drawing.Size(1454, 464);
             this.pnlLisUss.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.pnlLisUss.TabIndex = 1;
-            // 
-            // ptbaddU
-            // 
-            this.ptbaddU.Image = global::Presentacion.Properties.Resources.add;
-            this.ptbaddU.Location = new System.Drawing.Point(30, 22);
-            this.ptbaddU.Name = "ptbaddU";
-            this.ptbaddU.Size = new System.Drawing.Size(43, 38);
-            this.ptbaddU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbaddU.TabIndex = 87;
-            this.ptbaddU.TabStop = false;
-            this.ptbaddU.Click += new System.EventHandler(this.ptbaddU_Click);
             // 
             // dtgUsuario
             // 
@@ -604,160 +591,74 @@
             this.dtgUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Idusuario,
+            this.idusuario,
             this.cedula,
-            this.name,
+            this.nombre,
             this.apellido,
+            this.genero,
             this.telefono,
-            this.celu,
-            this.correo,
-            this.ciudad,
-            this.direccion,
+            this.celular,
             this.usuario,
-            this.rol,
+            this.rolusuario,
+            this.correo,
+            this.direccion,
+            this.ciudad,
             this.btnEditar,
             this.btnEliminar});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.IndianRed;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgUsuario.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.IndianRed;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgUsuario.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgUsuario.EnableHeadersVisualStyles = false;
             this.dtgUsuario.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtgUsuario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtgUsuario.Location = new System.Drawing.Point(57, 69);
+            this.dtgUsuario.Location = new System.Drawing.Point(62, 78);
             this.dtgUsuario.Name = "dtgUsuario";
             this.dtgUsuario.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgUsuario.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dtgUsuario.RowHeadersVisible = false;
             this.dtgUsuario.RowHeadersWidth = 86;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            this.dtgUsuario.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.dtgUsuario.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dtgUsuario.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
             this.dtgUsuario.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgUsuario.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.dtgUsuario.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(2);
             this.dtgUsuario.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dtgUsuario.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgUsuario.Size = new System.Drawing.Size(1241, 309);
-            this.dtgUsuario.TabIndex = 12;
+            this.dtgUsuario.Size = new System.Drawing.Size(1330, 309);
+            this.dtgUsuario.TabIndex = 88;
             this.dtgUsuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgUsuario_CellClick);
             // 
-            // Idusuario
+            // ptbaddU
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.Idusuario.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Idusuario.HeaderText = "Id";
-            this.Idusuario.Name = "Idusuario";
-            this.Idusuario.ReadOnly = true;
-            this.Idusuario.Visible = false;
-            this.Idusuario.Width = 39;
-            // 
-            // cedula
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.cedula.DefaultCellStyle = dataGridViewCellStyle4;
-            this.cedula.HeaderText = "Cedula";
-            this.cedula.Name = "cedula";
-            this.cedula.ReadOnly = true;
-            this.cedula.Width = 94;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Nombre";
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
-            // 
-            // apellido
-            // 
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            this.apellido.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            this.telefono.Width = 106;
-            // 
-            // celu
-            // 
-            this.celu.HeaderText = "Celular";
-            this.celu.Name = "celu";
-            this.celu.ReadOnly = true;
-            this.celu.Width = 93;
-            // 
-            // correo
-            // 
-            this.correo.HeaderText = "Correo";
-            this.correo.Name = "correo";
-            this.correo.ReadOnly = true;
-            this.correo.Width = 92;
-            // 
-            // ciudad
-            // 
-            this.ciudad.HeaderText = "Ciudad";
-            this.ciudad.Name = "ciudad";
-            this.ciudad.ReadOnly = true;
-            this.ciudad.Width = 94;
-            // 
-            // direccion
-            // 
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            this.direccion.Width = 110;
-            // 
-            // usuario
-            // 
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            this.usuario.Width = 99;
-            // 
-            // rol
-            // 
-            this.rol.HeaderText = "Tipo de Usuario";
-            this.rol.Name = "rol";
-            this.rol.ReadOnly = true;
-            this.rol.Width = 143;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.HeaderText = "Editar";
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.ReadOnly = true;
-            this.btnEditar.Width = 67;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.HeaderText = "Eliminar";
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.ReadOnly = true;
-            this.btnEliminar.Width = 81;
+            this.ptbaddU.Image = global::Presentacion.Properties.Resources.add;
+            this.ptbaddU.Location = new System.Drawing.Point(30, 22);
+            this.ptbaddU.Name = "ptbaddU";
+            this.ptbaddU.Size = new System.Drawing.Size(43, 38);
+            this.ptbaddU.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbaddU.TabIndex = 87;
+            this.ptbaddU.TabStop = false;
+            this.ptbaddU.Click += new System.EventHandler(this.ptbaddU_Click);
             // 
             // btnBuscarU
             // 
             this.btnBuscarU.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnBuscarU.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
             this.btnBuscarU.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarU.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.btnBuscarU.EnteredColor = System.Drawing.Color.Transparent;
             this.btnBuscarU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnBuscarU.Image = null;
@@ -765,6 +666,7 @@
             this.btnBuscarU.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
             this.btnBuscarU.Location = new System.Drawing.Point(467, 22);
             this.btnBuscarU.Name = "btnBuscarU";
+            this.btnBuscarU.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.btnBuscarU.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
             this.btnBuscarU.Size = new System.Drawing.Size(102, 40);
             this.btnBuscarU.TabIndex = 11;
@@ -822,7 +724,7 @@
             this.pnlMuser.Location = new System.Drawing.Point(12, 12);
             this.pnlMuser.Name = "pnlMuser";
             this.pnlMuser.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlMuser.Size = new System.Drawing.Size(752, 549);
+            this.pnlMuser.Size = new System.Drawing.Size(752, 471);
             this.pnlMuser.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.pnlMuser.TabIndex = 2;
             this.pnlMuser.Visible = false;
@@ -848,7 +750,7 @@
             this.btnActualizarus.FlatAppearance.BorderSize = 0;
             this.btnActualizarus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizarus.ForeColor = System.Drawing.Color.White;
-            this.btnActualizarus.Location = new System.Drawing.Point(311, 437);
+            this.btnActualizarus.Location = new System.Drawing.Point(336, 385);
             this.btnActualizarus.Name = "btnActualizarus";
             this.btnActualizarus.Size = new System.Drawing.Size(150, 40);
             this.btnActualizarus.TabIndex = 77;
@@ -1159,11 +1061,111 @@
             this.labelEdit26.TabIndex = 52;
             this.labelEdit26.Text = "Cedula:";
             // 
+            // idusuario
+            // 
+            this.idusuario.HeaderText = "Id";
+            this.idusuario.Name = "idusuario";
+            this.idusuario.ReadOnly = true;
+            this.idusuario.Width = 58;
+            // 
+            // cedula
+            // 
+            this.cedula.HeaderText = "Cedula";
+            this.cedula.Name = "cedula";
+            this.cedula.ReadOnly = true;
+            this.cedula.Width = 94;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            // 
+            // genero
+            // 
+            this.genero.HeaderText = "Genero";
+            this.genero.Name = "genero";
+            this.genero.ReadOnly = true;
+            this.genero.Width = 98;
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            this.telefono.Width = 106;
+            // 
+            // celular
+            // 
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            this.celular.Width = 93;
+            // 
+            // usuario
+            // 
+            this.usuario.HeaderText = "Usuario";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            this.usuario.Width = 99;
+            // 
+            // rolusuario
+            // 
+            this.rolusuario.HeaderText = "Rol";
+            this.rolusuario.Name = "rolusuario";
+            this.rolusuario.ReadOnly = true;
+            this.rolusuario.Width = 68;
+            // 
+            // correo
+            // 
+            this.correo.HeaderText = "Correo";
+            this.correo.Name = "correo";
+            this.correo.ReadOnly = true;
+            this.correo.Width = 92;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            this.direccion.Width = 110;
+            // 
+            // ciudad
+            // 
+            this.ciudad.HeaderText = "Ciudad";
+            this.ciudad.Name = "ciudad";
+            this.ciudad.ReadOnly = true;
+            this.ciudad.Width = 94;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.HeaderText = "Editar";
+            this.btnEditar.Image = global::Presentacion.Properties.Resources.draw;
+            this.btnEditar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.ReadOnly = true;
+            this.btnEditar.Width = 67;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.HeaderText = "Eliminar";
+            this.btnEliminar.Image = global::Presentacion.Properties.Resources.trash;
+            this.btnEliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.ReadOnly = true;
+            this.btnEliminar.Width = 81;
+            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1540, 944);
+            this.ClientSize = new System.Drawing.Size(1632, 1097);
             this.Controls.Add(this.pnlMuser);
             this.Controls.Add(this.pnlLisUss);
             this.Controls.Add(this.pnlRegUss);
@@ -1175,8 +1177,8 @@
             this.pnlRegUss.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbvolver)).EndInit();
             this.pnlLisUss.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbaddU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbaddU)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.pnlMuser.ResumeLayout(false);
             this.pnlMuser.PerformLayout();
@@ -1215,7 +1217,6 @@
         private ReaLTaiizor.Controls.LabelEdit labelEdit2;
         private ReaLTaiizor.Controls.LabelEdit labelEdit1;
         private ReaLTaiizor.Controls.Panel pnlLisUss;
-        private System.Windows.Forms.DataGridView dtgUsuario;
         private ReaLTaiizor.Controls.Button btnBuscarU;
         private ReaLTaiizor.Controls.TextBoxEdit txtBuscarUs;
         private System.Windows.Forms.PictureBox ptbaddU;
@@ -1245,17 +1246,19 @@
         private ReaLTaiizor.Controls.LabelEdit labelEdit26;
         private System.Windows.Forms.PictureBox ptbvolver;
         private System.Windows.Forms.PictureBox ptbMvolver;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Idusuario;
+        private System.Windows.Forms.DataGridView dtgUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idusuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn cedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genero;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn celu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ciudad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rolusuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ciudad;
         private System.Windows.Forms.DataGridViewImageColumn btnEditar;
         private System.Windows.Forms.DataGridViewImageColumn btnEliminar;
     }

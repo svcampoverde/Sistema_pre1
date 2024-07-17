@@ -9,7 +9,7 @@ namespace LogicDeNegocio.Dtos
         public int Id { get; set; }
         //para consulta
         public string CiudadDescripcion { get; set; }
-        public string Usuarios { get; set; }
+        public string UsuarioDescripcion { get; set; }
         public string RolUsuario { get; set; }
 
     }

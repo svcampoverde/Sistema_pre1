@@ -6,7 +6,8 @@ namespace LogicDeNegocio.Requests
 {
     public class UsuarioRequest
     {
-  
+        public int IdPersona { get; set; }
+
 
         [Required]
         public int IdCiudad { get; set; }

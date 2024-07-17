@@ -11,7 +11,8 @@ namespace LogicDeNegocio.Interfaces
 
         Task<UsuarioDto> ActualizarUsuarioAsync(int id, UsuarioRequest userDto);
         Task<List<UsuarioDto>> ObtenerUsuarios(string cedula);
-
+        Task<UsuarioDto> ObtenerUsuarioPorId(int id);
+        Task EliminarUsuario(int id);
         Task<bool> CambiarClaveAsync(int id, string nuevaClave);
     }
 }
