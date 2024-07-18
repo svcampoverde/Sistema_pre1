@@ -12,6 +12,7 @@ namespace LogicDeNegocio.Interfaces
         Task<ProductoDto> ActualizarProducto(int id, ProductoRequest request);
         Task EliminarProducto(int id);
         Task<ProductoDto> ObtenerProductoName(string nombre);
+        //Task<ProductoDto> RegistrarProductoConInventario(ProductoRequest productoRequest, InventarioRequest inventarioRequest, AtributoRequest atributoRequest, AtributoProductoRequest atributoproRequest);
         Task<List<ProductoDto>> ObtenerTodoslosProductos();
     }
 }

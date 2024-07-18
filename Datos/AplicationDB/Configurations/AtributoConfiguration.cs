@@ -33,8 +33,8 @@ namespace Datos.AplicationDB.Configurations
                 .IsRequired(); // Configuración de la columna IdCategoriaAtributo
             entity.Property(e => e.Activo)
               .HasColumnName("activo")
-              .HasColumnType("bit")
-              .IsRequired();
+              .HasColumnType("bit");
+              //.IsRequired();
             // Query Filter para propiedades activas
             entity.HasQueryFilter(e => e.Activo);
             entity.Property(e => e.FechaCreacionUTC)

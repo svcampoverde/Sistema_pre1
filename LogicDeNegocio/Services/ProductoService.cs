@@ -42,6 +42,46 @@ namespace LogicDeNegocio.Services
                 return productodto;
             }
         }
+        //public async Task<ProductoDto> RegistrarProductoConInventario(ProductoRequest productoRequest, AtributoRequest atributoRequest, InventarioRequest inventarioRequest, AtributoProductoRequest atributoproRequest)
+        //{
+        //    using (var context = _dbContextFactory())
+        //    using (var transaction = await context.Database.BeginTransactionAsync())
+        //    {
+        //        try
+        //        {
+        //            var producto = _mapper.Map<Producto>(productoRequest);
+        //            await context.Productos.AddAsync(producto);
+        //            await context.SaveChangesAsync();
+
+        //            var atributo = _mapper.Map<Atributo>(atributoRequest);
+        //            atributo.IdCategoriaAtributo = producto.Id; // Asignar el ID del producto recién creado
+        //            await context.Atributos.AddAsync(atributo);
+        //            await context.SaveChangesAsync();
+
+        //            var inventario = _mapper.Map<Inventario>(inventarioRequest);
+        //            inventario.IdProducto = producto.Id; // Asignar el ID del producto recién creado
+        //            await context.Inventarios.AddAsync(inventario);
+        //            await context.SaveChangesAsync();
+
+        //            var atri_producto = _mapper.Map<AtributoProducto>(atributoproRequest);
+        //            atri_producto.IdProducto = producto.Id; // Asignar el ID del producto recién creado
+        //            atri_producto.IdAtributo = atributo.Id;
+        //            await context.AtributoProductos.AddAsync(atri_producto);
+        //           // await context.CategoriaAtributos.AddAsync(atri_producto);
+        //            await context.SaveChangesAsync();
+
+        //            await transaction.CommitAsync();
+
+        //            return _mapper.Map<ProductoDto>(producto);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            await transaction.RollbackAsync();
+        //            throw new Exception("Error al registrar el producto y su inventario: " + ex.Message, ex);
+        //        }
+        //    }
+        //}
+
         public async Task<int> RegistrarProductos(ProductoRequest request)
         {
             var producto = new Producto

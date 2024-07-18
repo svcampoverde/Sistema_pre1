@@ -22,10 +22,10 @@ namespace Datos.AplicationDB.Configurations
                 .HasColumnName("nombre")
                 .HasColumnType("VARCHAR(200)")
                 .IsRequired(); // Configuración de la columna Descripcion
-            
+
             entity.Property(e => e.Descripcion)
-                .HasColumnName("descripcion")
-                .IsRequired(); // Configuración de la columna Descripcion
+                .HasColumnName("descripcion");
+                //.IsRequired(); // Configuración de la columna Descripcion
 
             entity.Property(e => e.Precio)
                 .HasColumnName("precio")
