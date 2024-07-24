@@ -1,14 +1,12 @@
-﻿using LogicDeNegocio.Interfaces;
-using System.Threading.Tasks;
-using System;
-using System.Windows.Forms;
-using Microsoft.EntityFrameworkCore.Internal;
-using DevComponents.DotNetBar.Validator;
-using LogicDeNegocio;
-using LogicDeNegocio.Requests;
+﻿using LogicDeNegocio;
 using LogicDeNegocio.Dtos;
-using Datos.Models;
+using LogicDeNegocio.Interfaces;
+using LogicDeNegocio.Requests;
+using Microsoft.EntityFrameworkCore.Internal;
+using System;
+using System.Threading.Tasks;
 using System.Transactions;
+using System.Windows.Forms;
 
 namespace Presentacion.ModuloProducto
 {
@@ -32,7 +30,7 @@ namespace Presentacion.ModuloProducto
             _atributoProductoService = atributoProductoService;
             _atributo = atributo;
             InitializeComponent();
-            
+
         }
         private async Task LlenarComboTipoProducto()
         {
@@ -95,56 +93,56 @@ namespace Presentacion.ModuloProducto
                 //        productoexist.Precio = Convert.ToDecimal(txtpreciovent.Text);
                 //        productoexist.IdCategoriaProducto = cmbCatproducto.SelectedIndex;
                 //        productoexist.IdTipoProducto = cmbtipoProducto.SelectedIndex;
-               
+
                 //    await _productoService.ActualizarProducto(idproducto, productoexist);
                 //        dto.Nombre= txtTamanio.Text; 
                 //        dto.Unidades= txtPeso.Text;
                 //        await _atributo.ActualizarAtributo(dto.Id, dto);
                 //}
-               // else
-               if(Validar())
+                // else
+                if (Validar())
                 {
                     using (var transaction = new System.Transactions.TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                     {
                         ProductoRequest pro = new ProductoRequest()
-                    {
-                        
-                        Nombre = txtProducto.Text,
-                        Descripcion = txtDescripcionproducto.Text,
-                        Precio = Convert.ToDecimal(txtpreciovent.Text),
-                        IdCategoriaProducto = cmbCatproducto.SelectedIndex,
-                        IdTipoProducto = cmbtipoProducto.SelectedIndex
-                    };
-
-                    ProductoDto Idproducto = await _productoService.RegistrarProducto(pro);
-                    int idpro = Idproducto.Id;
-
-                    AtributoRequest request = new AtributoRequest()
-                    {
-                        
-                        Nombre = txtPeso.Text,
-                        Unidades = txtTamanio.Text,
-                        IdCategoriaAtributo = idpro,
-                        
-                    };
-                    AtributoDto atribut = await _atributo.RegistrarAtributo(request);
-
-                        InventarioRequest inv = new InventarioRequest()
                         {
-                            Digitador = txtUsmodificado.Text,
-                            TipoMaterial = cmbTipomaterial.Texts,
-                            Ubicacion = txtUbicacion.Text,
-                            Cantidad = Convert.ToInt32(txtCantidad.Text),
-                            EstadoProducto = cmbEstproducto.Texts,
-                            PrecioCompra = Convert.ToDecimal(txtprecosto.Text),
-                            PrecioVenta = Convert.ToDecimal(txtpreciovent.Text),
-                            ProductoId = idpro
-                            
+
+                            Nombre = txtProducto.Text,
+                            Descripcion = txtDescripcionproducto.Text,
+                            Precio = Convert.ToDecimal(txtpreciovent.Text),
+                            IdCategoriaProducto = cmbCatproducto.SelectedIndex,
+                            IdTipoProducto = cmbtipoProducto.SelectedIndex
                         };
 
-                        await _inventarioService.RegistrarInventario(inv);
+                        ProductoDto Idproducto = await _productoService.RegistrarProducto(pro);
+                        int idpro = Idproducto.Id;
 
-                        
+                        AtributoRequest request = new AtributoRequest()
+                        {
+
+                            Nombre = txtPeso.Text,
+                            Unidades = txtTamanio.Text,
+                            IdCategoriaAtributo = idpro,
+
+                        };
+                        AtributoDto atribut = await _atributo.RegistrarAtributo(request);
+
+                        //InventarioRequest inv = new InventarioRequest()
+                        //{
+                        //    Digitador = txtUsmodificado.Text,
+                        //    TipoMaterial = cmbTipomaterial.Texts,
+                        //    Ubicacion = txtUbicacion.Text,
+                        //    Cantidad = Convert.ToInt32(txtCantidad.Text),
+                        //    EstadoProducto = cmbEstproducto.Texts,
+                        //    PrecioCompra = Convert.ToDecimal(txtprecosto.Text),
+                        //    PrecioVenta = Convert.ToDecimal(txtpreciovent.Text),
+                        //    ProductoId = idpro
+
+                        //};
+
+                        //await _inventarioService.RegistrarInventario(inv);
+
+
                         int atributoId = atribut.Id;
                         // Crear el objeto AtributoProductoRequest
                         AtributoProductoRequest atriRequest = new AtributoProductoRequest()
@@ -155,11 +153,12 @@ namespace Presentacion.ModuloProducto
                         };
 
                         await _atributoProductoService.RegistrarAtributoProducto(atriRequest);
-                     //   await _productoService.RegistrarProductoConInventario(pro, inv, request, atriRequest);
+                        //   await _productoService.RegistrarProductoConInventario(pro, inv, request, atriRequest);
                         MessageBox.Show("Producto y atributos registrados con éxito.");
-
-                      //  MessageBox.Show("registro guardado con exito");
-                }
+                        btnedpecificaciones.Visible = false;
+                        pnlespecificaciones.Visible=true;
+                        //  MessageBox.Show("registro guardado con exito");
+                    }
                 }
             }
             catch (ExceptionSistema ex)
@@ -172,55 +171,56 @@ namespace Presentacion.ModuloProducto
 
         private async void btnGuardarprove_Click(object sender, EventArgs e)
         {
-           
-            //try
-            //{
-            //    if (!String.IsNullOrEmpty(txtUsmodificado.Text))
-            //    {
-            //        var productoExist = await _productoService.ObtenerProductoName(txtProducto.Text);
 
-            //        if (productoExist != null)
-            //        {
-            //            int productoId = productoExist.Id;
-            //            InventarioRequest inv = new InventarioRequest()
-            //            {
-            //                Digitador = txtUsmodificado.Text,
-            //                TipoMaterial = cmbTipomaterial.Texts,
-            //                Ubicacion = txtUbicacion.Text,
-            //                Cantidad = Convert.ToInt32(txtCantidad.Text),
-            //                EstadoProducto = cmbEstproducto.Texts,
-            //                PrecioCompra = Convert.ToDecimal(txtprecosto.Text),
-            //                PrecioVenta = Convert.ToDecimal(txtpreciovent.Text),
-            //                ProductoId = productoId
-            //            };
+            try
+            {
+                if (!String.IsNullOrEmpty(txtUsmodificado.Text))
+                {
+                    var productoExist = await _productoService.ObtenerProductoName(txtProducto.Text);
 
-            //            await _inventarioService.RegistrarInventario(inv);
+                    if (productoExist != null)
+                    {
 
-            //            AtributoDto dto = new AtributoDto();
-            //            int atributoId = dto.Id;
-            //            MessageBox.Show("valor id" + dto);
-            //            // Crear el objeto AtributoProductoRequest
-            //            AtributoProductoRequest atributoRequest = new AtributoProductoRequest()
-            //            {
-            //                IdProducto = productoId,
-            //                IdAtributo = atributoId,
-            //                Valor = txtEspecificacion.Text
-            //            };
+                        int productoId = productoExist.Id;
+                        InventarioRequest inv = new InventarioRequest()
+                        {
+                            Digitador = txtUsmodificado.Text,
+                            TipoMaterial = cmbTipomaterial.Texts,
+                            Ubicacion = txtUbicacion.Text,
+                            Cantidad = Convert.ToInt32(txtCantidad.Text),
+                            EstadoProducto = cmbEstproducto.Texts,
+                            PrecioCompra = Convert.ToDecimal(txtprecosto.Text),
+                            PrecioVenta = Convert.ToDecimal(txtpreciovent.Text),
+                            ProductoId = productoId
+                        };
 
-            //            await _atributoProductoService.RegistrarAtributoProducto(atributoRequest);
-            //            MessageBox.Show("Producto y atributos registrados con éxito.");
-            //        }
-            //        else
-            //        {
-            //            throw new ExceptionSistema("Error al registrar el producto. ID no válido.");
-            //        }
+                        await _inventarioService.RegistrarInventario(inv);
 
-            //    }
-            //}
-            //catch (ExceptionSistema ex)
-            //{
-            //    MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
+                        //AtributoDto dto = new AtributoDto();
+                        //int atributoId = dto.Id;
+                        //MessageBox.Show("valor id" + dto);
+                        //// Crear el objeto AtributoProductoRequest
+                        //AtributoProductoRequest atributoRequest = new AtributoProductoRequest()
+                        //{
+                        //    IdProducto = productoId,
+                        //    IdAtributo = atributoId,
+                        //    Valor = txtEspecificacion.Text
+                        //};
+
+                        //await _atributoProductoService.RegistrarAtributoProducto(atributoRequest);
+                        //MessageBox.Show("Producto y atributos registrados con éxito.");
+                    }
+                    else
+                    {
+                        throw new ExceptionSistema("Error al registrar el producto. ID no válido.");
+                    }
+
+                }
+            }
+            catch (ExceptionSistema ex)
+            {
+                MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
         private bool Validar()
@@ -241,7 +241,7 @@ namespace Presentacion.ModuloProducto
 
         private void txtDescripcionproducto_TextChanged(object sender, EventArgs e)
         {
-           // MessageBox.Show("edita");
+            // MessageBox.Show("edita");
         }
 
         private async void txtProducto_TextChanged(object sender, EventArgs e)
@@ -256,13 +256,13 @@ namespace Presentacion.ModuloProducto
                         txtDescripcionproducto.Text = productoExist.Descripcion;
                         txtpreciovent.Text = productoExist.Precio.ToString();
                         cmbCatproducto.SelectedIndex = productoExist.IdCategoriaProducto;
-                      //  Convert.ToInt32(cmbtipoProducto.SelectedIndex) = productoExist.IdTipoProducto;
-                     
+                        //  Convert.ToInt32(cmbtipoProducto.SelectedIndex) = productoExist.IdTipoProducto;
+
                     }
                     else
                     {
-                        txtDescripcionproducto.Text="";
-                        txtpreciovent.Text="";
+                        txtDescripcionproducto.Text = "";
+                        txtpreciovent.Text = "";
                         cmbCatproducto.SelectedIndex = -1;
                         cmbtipoProducto.SelectedIndex = -1;
 

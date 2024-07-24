@@ -5,12 +5,6 @@ using LogicDeNegocio.Interfaces;
 using LogicDeNegocio.Requests;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -116,7 +110,7 @@ namespace Presentacion.ModuloEmpresa
                                 txtMtipemp.Text = dtgTipEmpresa.Rows[e.RowIndex].Cells["tipemp"].Value.ToString();
                                 pnlRegistrotip.Visible = false;
                                 pnlModificatipo.Visible = true;
-                                
+
 
                             }
                             else
@@ -176,6 +170,6 @@ namespace Presentacion.ModuloEmpresa
             LlenarDataGrid(txtBtipempresa.Text);
         }
 
-       
+
     }
 }

@@ -3,7 +3,6 @@ using LogicDeNegocio.Dtos;
 using LogicDeNegocio.Interfaces;
 using LogicDeNegocio.Requests;
 using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Query.Internal;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -116,7 +115,7 @@ namespace Presentacion.ModuloEmpleado
             };
             PersonaDto idperson = await _personaService.RegistrarPersona(request);
 
-            
+
             EmpleadoRequest empleado = new EmpleadoRequest()
             {
                 IdPersona = idperson.Id,
@@ -193,7 +192,7 @@ namespace Presentacion.ModuloEmpleado
                             Id = Convert.ToInt32(dtgEmpleado.Rows[e.RowIndex].Cells["idempleado"].Value);
 
                             EmpleadoDto dto = await _empleadoService.ObtenerEmpleadoPorId(Id);
-                            
+
                             await _empleadoService.EliminarEmpleado(dto.Id);
                             await _personaService.EliminarPersona(dto.IdPersona);
                             LlenarDataGrid("");
@@ -210,43 +209,44 @@ namespace Presentacion.ModuloEmpleado
 
         private async void btnModijob_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 //if(!String.IsNullOrEmpty(txtApellido.Text))
                 //{
-                    EmpleadoDto empleadoid = await _empleadoService.ObtenerEmpleadoPorId(Id);
-                    PersonaRequest request = new PersonaRequest()
-                    {
-                        Cedula = txtMCedula.Text,
-                        Nombre = txtMnombre.Text,
-                        Apellido = txtMApellidoem.Text,
-                        Telefono = txtMTelefono.Text,
-                        Celular=txtMCelular.Text,
-                        Correo=txtMCorreo.Text,
-                        Direccion=txtMdireccion.Text,
-                        Genero=cmbMgeneroj.Text,
+                EmpleadoDto empleadoid = await _empleadoService.ObtenerEmpleadoPorId(Id);
+                PersonaRequest request = new PersonaRequest()
+                {
+                    Cedula = txtMCedula.Text,
+                    Nombre = txtMnombre.Text,
+                    Apellido = txtMApellidoem.Text,
+                    Telefono = txtMTelefono.Text,
+                    Celular = txtMCelular.Text,
+                    Correo = txtMCorreo.Text,
+                    Direccion = txtMdireccion.Text,
+                    Genero = cmbMgeneroj.Text,
                     //    IdCiudad=cmbMCiudadjob.SelectedIndex
 
-                    };
-                    await _personaService.ActualizarPersona(empleadoid.IdPersona, request);
+                };
+                await _personaService.ActualizarPersona(empleadoid.IdPersona, request);
 
-                    EmpleadoRequest empleado = new EmpleadoRequest
-                    {
-                        Empresa=cmbMempj.Texts,
-                     //   IdCiudad = cmbMCiudadjob.SelectedIndex,
-                        FechaContrato = Convert.ToDateTime(txtMfechacontrat.Text),
-                        Sueldo = Convert.ToDecimal(txtMsalario.Text),
-                        
-                    };
-                    await _empleadoService.ActualizarEmpleado(empleadoid.Id, empleado);
-                    
+                EmpleadoRequest empleado = new EmpleadoRequest
+                {
+                    Empresa = cmbMempj.Texts,
+                    //   IdCiudad = cmbMCiudadjob.SelectedIndex,
+                    FechaContrato = Convert.ToDateTime(txtMfechacontrat.Text),
+                    Sueldo = Convert.ToDecimal(txtMsalario.Text),
 
-                    MessageBox.Show("Datos actualizados con exito.");
-                    pnlMjob.Visible = false;
-                    pnlListJob.Visible = true;
-                    LlenarDataGrid("");
-              //  }
-            }catch (ExceptionSistema ex)
+                };
+                await _empleadoService.ActualizarEmpleado(empleadoid.Id, empleado);
+
+
+                MessageBox.Show("Datos actualizados con exito.");
+                pnlMjob.Visible = false;
+                pnlListJob.Visible = true;
+                LlenarDataGrid("");
+                //  }
+            }
+            catch (ExceptionSistema ex)
             {
                 MessageBox.Show("Se produjo un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -255,7 +255,7 @@ namespace Presentacion.ModuloEmpleado
         private void ptbaddjob_Click(object sender, EventArgs e)
         {
             pnlRegjob.Visible = true;
-            pnlListJob.Visible=false;
+            pnlListJob.Visible = false;
         }
 
         private void txtBjob_TextChanged(object sender, EventArgs e)
@@ -270,14 +270,14 @@ namespace Presentacion.ModuloEmpleado
 
         private void ptblefRtjob_Click(object sender, EventArgs e)
         {
-            pnlListJob.Visible=true;
-            pnlRegjob.Visible=false;
+            pnlListJob.Visible = true;
+            pnlRegjob.Visible = false;
         }
 
         private void ptbmjob_Click(object sender, EventArgs e)
         {
             pnlListJob.Visible = true;
-            pnlMjob.Visible=false;
+            pnlMjob.Visible = false;
         }
     }
 }

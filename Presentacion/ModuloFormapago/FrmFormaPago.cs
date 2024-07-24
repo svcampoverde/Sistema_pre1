@@ -1,16 +1,9 @@
-﻿using DevComponents.DotNetBar.Validator;
-using LogicDeNegocio;
+﻿using LogicDeNegocio;
 using LogicDeNegocio.Dtos;
 using LogicDeNegocio.Interfaces;
 using LogicDeNegocio.Requests;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Presentacion.ModuloPago
@@ -77,7 +70,7 @@ namespace Presentacion.ModuloPago
             {
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-          
+
         }
         private bool Validar()
         {
@@ -87,14 +80,14 @@ namespace Presentacion.ModuloPago
                 campo = false;
                 errorProvider1.SetError(txtfpago, "Ingrese una especificación de forma de pago");
             }
-            if(txtfpDescrpcion.Text == "")
+            if (txtfpDescrpcion.Text == "")
             {
                 campo = false;
                 errorProvider1.SetError(txtMfpago, "Ingrese una especificación de forma de pago");
             }
             return campo;
         }
-        private void LimpiarCampos() 
+        private void LimpiarCampos()
         {
             txtfpago.Text = string.Empty;
             txtfpDescrpcion.Text = string.Empty;
@@ -155,7 +148,7 @@ namespace Presentacion.ModuloPago
                 {
                     Nombre = txtMfpago.Text,
                     Descripcion = txtMfpdescripcion.Text,
-                  
+
                 };
                 await _service.ActualizarFormaPago(Id, request);
                 MessageBox.Show("Datos actualizados con exito.");
@@ -168,8 +161,8 @@ namespace Presentacion.ModuloPago
         private void ptbaddfpago_Click(object sender, EventArgs e)
         {
             pnlRegfPago.Visible = true;
-            pnlListFpago.Visible=false;
-        //    pnlMfpago.Visible = false;
+            pnlListFpago.Visible = false;
+            //    pnlMfpago.Visible = false;
         }
 
         private void ptbrfpago_Click(object sender, EventArgs e)

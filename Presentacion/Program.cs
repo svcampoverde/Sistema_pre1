@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Presentacion.ModuloLogin;
+using System;
+//using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using Unity;
 
@@ -10,12 +12,14 @@ namespace Presentacion
         /// Punto de entrada principal para la aplicación.
         /// </summary>
         [STAThread]
+        [Obsolete]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             // Resolver el formulario principal con Unity
-            var form = UnityConfig.Container.Resolve<FrmIPrincipal>();
+             // FrmLogin form = UnityConfig.Container.Resolve<FrmLogin>();
+            FrmIPrincipal form = UnityConfig.Container.Resolve<FrmIPrincipal>();
             Application.Run(form);
             // Application.Run(new FRMPrincipal());
         }

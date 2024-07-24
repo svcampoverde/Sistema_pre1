@@ -1,15 +1,10 @@
-﻿using Datos.Models;
-using LogicDeNegocio;
+﻿using LogicDeNegocio;
 using LogicDeNegocio.Dtos;
 using LogicDeNegocio.Interfaces;
 using LogicDeNegocio.Requests;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,7 +20,7 @@ namespace Presentacion.ModuloServicio
             _eventoService = eventoService;
             _ciudadService = ciudadService ?? throw new ArgumentNullException(nameof(ciudadService));
             InitializeComponent();
-            
+
         }
         private async Task LlenarComboBoxCiudades()
         {
@@ -58,7 +53,7 @@ namespace Presentacion.ModuloServicio
                     dtgEvento.Rows.Add(1);
                     dtgEvento.Rows[cont].Cells[0].Value = evento.Id.ToString();
                     dtgEvento.Rows[cont].Cells[1].Value = evento.FechaEvento.ToString();
-                    dtgEvento.Rows[cont].Cells[2].Value= evento.Nombre.ToString();
+                    dtgEvento.Rows[cont].Cells[2].Value = evento.Nombre.ToString();
                     dtgEvento.Rows[cont].Cells[3].Value = evento.Descripcion.ToString();
                     dtgEvento.Rows[cont].Cells[4].Value = evento.Artista.ToString();
                     dtgEvento.Rows[cont].Cells[5].Value = evento.Promotor.ToString();
@@ -87,13 +82,13 @@ namespace Presentacion.ModuloServicio
         {
             EventoRequest eventoRequest = new EventoRequest()
             {
-                Nombre =txtRevento.Text,
+                Nombre = txtRevento.Text,
                 Descripcion = txtlocalevento.Text,
                 FechaEvento = Convert.ToDateTime(txtdateevento.Text),
                 Promotor = txtPromotor.Text,
                 Artista = txtArtista.Text,
-                Direccion = txtlocalevento.Text, 
-                IdCiudad= Convert.ToInt32(cmbCiudadevento.SelectedValue),
+                Direccion = txtlocalevento.Text,
+                IdCiudad = Convert.ToInt32(cmbCiudadevento.SelectedValue),
             };
             await _eventoService.RegistrarEvento(eventoRequest);
             LimpiarCampos();
@@ -116,8 +111,8 @@ namespace Presentacion.ModuloServicio
 
         private void ptbaddevento_Click(object sender, EventArgs e)
         {
-            pnlRegistroevento.Visible=true;
-            pnlListEvento.Visible=false;
+            pnlRegistroevento.Visible = true;
+            pnlListEvento.Visible = false;
         }
 
         private async void dtgEvento_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -143,7 +138,7 @@ namespace Presentacion.ModuloServicio
                                 txtMartistaevent.Text = dtgEvento.Rows[e.RowIndex].Cells["artista"].Value.ToString();
                                 txtMpromotor.Text = dtgEvento.Rows[e.RowIndex].Cells["promotor"].Value.ToString();
                                 txtMlocalevento.Text = dtgEvento.Rows[e.RowIndex].Cells["local"].Value.ToString();
-                              //  cmbMciudevento.Texts = dtgEvento.Rows[e.RowIndex].Cells["ciu"].Value.ToString();
+                                //  cmbMciudevento.Texts = dtgEvento.Rows[e.RowIndex].Cells["ciu"].Value.ToString();
                                 pnlListEvento.Visible = false;
                                 pnlMevento.Visible = true;
                                 cmbMciudevento.Visible = false;
@@ -203,8 +198,8 @@ namespace Presentacion.ModuloServicio
 
         private void ptbIRevento_Click(object sender, EventArgs e)
         {
-            pnlListEvento.Visible=true;
-            pnlRegistroevento.Visible=false;
+            pnlListEvento.Visible = true;
+            pnlRegistroevento.Visible = false;
         }
 
     }

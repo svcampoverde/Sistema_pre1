@@ -34,9 +34,9 @@ namespace Presentacion.ModuloEmpresa
                     combo.DisplayMember = "Descripcion";
                     combo.ValueMember = "Id";
 
-                 }
-                    
                 }
+
+            }
             catch (ExceptionSistema ex)
             {
                 MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,9 +105,9 @@ namespace Presentacion.ModuloEmpresa
             pnlRegEmp.Visible = true;
         }
 
-        private async  void btnGuardarE_Click(object sender, EventArgs e)
+        private async void btnGuardarE_Click(object sender, EventArgs e)
         {
-           try 
+            try
             {
                 if (Validar())
                 {
@@ -183,7 +183,7 @@ namespace Presentacion.ModuloEmpresa
             pnlRegEmp.Visible = false;
             pnlMempresa.Visible = false;
         }
-        private async  void dtgEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
+        private async void dtgEmpresa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             try

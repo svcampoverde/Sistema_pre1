@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Presentacion.ModuloCiudad
 {
-    public partial class FrmCiudad : MaterialSkin.Controls.MaterialForm
+    public partial class FrmCiudad : Form
     {
         private readonly SistemapContext _sistemapContext;
 
@@ -28,10 +28,10 @@ namespace Presentacion.ModuloCiudad
                     MessageBox.Show("No se encontraron provincias para cargar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                cmbProvincias.Items.Clear();
-                cmbProvincias.DataSource = list;
-                cmbProvincias.DisplayMember = "Descripcionp";
-                cmbProvincias.ValueMember = "Idprovincia";
+                //cmbProvincias.Items.Clear();
+                //cmbProvincias.DataSource = list;
+                //cmbProvincias.DisplayMember = "Descripcionp";
+                //cmbProvincias.ValueMember = "Idprovincia";
 
             }
             catch (ExceptionSistema ex)
@@ -53,8 +53,8 @@ namespace Presentacion.ModuloCiudad
                 {
 
                     Ciudad ciu = new Ciudad();
-                    ciu.Nombre = ciudad;
-                    ciu.IdProvincia = idp;
+                    //ciu.Nombre = ciudad;
+                    //ciu.IdProvincia = idp;
                     _sistemapContext.Add(ciu);
                     _sistemapContext.SaveChanges();
                     MessageBox.Show("Registro de ciudad realizada con éxito");
@@ -82,7 +82,7 @@ namespace Presentacion.ModuloCiudad
 
         private void Limpiar()
         {
-            txtCiudad.Clear();
+            txtCiudad.Text ="";
         }
 
         private void FrmCiudad_Load(object sender, EventArgs e)

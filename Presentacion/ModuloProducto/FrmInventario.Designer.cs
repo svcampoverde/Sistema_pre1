@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInventario));
             this.pnlRegInv = new ReaLTaiizor.Controls.Panel();
             this.cmbtipoProducto = new Presentacion.btnpersonalizados.PersonComboBox();
@@ -113,6 +113,7 @@
             this.labelEdit27 = new ReaLTaiizor.Controls.LabelEdit();
             this.btnActualizarinv = new Presentacion.btnpersonalizados.Botonper();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pnlespecificaciones = new System.Windows.Forms.Panel();
             this.pnlRegInv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbleftrinv)).BeginInit();
             this.pnlListInv.SuspendLayout();
@@ -121,11 +122,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbMinv)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.pnlespecificaciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlRegInv
             // 
             this.pnlRegInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.pnlRegInv.Controls.Add(this.pnlespecificaciones);
             this.pnlRegInv.Controls.Add(this.cmbtipoProducto);
             this.pnlRegInv.Controls.Add(this.labelEdit19);
             this.pnlRegInv.Controls.Add(this.btnedpecificaciones);
@@ -133,36 +136,23 @@
             this.pnlRegInv.Controls.Add(this.labelEdit28);
             this.pnlRegInv.Controls.Add(this.txtTamanio);
             this.pnlRegInv.Controls.Add(this.labelEdit29);
-            this.pnlRegInv.Controls.Add(this.txtUbicacion);
-            this.pnlRegInv.Controls.Add(this.labelEdit20);
-            this.pnlRegInv.Controls.Add(this.cmbEstproducto);
             this.pnlRegInv.Controls.Add(this.txtEspecificacion);
             this.pnlRegInv.Controls.Add(this.labelEdit22);
             this.pnlRegInv.Controls.Add(this.txtpreciovent);
             this.pnlRegInv.Controls.Add(this.labelEdit18);
             this.pnlRegInv.Controls.Add(this.ptbleftrinv);
             this.pnlRegInv.Controls.Add(this.cmbCatproducto);
-            this.pnlRegInv.Controls.Add(this.cmbTipomaterial);
-            this.pnlRegInv.Controls.Add(this.btnGuardarprove);
-            this.pnlRegInv.Controls.Add(this.txtprecosto);
-            this.pnlRegInv.Controls.Add(this.txtCantidad);
             this.pnlRegInv.Controls.Add(this.txtDescripcionproducto);
-            this.pnlRegInv.Controls.Add(this.txtUsmodificado);
             this.pnlRegInv.Controls.Add(this.txtProducto);
             this.pnlRegInv.Controls.Add(this.labelEdit8);
-            this.pnlRegInv.Controls.Add(this.labelEdit7);
             this.pnlRegInv.Controls.Add(this.labelEdit6);
-            this.pnlRegInv.Controls.Add(this.labelEdit5);
-            this.pnlRegInv.Controls.Add(this.labelEdit4);
-            this.pnlRegInv.Controls.Add(this.labelEdit3);
-            this.pnlRegInv.Controls.Add(this.labelEdit2);
             this.pnlRegInv.Controls.Add(this.labelEdit1);
             this.pnlRegInv.Controls.Add(this.labelEdit30);
             this.pnlRegInv.EdgeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
             this.pnlRegInv.Location = new System.Drawing.Point(23, 12);
             this.pnlRegInv.Name = "pnlRegInv";
             this.pnlRegInv.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlRegInv.Size = new System.Drawing.Size(906, 624);
+            this.pnlRegInv.Size = new System.Drawing.Size(906, 584);
             this.pnlRegInv.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.pnlRegInv.TabIndex = 1;
             this.pnlRegInv.Text = "panel2";
@@ -283,12 +273,12 @@
             this.txtUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtUbicacion.ForeColor = System.Drawing.Color.White;
             this.txtUbicacion.Image = null;
-            this.txtUbicacion.Location = new System.Drawing.Point(323, 428);
+            this.txtUbicacion.Location = new System.Drawing.Point(606, 121);
             this.txtUbicacion.MaxLength = 32767;
             this.txtUbicacion.Multiline = false;
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.ReadOnly = false;
-            this.txtUbicacion.Size = new System.Drawing.Size(137, 42);
+            this.txtUbicacion.Size = new System.Drawing.Size(228, 42);
             this.txtUbicacion.TabIndex = 102;
             this.txtUbicacion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUbicacion.UseSystemPasswordChar = false;
@@ -299,7 +289,7 @@
             this.labelEdit20.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit20.ForeColor = System.Drawing.Color.White;
-            this.labelEdit20.Location = new System.Drawing.Point(243, 441);
+            this.labelEdit20.Location = new System.Drawing.Point(499, 130);
             this.labelEdit20.Name = "labelEdit20";
             this.labelEdit20.Size = new System.Drawing.Size(83, 20);
             this.labelEdit20.TabIndex = 101;
@@ -325,7 +315,7 @@
             "Desuso"});
             this.cmbEstproducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
             this.cmbEstproducto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbEstproducto.Location = new System.Drawing.Point(606, 371);
+            this.cmbEstproducto.Location = new System.Drawing.Point(606, 73);
             this.cmbEstproducto.MinimumSize = new System.Drawing.Size(200, 42);
             this.cmbEstproducto.Name = "cmbEstproducto";
             this.cmbEstproducto.Size = new System.Drawing.Size(228, 42);
@@ -338,7 +328,7 @@
             this.txtEspecificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEspecificacion.ForeColor = System.Drawing.Color.White;
             this.txtEspecificacion.Image = null;
-            this.txtEspecificacion.Location = new System.Drawing.Point(606, 419);
+            this.txtEspecificacion.Location = new System.Drawing.Point(258, 222);
             this.txtEspecificacion.MaxLength = 32767;
             this.txtEspecificacion.Multiline = false;
             this.txtEspecificacion.Name = "txtEspecificacion";
@@ -354,7 +344,7 @@
             this.labelEdit22.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit22.ForeColor = System.Drawing.Color.White;
-            this.labelEdit22.Location = new System.Drawing.Point(522, 432);
+            this.labelEdit22.Location = new System.Drawing.Point(215, 236);
             this.labelEdit22.Name = "labelEdit22";
             this.labelEdit22.Size = new System.Drawing.Size(50, 20);
             this.labelEdit22.TabIndex = 97;
@@ -439,7 +429,7 @@
             "Hierro"});
             this.cmbTipomaterial.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
             this.cmbTipomaterial.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbTipomaterial.Location = new System.Drawing.Point(606, 324);
+            this.cmbTipomaterial.Location = new System.Drawing.Point(606, 23);
             this.cmbTipomaterial.MinimumSize = new System.Drawing.Size(200, 42);
             this.cmbTipomaterial.Name = "cmbTipomaterial";
             this.cmbTipomaterial.Size = new System.Drawing.Size(228, 42);
@@ -457,7 +447,7 @@
             this.btnGuardarprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarprove.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarprove.Location = new System.Drawing.Point(364, 521);
+            this.btnGuardarprove.Location = new System.Drawing.Point(336, 193);
             this.btnGuardarprove.Name = "btnGuardarprove";
             this.btnGuardarprove.Size = new System.Drawing.Size(150, 40);
             this.btnGuardarprove.TabIndex = 78;
@@ -472,7 +462,7 @@
             this.txtprecosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtprecosto.ForeColor = System.Drawing.Color.White;
             this.txtprecosto.Image = null;
-            this.txtprecosto.Location = new System.Drawing.Point(136, 428);
+            this.txtprecosto.Location = new System.Drawing.Point(136, 130);
             this.txtprecosto.MaxLength = 32767;
             this.txtprecosto.Multiline = false;
             this.txtprecosto.Name = "txtprecosto";
@@ -488,7 +478,7 @@
             this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCantidad.ForeColor = System.Drawing.Color.White;
             this.txtCantidad.Image = null;
-            this.txtCantidad.Location = new System.Drawing.Point(136, 380);
+            this.txtCantidad.Location = new System.Drawing.Point(136, 82);
             this.txtCantidad.MaxLength = 32767;
             this.txtCantidad.Multiline = false;
             this.txtCantidad.Name = "txtCantidad";
@@ -521,7 +511,7 @@
             this.txtUsmodificado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtUsmodificado.ForeColor = System.Drawing.Color.White;
             this.txtUsmodificado.Image = null;
-            this.txtUsmodificado.Location = new System.Drawing.Point(136, 326);
+            this.txtUsmodificado.Location = new System.Drawing.Point(136, 32);
             this.txtUsmodificado.MaxLength = 32767;
             this.txtUsmodificado.Multiline = false;
             this.txtUsmodificado.Name = "txtUsmodificado";
@@ -566,7 +556,7 @@
             this.labelEdit7.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit7.ForeColor = System.Drawing.Color.White;
-            this.labelEdit7.Location = new System.Drawing.Point(33, 441);
+            this.labelEdit7.Location = new System.Drawing.Point(33, 143);
             this.labelEdit7.Name = "labelEdit7";
             this.labelEdit7.Size = new System.Drawing.Size(100, 20);
             this.labelEdit7.TabIndex = 60;
@@ -590,7 +580,7 @@
             this.labelEdit5.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit5.ForeColor = System.Drawing.Color.White;
-            this.labelEdit5.Location = new System.Drawing.Point(478, 333);
+            this.labelEdit5.Location = new System.Drawing.Point(478, 32);
             this.labelEdit5.Name = "labelEdit5";
             this.labelEdit5.Size = new System.Drawing.Size(125, 20);
             this.labelEdit5.TabIndex = 58;
@@ -602,7 +592,7 @@
             this.labelEdit4.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit4.ForeColor = System.Drawing.Color.White;
-            this.labelEdit4.Location = new System.Drawing.Point(447, 381);
+            this.labelEdit4.Location = new System.Drawing.Point(447, 83);
             this.labelEdit4.Name = "labelEdit4";
             this.labelEdit4.Size = new System.Drawing.Size(153, 20);
             this.labelEdit4.TabIndex = 57;
@@ -614,7 +604,7 @@
             this.labelEdit3.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit3.ForeColor = System.Drawing.Color.White;
-            this.labelEdit3.Location = new System.Drawing.Point(27, 393);
+            this.labelEdit3.Location = new System.Drawing.Point(27, 95);
             this.labelEdit3.Name = "labelEdit3";
             this.labelEdit3.Size = new System.Drawing.Size(77, 20);
             this.labelEdit3.TabIndex = 56;
@@ -626,7 +616,7 @@
             this.labelEdit2.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit2.ForeColor = System.Drawing.Color.White;
-            this.labelEdit2.Location = new System.Drawing.Point(27, 333);
+            this.labelEdit2.Location = new System.Drawing.Point(16, 45);
             this.labelEdit2.Name = "labelEdit2";
             this.labelEdit2.Size = new System.Drawing.Size(117, 20);
             this.labelEdit2.TabIndex = 55;
@@ -704,15 +694,15 @@
             this.dtgInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dtgInventario.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dtgInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dtgInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idempresa,
@@ -726,28 +716,28 @@
             this.estadop,
             this.btnEditar,
             this.btnEliminar});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgInventario.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgInventario.DefaultCellStyle = dataGridViewCellStyle8;
             this.dtgInventario.EnableHeadersVisualStyles = false;
             this.dtgInventario.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dtgInventario.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dtgInventario.Location = new System.Drawing.Point(36, 80);
             this.dtgInventario.Name = "dtgInventario";
             this.dtgInventario.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgInventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgInventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dtgInventario.RowHeadersVisible = false;
             this.dtgInventario.RowHeadersWidth = 40;
             this.dtgInventario.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
@@ -1323,6 +1313,28 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // pnlespecificaciones
+            // 
+            this.pnlespecificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.pnlespecificaciones.Controls.Add(this.labelEdit2);
+            this.pnlespecificaciones.Controls.Add(this.txtUsmodificado);
+            this.pnlespecificaciones.Controls.Add(this.cmbTipomaterial);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit5);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit4);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit3);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit7);
+            this.pnlespecificaciones.Controls.Add(this.txtCantidad);
+            this.pnlespecificaciones.Controls.Add(this.txtUbicacion);
+            this.pnlespecificaciones.Controls.Add(this.txtprecosto);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit20);
+            this.pnlespecificaciones.Controls.Add(this.cmbEstproducto);
+            this.pnlespecificaciones.Controls.Add(this.btnGuardarprove);
+            this.pnlespecificaciones.Location = new System.Drawing.Point(0, 318);
+            this.pnlespecificaciones.Name = "pnlespecificaciones";
+            this.pnlespecificaciones.Size = new System.Drawing.Size(906, 266);
+            this.pnlespecificaciones.TabIndex = 88;
+            this.pnlespecificaciones.Visible = false;
+            // 
             // FrmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1346,6 +1358,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.pnlespecificaciones.ResumeLayout(false);
+            this.pnlespecificaciones.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1431,5 +1445,6 @@
         private ReaLTaiizor.Controls.Button btnedpecificaciones;
         private btnpersonalizados.PersonComboBox cmbtipoProducto;
         private ReaLTaiizor.Controls.LabelEdit labelEdit19;
+        private System.Windows.Forms.Panel pnlespecificaciones;
     }
 }

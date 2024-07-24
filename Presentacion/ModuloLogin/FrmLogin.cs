@@ -1,6 +1,5 @@
 ﻿
 using Datos.AplicationDB;
-using MaterialSkin;
 using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Linq;
@@ -8,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Presentacion.ModuloLogin
 {
-    public partial class FrmLogin : MaterialSkin.Controls.MaterialForm
+    public partial class FrmLogin :Form
     {
         private readonly SistemapContext _sistemapContext;
 
@@ -18,13 +17,7 @@ namespace Presentacion.ModuloLogin
             _sistemapContext = sistemapContext;
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-            SkinManager.Theme = MaterialSkin.MaterialSkinManager.Themes.LIGHT;
-            SkinManager.ColorScheme = new ColorScheme(Primary.Red900, Primary.Red900, Primary.Blue100, Accent.Green700, TextShade.BLACK);
-        }
-
+        
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             // Application.Exit();
@@ -33,8 +26,8 @@ namespace Presentacion.ModuloLogin
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string user = txtUsuario.Text.Trim();
-            string clave = txtClave.Text.Trim();
+            //string user = txtUsuario.Text.Trim();
+            //string clave = txtClave.Text.Trim();
             try
             {
                 if (validarUs())
@@ -42,13 +35,13 @@ namespace Presentacion.ModuloLogin
                     // Se hace uso del control de excepciones conde se llama a la clase ControlExcepcion, si el usuario no ingresa las credenciales 
                     try
                     {
-                        ConsultarCre(user, clave);
+                       // ConsultarCre(user, clave);
                     }
                     catch (Exception ex)
                     {
                         // Se envia un aviso indicando que sus credenciales no son las correctas
                         MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtUsuario.Text = null;
+                      //  txtUsuario.Text = null;
                     }
                 }
             }
@@ -84,8 +77,8 @@ namespace Presentacion.ModuloLogin
             if (userexit)
             {
                 this.Hide();
-                FrmRecuperarContrasena ob = new FrmRecuperarContrasena();
-                ob.ShowDialog();
+                //FrmRecuperarContrasena ob = new FrmRecuperarContrasena();
+                //ob.ShowDialog();
             }
             else
             {
@@ -95,15 +88,15 @@ namespace Presentacion.ModuloLogin
         private bool validarUs()
         {
             bool res = true;
-            if (string.IsNullOrEmpty(txtUsuario.Text))
-            {
-                res = false;
-                errorProvider1.SetError(txtUsuario, "Ingrese el usuario");
-            }
-            else
-            {
-                errorProvider1.Clear();
-            }
+            //if (string.IsNullOrEmpty(txtUsuario.Text))
+            //{
+            //    res = false;
+            //   errorProvider1.SetError(txtUsuario, "Ingrese el usuario");
+            //}
+            //else
+            //{
+            //    errorProvider1.Clear();
+            //}
             return res;
         }
 
@@ -125,7 +118,7 @@ namespace Presentacion.ModuloLogin
                         MessageBox.Show(ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtUsuario.Text = null;
                     }
-                }
+                 }
             }
             catch (Exception ex)
             {
@@ -135,14 +128,14 @@ namespace Presentacion.ModuloLogin
 
         private void chMostrar_CheckedChanged(object sender, EventArgs e)
         {
-            if (chMostrar.Checked)
-            {
-                txtClave.PasswordChar = '\0';
-            }
-            else
-            {
-                txtClave.PasswordChar = '*';
-            }
+            //if (chMostrar.Checked)
+            //{
+            //    txtClave.PasswordChar = '\0';
+            //}
+            //else
+            //{
+            //    txtClave.PasswordChar = '*';
+            //}
 
         }
 

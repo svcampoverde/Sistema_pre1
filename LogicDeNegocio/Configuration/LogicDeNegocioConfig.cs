@@ -10,7 +10,6 @@ using Unity;
 using LogicDeNegocio.Personas;
 using Microsoft.Extensions.Logging;
 using Unity.Lifetime;
-using LogicDeNegocio.Requests;
 namespace LogicDeNegocio.Configuration
 {
     public static class LogicDeNegocioConfig

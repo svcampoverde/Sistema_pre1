@@ -61,7 +61,7 @@ namespace Presentacion.ModuloServicio
                 if (Validar())
                 {
                     TipoServicioRequest servicio = new TipoServicioRequest()
-                    {Codigo=txtServicio.Text, Descripcion=txtServicio.Text};
+                    { Codigo = txtServicio.Text, Descripcion = txtServicio.Text };
                     await _tiposervicioService.RegistrarTipoServicio(servicio);
                     MessageBox.Show("Registro de servicio realizado con éxito");
                     Limpiar();
@@ -153,8 +153,8 @@ namespace Presentacion.ModuloServicio
             string servi = txtMservicio.Text;
             if (!String.IsNullOrEmpty(txtMservicio.Text))
             {
-                TipoServicioRequest tiposervicio = new TipoServicioRequest() { Id = Id,  Descripcion = servi };
-              
+                TipoServicioRequest tiposervicio = new TipoServicioRequest() { Id = Id, Descripcion = servi };
+
                 await _tiposervicioService.ActualizarTipoServicio(Id, tiposervicio);
                 MessageBox.Show("Datos actualizados con exito.");
                 pnlModificaservicio.Visible = false;

@@ -1,12 +1,8 @@
-﻿using Datos.Models;
-using LogicDeNegocio;
+﻿using LogicDeNegocio;
 using LogicDeNegocio.Dtos;
 using LogicDeNegocio.Interfaces;
-using LogicDeNegocio.Personas;
 using LogicDeNegocio.Requests;
-using LogicDeNegocio.Services;
 using Microsoft.EntityFrameworkCore.Internal;
-using Org.BouncyCastle.Bcpg.OpenPgp;
 using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,18 +21,18 @@ namespace Presentacion.ModuloProveedor
         private readonly ITipoCuentaService _ipoCuentaService;
         private readonly IFormaPagoService _formaPago;
 
-        public FrmRegistroProveedor(IProveedorService proveedorService, ICiudadService ciudadService, 
+        public FrmRegistroProveedor(IProveedorService proveedorService, ICiudadService ciudadService,
             ITipoServicioService ipoServicioService, IPersonaService persona, ICuentaService cuenta, IBancoService banco,
-            IEmpresaService empresaService,ITipoCuentaService tipoCuenta, IFormaPagoService formaPago)
+            IEmpresaService empresaService, ITipoCuentaService tipoCuenta, IFormaPagoService formaPago)
         {
             InitializeComponent();
-            _proveedorService = proveedorService ?? throw new ArgumentNullException(nameof(proveedorService)); 
+            _proveedorService = proveedorService ?? throw new ArgumentNullException(nameof(proveedorService));
             _ciudadService = ciudadService ?? throw new ArgumentNullException(nameof(ciudadService));
             _ipoServicioService = ipoServicioService ?? throw new ArgumentNullException(nameof(ipoServicioService));
             _cuentaService = cuenta;//?? throw new ArgumentNullException(nameof(cuenta));
-            _bancoService= banco ?? throw new ArgumentNullException(nameof(banco));
-            _empresaService=empresaService ?? throw new ArgumentNullException(nameof(ipoServicioService));
-            _formaPago=formaPago ?? throw new ArgumentNullException(nameof(formaPago));
+            _bancoService = banco ?? throw new ArgumentNullException(nameof(banco));
+            _empresaService = empresaService ?? throw new ArgumentNullException(nameof(ipoServicioService));
+            _formaPago = formaPago ?? throw new ArgumentNullException(nameof(formaPago));
             _ipoCuentaService = tipoCuenta;
             _personaService = persona;
         }
@@ -156,64 +152,64 @@ namespace Presentacion.ModuloProveedor
 
         private async void btnGuardarprove_Click(object sender, EventArgs e)
         {
-             // int idservicio = Convert.ToInt32(cmbServiciopro.Texts);
-             //int idprovincia = Convert.ToInt32(cmbCiudad.Texts);
+            // int idservicio = Convert.ToInt32(cmbServiciopro.Texts);
+            //int idprovincia = Convert.ToInt32(cmbCiudad.Texts);
             try
             {
-            string cedula = txtCedula.Text.Trim();
-            string nombre = txtNombre.Text.Trim();
-            string apellido = txtApellido.Text.Trim();
-            string genero = cmbGeneropro.Texts;
-            string telefono = txtTelefono.Text.Trim();
-            string celular = txtCelular.Text.Trim();
-            string correo = txtCorreo.Text.Trim();
-            string direccion = txtDireccion.Text.Trim();
-            string numcuenta = txtnumCuenta.Text.Trim();
-            int idBanco = cmbBancoProveedor.SelectedIndex;
-            int idempresa = cmbEmpresap.SelectedIndex;
-            int idtipocuenta = cmbCuentaproveedor.SelectedIndex;
-            int idformapago =cmbFpagoproveedor.SelectedIndex;
-            int idservicio = cmbServiciopro.SelectedIndex;
-            int idciudad = cmbCiudad.SelectedIndex;
-            PersonaRequest person = new PersonaRequest
-            {
-                Cedula = cedula,
-                Nombre = nombre,
-                Apellido = apellido,
-                Telefono = telefono,
-                Genero = genero,
-                Celular = celular,
-                Correo = correo,
-                Direccion = direccion,
-                IdCiudad= idciudad,
-                
-            };
-            PersonaDto persona = await _personaService.RegistrarPersona(person);
-           // PersonaDto p = new PersonaDto();
-            int idperson = persona.Id;
-            var request = new CuentaRequest
-            {
-                IdBanco = cmbBancoProveedor.SelectedIndex,
-                IdTipoCuenta=cmbCuentaproveedor.SelectedIndex,
-                NumCuenta = numcuenta,
-            };
-             CuentaDto cuentaid = await _cuentaService.RegistrarCuenta(request);
-            
-            int idcuenta = cuentaid.Id;
+                string cedula = txtCedula.Text.Trim();
+                string nombre = txtNombre.Text.Trim();
+                string apellido = txtApellido.Text.Trim();
+                string genero = cmbGeneropro.Texts;
+                string telefono = txtTelefono.Text.Trim();
+                string celular = txtCelular.Text.Trim();
+                string correo = txtCorreo.Text.Trim();
+                string direccion = txtDireccion.Text.Trim();
+                string numcuenta = txtnumCuenta.Text.Trim();
+                int idBanco = cmbBancoProveedor.SelectedIndex;
+                int idempresa = cmbEmpresap.SelectedIndex;
+                int idtipocuenta = cmbCuentaproveedor.SelectedIndex;
+                int idformapago = cmbFpagoproveedor.SelectedIndex;
+                int idservicio = cmbServiciopro.SelectedIndex;
+                int idciudad = cmbCiudad.SelectedIndex;
+                PersonaRequest person = new PersonaRequest
+                {
+                    Cedula = cedula,
+                    Nombre = nombre,
+                    Apellido = apellido,
+                    Telefono = telefono,
+                    Genero = genero,
+                    Celular = celular,
+                    Correo = correo,
+                    Direccion = direccion,
+                    IdCiudad = idciudad,
 
-            var proved = new ProveedorRequest
-            {
-                IdPersona = idperson,
-                IdCiudad=idciudad,
-                //IdTipoServicio = idservicio,
-                ServicioId=idservicio,
-                //TipoServicio=txtCelular.Text,
-                //Empresa = 
-                IdEmpresa=idempresa,
-                IdCuenta=idcuenta,
-                IdFormaPago=idformapago,
- 
-            };
+                };
+                PersonaDto persona = await _personaService.RegistrarPersona(person);
+                // PersonaDto p = new PersonaDto();
+                int idperson = persona.Id;
+                var request = new CuentaRequest
+                {
+                    IdBanco = cmbBancoProveedor.SelectedIndex,
+                    IdTipoCuenta = cmbCuentaproveedor.SelectedIndex,
+                    NumCuenta = numcuenta,
+                };
+                CuentaDto cuentaid = await _cuentaService.RegistrarCuenta(request);
+
+                int idcuenta = cuentaid.Id;
+
+                var proved = new ProveedorRequest
+                {
+                    IdPersona = idperson,
+                    IdCiudad = idciudad,
+                    //IdTipoServicio = idservicio,
+                    ServicioId = idservicio,
+                    //TipoServicio=txtCelular.Text,
+                    //Empresa = 
+                    IdEmpresa = idempresa,
+                    IdCuenta = idcuenta,
+                    IdFormaPago = idformapago,
+
+                };
                 await _proveedorService.RegistrarProveedor(proved);
                 MessageBox.Show("Proveedor registrado con exitó.");
             }

@@ -1,6 +1,5 @@
 ﻿using LogicDeNegocio;
 using Presentacion.ModuloPresupuesto;
-using Presentacion.ModuloRolusuario;
 using Presentacion.ModuloUsuario;
 using System;
 using System.Collections.Generic;

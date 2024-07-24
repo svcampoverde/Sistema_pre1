@@ -5,7 +5,6 @@ using LogicDeNegocio.Interfaces;
 using LogicDeNegocio.Requests;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Windows.Forms;
 //using LogicDeNegocio.producto;
 

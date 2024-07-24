@@ -1,17 +1,10 @@
-﻿using LogicDeNegocio.Dtos;
-using LogicDeNegocio;
+﻿using LogicDeNegocio;
+using LogicDeNegocio.Dtos;
 using LogicDeNegocio.Interfaces;
+using LogicDeNegocio.Requests;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevComponents.DotNetBar.Validator;
-using LogicDeNegocio.Requests;
 
 namespace Presentacion.ModuloProducto
 {
@@ -22,7 +15,7 @@ namespace Presentacion.ModuloProducto
         public FrmTipoProducto(ITipoProductoService service)
         {
             this._service = service;
-            InitializeComponent(); 
+            InitializeComponent();
         }
 
         private async void LlenarDataGrid(string dato)
@@ -138,7 +131,7 @@ namespace Presentacion.ModuloProducto
 
         private async void btnMtiproducto_Click(object sender, EventArgs e)
         {
-          //  string tipo = txtMtipemp.Text;
+            //  string tipo = txtMtipemp.Text;
             if (!String.IsNullOrEmpty(txtMtiprocuto.Text))
             {
                 TipoProductoRequest tipoEmpresa = new TipoProductoRequest()
@@ -184,14 +177,14 @@ namespace Presentacion.ModuloProducto
 
         private void ptbMtproducto_Click(object sender, EventArgs e)
         {
-            pnlListiproducto.Visible=true;
+            pnlListiproducto.Visible = true;
             pnlMtiproducto.Visible = false;
         }
 
         private void ptbRtproducto_Click(object sender, EventArgs e)
         {
-            pnlListiproducto.Visible=true;
-            pnlRtiproducto.Visible=false;
+            pnlListiproducto.Visible = true;
+            pnlRtiproducto.Visible = false;
         }
     }
 }

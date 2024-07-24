@@ -17,7 +17,7 @@ namespace Presentacion.ModuloUsuario
         private IUnityContainer _container;
         private readonly IUsuarioService _service;
         private readonly IPersonaService _personaService;
-         int Id;
+        int Id;
         public FrmBuscarUsuario(IUnityContainer container, FrmIPrincipal mdip, IUsuarioService service, IPersonaService personaService)
         {
             InitializeComponent();

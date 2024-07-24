@@ -1,21 +1,13 @@
 ﻿
 using LogicDeNegocio;
-using Presentacion.btnpersonalizados;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevComponents.DotNetBar.Validator;
 using LogicDeNegocio.Dtos;
 using LogicDeNegocio.Interfaces;
-using LogicDeNegocio.Services;
-using LogicDeNegocio.Personas;
 using LogicDeNegocio.Requests;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Presentacion.ModuloUsuario
 {
@@ -80,8 +72,8 @@ namespace Presentacion.ModuloUsuario
         {
             try
             {
-                pnlLisUss.Visible=true;
-                pnlRegUss.Visible=false;
+                pnlLisUss.Visible = true;
+                pnlRegUss.Visible = false;
                 List<UsuarioDto> list = await _service.ObtenerUsuarios(cedula);
                 dtgUsuario.Rows.Clear();
                 // dtgUsuario.DataSource = await _personaService.BuscarPersona(datos);
@@ -300,9 +292,9 @@ namespace Presentacion.ModuloUsuario
 
         private void ptbaddU_Click(object sender, EventArgs e)
         {
-            pnlRegUss.Visible=true;
-            pnlMuser.Visible=false;
-            pnlLisUss.Visible=false;
+            pnlRegUss.Visible = true;
+            pnlMuser.Visible = false;
+            pnlLisUss.Visible = false;
         }
 
         private void ptbvolver_Click(object sender, EventArgs e)

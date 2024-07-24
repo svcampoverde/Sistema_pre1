@@ -1,4 +1,6 @@
-﻿namespace Presentacion.ModuloLogin
+﻿using Google.Protobuf.WellKnownTypes;
+
+namespace Presentacion.ModuloLogin
 {
     partial class FrmRecuperarContrasena
     {
@@ -28,154 +30,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnGuardar = new Presentacion.btnpersonalizados.Botonper();
-            this.btnCancelar = new Presentacion.btnpersonalizados.Botonper();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtnpass = new MaterialSkin.Controls.MaterialTextBox2();
-            this.txtcpass = new MaterialSkin.Controls.MaterialTextBox2();
+            this.btnGuardarPass = new Presentacion.btnpersonalizados.Botonper();
+            this.btnCancelarpass = new Presentacion.btnpersonalizados.Botonper();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chnpass = new System.Windows.Forms.CheckBox();
             this.chcpass = new System.Windows.Forms.CheckBox();
-            this.panel1.SuspendLayout();
+            this.txtCiudad = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.labelEdit1 = new ReaLTaiizor.Controls.LabelEdit();
+            this.textBoxEdit1 = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.labelEdit2 = new ReaLTaiizor.Controls.LabelEdit();
+            this.labelEdit3 = new ReaLTaiizor.Controls.LabelEdit();
             this.SuspendLayout();
             // 
-            // materialLabel1
+            // btnGuardarPass
             // 
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(155, 10);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(179, 23);
-            this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Recuperar contraseña";
+            this.btnGuardarPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnGuardarPass.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnGuardarPass.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardarPass.BorderRadius = 20;
+            this.btnGuardarPass.BorderSize = 0;
+            this.btnGuardarPass.FlatAppearance.BorderSize = 0;
+            this.btnGuardarPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarPass.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarPass.Location = new System.Drawing.Point(66, 261);
+            this.btnGuardarPass.Name = "btnGuardarPass";
+            this.btnGuardarPass.Size = new System.Drawing.Size(138, 36);
+            this.btnGuardarPass.TabIndex = 28;
+            this.btnGuardarPass.Text = "Actualizar";
+            this.btnGuardarPass.TextColor = System.Drawing.Color.White;
+            this.btnGuardarPass.UseVisualStyleBackColor = false;
+            this.btnGuardarPass.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // btnGuardar
+            // btnCancelarpass
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
-            this.btnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
-            this.btnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGuardar.BorderRadius = 20;
-            this.btnGuardar.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardar.Location = new System.Drawing.Point(33, 233);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(152, 51);
-            this.btnGuardar.TabIndex = 28;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.TextColor = System.Drawing.Color.Black;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
-            this.btnCancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
-            this.btnCancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCancelar.BorderRadius = 20;
-            this.btnCancelar.BorderSize = 0;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.Location = new System.Drawing.Point(315, 233);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(147, 51);
-            this.btnCancelar.TabIndex = 27;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextColor = System.Drawing.Color.Black;
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(41, 94);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(133, 19);
-            this.materialLabel2.TabIndex = 31;
-            this.materialLabel2.Text = "Nueva contraseña:";
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(41, 169);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(159, 19);
-            this.materialLabel3.TabIndex = 32;
-            this.materialLabel3.Text = "Confirmar contraseña:";
-            // 
-            // txtnpass
-            // 
-            this.txtnpass.AnimateReadOnly = false;
-            this.txtnpass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtnpass.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtnpass.Depth = 0;
-            this.txtnpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtnpass.HideSelection = true;
-            this.txtnpass.LeadingIcon = null;
-            this.txtnpass.Location = new System.Drawing.Point(212, 78);
-            this.txtnpass.MaxLength = 32767;
-            this.txtnpass.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtnpass.Name = "txtnpass";
-            this.txtnpass.PasswordChar = '*';
-            this.txtnpass.PrefixSuffixText = null;
-            this.txtnpass.ReadOnly = false;
-            this.txtnpass.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtnpass.SelectedText = "";
-            this.txtnpass.SelectionLength = 0;
-            this.txtnpass.SelectionStart = 0;
-            this.txtnpass.ShortcutsEnabled = true;
-            this.txtnpass.Size = new System.Drawing.Size(250, 48);
-            this.txtnpass.TabIndex = 33;
-            this.txtnpass.TabStop = false;
-            this.txtnpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtnpass.TrailingIcon = null;
-            this.txtnpass.UseSystemPasswordChar = false;
-            // 
-            // txtcpass
-            // 
-            this.txtcpass.AnimateReadOnly = false;
-            this.txtcpass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtcpass.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtcpass.Depth = 0;
-            this.txtcpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtcpass.HideSelection = true;
-            this.txtcpass.LeadingIcon = null;
-            this.txtcpass.Location = new System.Drawing.Point(212, 149);
-            this.txtcpass.MaxLength = 32767;
-            this.txtcpass.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtcpass.Name = "txtcpass";
-            this.txtcpass.PasswordChar = '*';
-            this.txtcpass.PrefixSuffixText = null;
-            this.txtcpass.ReadOnly = false;
-            this.txtcpass.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtcpass.SelectedText = "";
-            this.txtcpass.SelectionLength = 0;
-            this.txtcpass.SelectionStart = 0;
-            this.txtcpass.ShortcutsEnabled = true;
-            this.txtcpass.Size = new System.Drawing.Size(250, 48);
-            this.txtcpass.TabIndex = 34;
-            this.txtcpass.TabStop = false;
-            this.txtcpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtcpass.TrailingIcon = null;
-            this.txtcpass.UseSystemPasswordChar = false;
+            this.btnCancelarpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnCancelarpass.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnCancelarpass.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancelarpass.BorderRadius = 20;
+            this.btnCancelarpass.BorderSize = 0;
+            this.btnCancelarpass.FlatAppearance.BorderSize = 0;
+            this.btnCancelarpass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarpass.ForeColor = System.Drawing.Color.White;
+            this.btnCancelarpass.Location = new System.Drawing.Point(290, 261);
+            this.btnCancelarpass.Name = "btnCancelarpass";
+            this.btnCancelarpass.Size = new System.Drawing.Size(121, 36);
+            this.btnCancelarpass.TabIndex = 27;
+            this.btnCancelarpass.Text = "Cancelar";
+            this.btnCancelarpass.TextColor = System.Drawing.Color.White;
+            this.btnCancelarpass.UseVisualStyleBackColor = false;
+            this.btnCancelarpass.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
-            this.panel1.Controls.Add(this.materialLabel1);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(513, 49);
@@ -184,7 +93,8 @@
             // chnpass
             // 
             this.chnpass.AutoSize = true;
-            this.chnpass.Location = new System.Drawing.Point(212, 126);
+            this.chnpass.ForeColor = System.Drawing.Color.White;
+            this.chnpass.Location = new System.Drawing.Point(178, 137);
             this.chnpass.Name = "chnpass";
             this.chnpass.Size = new System.Drawing.Size(61, 17);
             this.chnpass.TabIndex = 36;
@@ -195,7 +105,8 @@
             // chcpass
             // 
             this.chcpass.AutoSize = true;
-            this.chcpass.Location = new System.Drawing.Point(212, 203);
+            this.chcpass.ForeColor = System.Drawing.Color.White;
+            this.chcpass.Location = new System.Drawing.Point(178, 217);
             this.chcpass.Name = "chcpass";
             this.chcpass.Size = new System.Drawing.Size(61, 17);
             this.chcpass.TabIndex = 37;
@@ -203,26 +114,95 @@
             this.chcpass.UseVisualStyleBackColor = true;
             this.chcpass.CheckedChanged += new System.EventHandler(this.chcpass_CheckedChanged);
             // 
+            // txtCiudad
+            // 
+            this.txtCiudad.BackColor = System.Drawing.Color.Transparent;
+            this.txtCiudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCiudad.ForeColor = System.Drawing.Color.White;
+            this.txtCiudad.Image = null;
+            this.txtCiudad.Location = new System.Drawing.Point(174, 90);
+            this.txtCiudad.MaxLength = 32767;
+            this.txtCiudad.Multiline = false;
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.ReadOnly = false;
+            this.txtCiudad.Size = new System.Drawing.Size(256, 42);
+            this.txtCiudad.TabIndex = 92;
+            this.txtCiudad.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCiudad.UseSystemPasswordChar = false;
+            // 
+            // labelEdit1
+            // 
+            this.labelEdit1.AutoSize = true;
+            this.labelEdit1.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit1.ForeColor = System.Drawing.Color.White;
+            this.labelEdit1.Location = new System.Drawing.Point(30, 100);
+            this.labelEdit1.Name = "labelEdit1";
+            this.labelEdit1.Size = new System.Drawing.Size(142, 20);
+            this.labelEdit1.TabIndex = 91;
+            this.labelEdit1.Text = "Nueva contraseña:";
+            // 
+            // textBoxEdit1
+            // 
+            this.textBoxEdit1.BackColor = System.Drawing.Color.Transparent;
+            this.textBoxEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.textBoxEdit1.ForeColor = System.Drawing.Color.White;
+            this.textBoxEdit1.Image = null;
+            this.textBoxEdit1.Location = new System.Drawing.Point(178, 169);
+            this.textBoxEdit1.MaxLength = 32767;
+            this.textBoxEdit1.Multiline = false;
+            this.textBoxEdit1.Name = "textBoxEdit1";
+            this.textBoxEdit1.ReadOnly = false;
+            this.textBoxEdit1.Size = new System.Drawing.Size(256, 42);
+            this.textBoxEdit1.TabIndex = 94;
+            this.textBoxEdit1.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxEdit1.UseSystemPasswordChar = false;
+            // 
+            // labelEdit2
+            // 
+            this.labelEdit2.AutoSize = true;
+            this.labelEdit2.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit2.ForeColor = System.Drawing.Color.White;
+            this.labelEdit2.Location = new System.Drawing.Point(30, 180);
+            this.labelEdit2.Name = "labelEdit2";
+            this.labelEdit2.Size = new System.Drawing.Size(142, 20);
+            this.labelEdit2.TabIndex = 93;
+            this.labelEdit2.Text = "Nueva contraseña:";
+            // 
+            // labelEdit3
+            // 
+            this.labelEdit3.AutoSize = true;
+            this.labelEdit3.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.labelEdit3.ForeColor = System.Drawing.Color.White;
+            this.labelEdit3.Location = new System.Drawing.Point(152, 35);
+            this.labelEdit3.Name = "labelEdit3";
+            this.labelEdit3.Size = new System.Drawing.Size(202, 24);
+            this.labelEdit3.TabIndex = 95;
+            this.labelEdit3.Text = "Recuperar contraseña:";
+            // 
             // FrmRecuperarContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 318);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.ClientSize = new System.Drawing.Size(509, 329);
             this.ControlBox = false;
+            this.Controls.Add(this.labelEdit3);
+            this.Controls.Add(this.textBoxEdit1);
+            this.Controls.Add(this.labelEdit2);
+            this.Controls.Add(this.txtCiudad);
+            this.Controls.Add(this.labelEdit1);
             this.Controls.Add(this.chcpass);
             this.Controls.Add(this.chnpass);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtcpass);
-            this.Controls.Add(this.txtnpass);
-            this.Controls.Add(this.materialLabel3);
-            this.Controls.Add(this.materialLabel2);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnGuardarPass);
+            this.Controls.Add(this.btnCancelarpass);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmRecuperarContrasena";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmRecuperarContrasena";
             this.Load += new System.EventHandler(this.RecuperarContraseña_Load);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,15 +210,15 @@
 
         #endregion
 
-        private btnpersonalizados.Botonper btnCancelar;
-        private btnpersonalizados.Botonper btnGuardar;
-        private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialTextBox2 txtnpass;
-        private MaterialSkin.Controls.MaterialTextBox2 txtcpass;
+        private btnpersonalizados.Botonper btnCancelarpass;
+        private btnpersonalizados.Botonper btnGuardarPass;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox chnpass;
         private System.Windows.Forms.CheckBox chcpass;
+        private ReaLTaiizor.Controls.TextBoxEdit txtCiudad;
+        private ReaLTaiizor.Controls.LabelEdit labelEdit1;
+        private ReaLTaiizor.Controls.TextBoxEdit textBoxEdit1;
+        private ReaLTaiizor.Controls.LabelEdit labelEdit2;
+        private ReaLTaiizor.Controls.LabelEdit labelEdit3;
     }
 }
