@@ -61,11 +61,11 @@ namespace Datos.AplicationDB.Configurations
                 .HasColumnType("datetime");
 
             // Configuración de relación con Producto
-            entity.HasOne(e => e.Producto)
-                .WithOne(p => p.Inventario)
-                .HasForeignKey<Inventario>(i => i.IdProducto)
-                .OnDelete(DeleteBehavior.Cascade)
-                .HasConstraintName("inventario_producto_fk");
+            //entity.HasOne(e => e.Producto)
+            //    .WithOne(p => p.Inventario)
+            //    .HasForeignKey<Inventario>(i => i.IdProducto)
+            //    .OnDelete(DeleteBehavior.Cascade)
+            //    .HasConstraintName("inventario_producto_fk");
         }
     }
 }

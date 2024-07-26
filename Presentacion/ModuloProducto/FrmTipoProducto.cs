@@ -31,7 +31,8 @@ namespace Presentacion.ModuloProducto
                 {
                     dtgTipProducto.Rows.Add(1);
                     dtgTipProducto.Rows[cont].Cells[0].Value = t.Id.ToString();
-                    dtgTipProducto.Rows[cont].Cells[1].Value = t.Descripcion.ToString();
+                    dtgTipProducto.Rows[cont].Cells[1].Value = t.Codigo.ToString();
+                    dtgTipProducto.Rows[cont].Cells[2].Value = t.Descripcion.ToString();
                     cont++;
                 }
                 pnlListiproducto.Visible = true;
@@ -46,16 +47,16 @@ namespace Presentacion.ModuloProducto
         private bool Validar()
         {
             bool campo = true;
-            if (txtipproducto.Text == "")
+            if (txtcodtiproducto.Text == "")
             {
                 campo = false;
-                errorProvider1.SetError(txtipproducto, "Ingrese un tipo de producto");
+                errorProvider1.SetError(txtcodtiproducto, "Ingrese un tipo de producto");
             }
             return campo;
         }
         public void Limpiar()
         {
-            txtipproducto.Text = "";
+            txtcodtiproducto.Text = "";
         }
 
         private async void btnGuarTipoproducto_Click(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace Presentacion.ModuloProducto
                 if (Validar())
                 {
                     TipoProductoRequest tipo = new TipoProductoRequest()
-                    { Codigo = txtipproducto.Text, Descripcion = txtipproducto.Text };
+                    { Codigo =txtcodtiproducto.Text, Descripcion = txtcodtiproducto.Text };
                     await _service.RegistrarTipoProducto(tipo);
                     MessageBox.Show("Registro realizado con éxito");
                     Limpiar();
@@ -96,6 +97,7 @@ namespace Presentacion.ModuloProducto
                             if (dtgTipProducto.Rows[e.RowIndex].Cells["idtiproducto"].Value != null)
                             {
                                 Id = Convert.ToInt32(dtgTipProducto.Rows[e.RowIndex].Cells["idtiproducto"].Value);
+                                txtMcodtiproducto.Text = dtgTipProducto.Rows[e.RowIndex].Cells["codigo"].Value.ToString();
                                 txtMtiprocuto.Text = dtgTipProducto.Rows[e.RowIndex].Cells["tipproducto"].Value.ToString();
                                 pnlRtiproducto.Visible = false;
                                 pnlMtiproducto.Visible = true;
@@ -136,6 +138,7 @@ namespace Presentacion.ModuloProducto
             {
                 TipoProductoRequest tipoEmpresa = new TipoProductoRequest()
                 {
+                    Codigo = txtMcodtiproducto.Text,
                     Descripcion = txtMtiprocuto.Text
                 };
                 await _service.ActualizarTipoProducto(Id, tipoEmpresa);

@@ -34,6 +34,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInventario));
             this.pnlRegInv = new ReaLTaiizor.Controls.Panel();
+            this.pnlespecificaciones = new System.Windows.Forms.Panel();
+            this.labelEdit2 = new ReaLTaiizor.Controls.LabelEdit();
+            this.txtUsmodificado = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.cmbTipomaterial = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.labelEdit5 = new ReaLTaiizor.Controls.LabelEdit();
+            this.labelEdit4 = new ReaLTaiizor.Controls.LabelEdit();
+            this.labelEdit3 = new ReaLTaiizor.Controls.LabelEdit();
+            this.labelEdit7 = new ReaLTaiizor.Controls.LabelEdit();
+            this.txtCantidad = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.txtUbicacion = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.txtprecosto = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.labelEdit20 = new ReaLTaiizor.Controls.LabelEdit();
+            this.cmbEstproducto = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.btnGuardarprove = new Presentacion.btnpersonalizados.Botonper();
             this.cmbtipoProducto = new Presentacion.btnpersonalizados.PersonComboBox();
             this.labelEdit19 = new ReaLTaiizor.Controls.LabelEdit();
             this.btnedpecificaciones = new ReaLTaiizor.Controls.Button();
@@ -41,29 +55,16 @@
             this.labelEdit28 = new ReaLTaiizor.Controls.LabelEdit();
             this.txtTamanio = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit29 = new ReaLTaiizor.Controls.LabelEdit();
-            this.txtUbicacion = new ReaLTaiizor.Controls.TextBoxEdit();
-            this.labelEdit20 = new ReaLTaiizor.Controls.LabelEdit();
-            this.cmbEstproducto = new Presentacion.btnpersonalizados.PersonComboBox();
             this.txtEspecificacion = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit22 = new ReaLTaiizor.Controls.LabelEdit();
             this.txtpreciovent = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit18 = new ReaLTaiizor.Controls.LabelEdit();
             this.ptbleftrinv = new System.Windows.Forms.PictureBox();
             this.cmbCatproducto = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.cmbTipomaterial = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.btnGuardarprove = new Presentacion.btnpersonalizados.Botonper();
-            this.txtprecosto = new ReaLTaiizor.Controls.TextBoxEdit();
-            this.txtCantidad = new ReaLTaiizor.Controls.TextBoxEdit();
             this.txtDescripcionproducto = new ReaLTaiizor.Controls.TextBoxEdit();
-            this.txtUsmodificado = new ReaLTaiizor.Controls.TextBoxEdit();
             this.txtProducto = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit8 = new ReaLTaiizor.Controls.LabelEdit();
-            this.labelEdit7 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit6 = new ReaLTaiizor.Controls.LabelEdit();
-            this.labelEdit5 = new ReaLTaiizor.Controls.LabelEdit();
-            this.labelEdit4 = new ReaLTaiizor.Controls.LabelEdit();
-            this.labelEdit3 = new ReaLTaiizor.Controls.LabelEdit();
-            this.labelEdit2 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit1 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit30 = new ReaLTaiizor.Controls.LabelEdit();
             this.pnlListInv = new System.Windows.Forms.Panel();
@@ -113,8 +114,8 @@
             this.labelEdit27 = new ReaLTaiizor.Controls.LabelEdit();
             this.btnActualizarinv = new Presentacion.btnpersonalizados.Botonper();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.pnlespecificaciones = new System.Windows.Forms.Panel();
             this.pnlRegInv.SuspendLayout();
+            this.pnlespecificaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbleftrinv)).BeginInit();
             this.pnlListInv.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbaddinv)).BeginInit();
@@ -122,13 +123,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbMinv)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.pnlespecificaciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlRegInv
             // 
             this.pnlRegInv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.pnlRegInv.Controls.Add(this.pnlespecificaciones);
             this.pnlRegInv.Controls.Add(this.cmbtipoProducto);
             this.pnlRegInv.Controls.Add(this.labelEdit19);
             this.pnlRegInv.Controls.Add(this.btnedpecificaciones);
@@ -152,10 +151,242 @@
             this.pnlRegInv.Location = new System.Drawing.Point(23, 12);
             this.pnlRegInv.Name = "pnlRegInv";
             this.pnlRegInv.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlRegInv.Size = new System.Drawing.Size(906, 584);
+            this.pnlRegInv.Size = new System.Drawing.Size(906, 326);
             this.pnlRegInv.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
             this.pnlRegInv.TabIndex = 1;
             this.pnlRegInv.Text = "panel2";
+            // 
+            // pnlespecificaciones
+            // 
+            this.pnlespecificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.pnlespecificaciones.Controls.Add(this.labelEdit2);
+            this.pnlespecificaciones.Controls.Add(this.txtUsmodificado);
+            this.pnlespecificaciones.Controls.Add(this.cmbTipomaterial);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit5);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit4);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit3);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit7);
+            this.pnlespecificaciones.Controls.Add(this.txtCantidad);
+            this.pnlespecificaciones.Controls.Add(this.txtUbicacion);
+            this.pnlespecificaciones.Controls.Add(this.txtprecosto);
+            this.pnlespecificaciones.Controls.Add(this.labelEdit20);
+            this.pnlespecificaciones.Controls.Add(this.cmbEstproducto);
+            this.pnlespecificaciones.Controls.Add(this.btnGuardarprove);
+            this.pnlespecificaciones.Location = new System.Drawing.Point(23, 330);
+            this.pnlespecificaciones.Name = "pnlespecificaciones";
+            this.pnlespecificaciones.Size = new System.Drawing.Size(906, 266);
+            this.pnlespecificaciones.TabIndex = 88;
+            this.pnlespecificaciones.Visible = false;
+            // 
+            // labelEdit2
+            // 
+            this.labelEdit2.AutoSize = true;
+            this.labelEdit2.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit2.ForeColor = System.Drawing.Color.White;
+            this.labelEdit2.Location = new System.Drawing.Point(16, 45);
+            this.labelEdit2.Name = "labelEdit2";
+            this.labelEdit2.Size = new System.Drawing.Size(117, 20);
+            this.labelEdit2.TabIndex = 55;
+            this.labelEdit2.Text = "Modificado por:";
+            // 
+            // txtUsmodificado
+            // 
+            this.txtUsmodificado.BackColor = System.Drawing.Color.Transparent;
+            this.txtUsmodificado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUsmodificado.ForeColor = System.Drawing.Color.White;
+            this.txtUsmodificado.Image = null;
+            this.txtUsmodificado.Location = new System.Drawing.Point(136, 32);
+            this.txtUsmodificado.MaxLength = 32767;
+            this.txtUsmodificado.Multiline = false;
+            this.txtUsmodificado.Name = "txtUsmodificado";
+            this.txtUsmodificado.ReadOnly = false;
+            this.txtUsmodificado.Size = new System.Drawing.Size(228, 42);
+            this.txtUsmodificado.TabIndex = 63;
+            this.txtUsmodificado.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsmodificado.UseSystemPasswordChar = false;
+            // 
+            // cmbTipomaterial
+            // 
+            this.cmbTipomaterial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbTipomaterial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbTipomaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbTipomaterial.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTipomaterial.BorderRadius = 0;
+            this.cmbTipomaterial.BorderSize = 0;
+            this.cmbTipomaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbTipomaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbTipomaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbTipomaterial.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbTipomaterial.Items.AddRange(new object[] {
+            "Plastico",
+            "Aluminio",
+            "Madera",
+            "Acero",
+            "Hierro"});
+            this.cmbTipomaterial.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbTipomaterial.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbTipomaterial.Location = new System.Drawing.Point(606, 23);
+            this.cmbTipomaterial.MinimumSize = new System.Drawing.Size(200, 42);
+            this.cmbTipomaterial.Name = "cmbTipomaterial";
+            this.cmbTipomaterial.Size = new System.Drawing.Size(228, 42);
+            this.cmbTipomaterial.TabIndex = 79;
+            this.cmbTipomaterial.Texts = "";
+            // 
+            // labelEdit5
+            // 
+            this.labelEdit5.AutoSize = true;
+            this.labelEdit5.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit5.ForeColor = System.Drawing.Color.White;
+            this.labelEdit5.Location = new System.Drawing.Point(478, 32);
+            this.labelEdit5.Name = "labelEdit5";
+            this.labelEdit5.Size = new System.Drawing.Size(125, 20);
+            this.labelEdit5.TabIndex = 58;
+            this.labelEdit5.Text = "Tipo de material:";
+            // 
+            // labelEdit4
+            // 
+            this.labelEdit4.AutoSize = true;
+            this.labelEdit4.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit4.ForeColor = System.Drawing.Color.White;
+            this.labelEdit4.Location = new System.Drawing.Point(447, 83);
+            this.labelEdit4.Name = "labelEdit4";
+            this.labelEdit4.Size = new System.Drawing.Size(153, 20);
+            this.labelEdit4.TabIndex = 57;
+            this.labelEdit4.Text = "Estado de producto:";
+            // 
+            // labelEdit3
+            // 
+            this.labelEdit3.AutoSize = true;
+            this.labelEdit3.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit3.ForeColor = System.Drawing.Color.White;
+            this.labelEdit3.Location = new System.Drawing.Point(27, 95);
+            this.labelEdit3.Name = "labelEdit3";
+            this.labelEdit3.Size = new System.Drawing.Size(77, 20);
+            this.labelEdit3.TabIndex = 56;
+            this.labelEdit3.Text = "Cantidad:";
+            // 
+            // labelEdit7
+            // 
+            this.labelEdit7.AutoSize = true;
+            this.labelEdit7.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit7.ForeColor = System.Drawing.Color.White;
+            this.labelEdit7.Location = new System.Drawing.Point(33, 143);
+            this.labelEdit7.Name = "labelEdit7";
+            this.labelEdit7.Size = new System.Drawing.Size(100, 20);
+            this.labelEdit7.TabIndex = 60;
+            this.labelEdit7.Text = "Precio costo:";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.BackColor = System.Drawing.Color.Transparent;
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtCantidad.ForeColor = System.Drawing.Color.White;
+            this.txtCantidad.Image = null;
+            this.txtCantidad.Location = new System.Drawing.Point(136, 82);
+            this.txtCantidad.MaxLength = 32767;
+            this.txtCantidad.Multiline = false;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.ReadOnly = false;
+            this.txtCantidad.Size = new System.Drawing.Size(117, 42);
+            this.txtCantidad.TabIndex = 65;
+            this.txtCantidad.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtCantidad.UseSystemPasswordChar = false;
+            // 
+            // txtUbicacion
+            // 
+            this.txtUbicacion.BackColor = System.Drawing.Color.Transparent;
+            this.txtUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtUbicacion.ForeColor = System.Drawing.Color.White;
+            this.txtUbicacion.Image = null;
+            this.txtUbicacion.Location = new System.Drawing.Point(606, 121);
+            this.txtUbicacion.MaxLength = 32767;
+            this.txtUbicacion.Multiline = false;
+            this.txtUbicacion.Name = "txtUbicacion";
+            this.txtUbicacion.ReadOnly = false;
+            this.txtUbicacion.Size = new System.Drawing.Size(228, 42);
+            this.txtUbicacion.TabIndex = 102;
+            this.txtUbicacion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUbicacion.UseSystemPasswordChar = false;
+            // 
+            // txtprecosto
+            // 
+            this.txtprecosto.BackColor = System.Drawing.Color.Transparent;
+            this.txtprecosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtprecosto.ForeColor = System.Drawing.Color.White;
+            this.txtprecosto.Image = null;
+            this.txtprecosto.Location = new System.Drawing.Point(136, 130);
+            this.txtprecosto.MaxLength = 32767;
+            this.txtprecosto.Multiline = false;
+            this.txtprecosto.Name = "txtprecosto";
+            this.txtprecosto.ReadOnly = false;
+            this.txtprecosto.Size = new System.Drawing.Size(101, 42);
+            this.txtprecosto.TabIndex = 66;
+            this.txtprecosto.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtprecosto.UseSystemPasswordChar = false;
+            // 
+            // labelEdit20
+            // 
+            this.labelEdit20.AutoSize = true;
+            this.labelEdit20.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit20.ForeColor = System.Drawing.Color.White;
+            this.labelEdit20.Location = new System.Drawing.Point(499, 130);
+            this.labelEdit20.Name = "labelEdit20";
+            this.labelEdit20.Size = new System.Drawing.Size(83, 20);
+            this.labelEdit20.TabIndex = 101;
+            this.labelEdit20.Text = "Ubicacion:";
+            // 
+            // cmbEstproducto
+            // 
+            this.cmbEstproducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbEstproducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbEstproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbEstproducto.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbEstproducto.BorderRadius = 0;
+            this.cmbEstproducto.BorderSize = 0;
+            this.cmbEstproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbEstproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbEstproducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbEstproducto.IconColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbEstproducto.Items.AddRange(new object[] {
+            "Nuevo",
+            "Medio uso",
+            "Dañado",
+            "Viejo",
+            "Desuso"});
+            this.cmbEstproducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbEstproducto.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbEstproducto.Location = new System.Drawing.Point(606, 73);
+            this.cmbEstproducto.MinimumSize = new System.Drawing.Size(200, 42);
+            this.cmbEstproducto.Name = "cmbEstproducto";
+            this.cmbEstproducto.Size = new System.Drawing.Size(228, 42);
+            this.cmbEstproducto.TabIndex = 99;
+            this.cmbEstproducto.Texts = "";
+            // 
+            // btnGuardarprove
+            // 
+            this.btnGuardarprove.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardarprove.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardarprove.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardarprove.BorderRadius = 20;
+            this.btnGuardarprove.BorderSize = 0;
+            this.btnGuardarprove.FlatAppearance.BorderSize = 0;
+            this.btnGuardarprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarprove.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarprove.Location = new System.Drawing.Point(336, 193);
+            this.btnGuardarprove.Name = "btnGuardarprove";
+            this.btnGuardarprove.Size = new System.Drawing.Size(150, 40);
+            this.btnGuardarprove.TabIndex = 78;
+            this.btnGuardarprove.Text = "Guardar";
+            this.btnGuardarprove.TextColor = System.Drawing.Color.White;
+            this.btnGuardarprove.UseVisualStyleBackColor = false;
+            this.btnGuardarprove.Click += new System.EventHandler(this.btnGuardarprove_Click);
             // 
             // cmbtipoProducto
             // 
@@ -171,7 +402,7 @@
             this.cmbtipoProducto.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.cmbtipoProducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
             this.cmbtipoProducto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbtipoProducto.Location = new System.Drawing.Point(611, 79);
+            this.cmbtipoProducto.Location = new System.Drawing.Point(162, 79);
             this.cmbtipoProducto.MinimumSize = new System.Drawing.Size(200, 42);
             this.cmbtipoProducto.Name = "cmbtipoProducto";
             this.cmbtipoProducto.Size = new System.Drawing.Size(228, 42);
@@ -184,7 +415,7 @@
             this.labelEdit19.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit19.ForeColor = System.Drawing.Color.White;
-            this.labelEdit19.Location = new System.Drawing.Point(473, 90);
+            this.labelEdit19.Location = new System.Drawing.Point(24, 90);
             this.labelEdit19.Name = "labelEdit19";
             this.labelEdit19.Size = new System.Drawing.Size(132, 20);
             this.labelEdit19.TabIndex = 130;
@@ -266,61 +497,6 @@
             this.labelEdit29.Size = new System.Drawing.Size(71, 20);
             this.labelEdit29.TabIndex = 125;
             this.labelEdit29.Text = "Tamaño:";
-            // 
-            // txtUbicacion
-            // 
-            this.txtUbicacion.BackColor = System.Drawing.Color.Transparent;
-            this.txtUbicacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtUbicacion.ForeColor = System.Drawing.Color.White;
-            this.txtUbicacion.Image = null;
-            this.txtUbicacion.Location = new System.Drawing.Point(606, 121);
-            this.txtUbicacion.MaxLength = 32767;
-            this.txtUbicacion.Multiline = false;
-            this.txtUbicacion.Name = "txtUbicacion";
-            this.txtUbicacion.ReadOnly = false;
-            this.txtUbicacion.Size = new System.Drawing.Size(228, 42);
-            this.txtUbicacion.TabIndex = 102;
-            this.txtUbicacion.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtUbicacion.UseSystemPasswordChar = false;
-            // 
-            // labelEdit20
-            // 
-            this.labelEdit20.AutoSize = true;
-            this.labelEdit20.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEdit20.ForeColor = System.Drawing.Color.White;
-            this.labelEdit20.Location = new System.Drawing.Point(499, 130);
-            this.labelEdit20.Name = "labelEdit20";
-            this.labelEdit20.Size = new System.Drawing.Size(83, 20);
-            this.labelEdit20.TabIndex = 101;
-            this.labelEdit20.Text = "Ubicacion:";
-            // 
-            // cmbEstproducto
-            // 
-            this.cmbEstproducto.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbEstproducto.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbEstproducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbEstproducto.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbEstproducto.BorderRadius = 0;
-            this.cmbEstproducto.BorderSize = 0;
-            this.cmbEstproducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbEstproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbEstproducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbEstproducto.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbEstproducto.Items.AddRange(new object[] {
-            "Nuevo",
-            "Medio uso",
-            "Dañado",
-            "Viejo",
-            "Desuso"});
-            this.cmbEstproducto.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbEstproducto.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbEstproducto.Location = new System.Drawing.Point(606, 73);
-            this.cmbEstproducto.MinimumSize = new System.Drawing.Size(200, 42);
-            this.cmbEstproducto.Name = "cmbEstproducto";
-            this.cmbEstproducto.Size = new System.Drawing.Size(228, 42);
-            this.cmbEstproducto.TabIndex = 99;
-            this.cmbEstproducto.Texts = "";
             // 
             // txtEspecificacion
             // 
@@ -409,85 +585,6 @@
             this.cmbCatproducto.TabIndex = 80;
             this.cmbCatproducto.Texts = "";
             // 
-            // cmbTipomaterial
-            // 
-            this.cmbTipomaterial.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbTipomaterial.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbTipomaterial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbTipomaterial.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTipomaterial.BorderRadius = 0;
-            this.cmbTipomaterial.BorderSize = 0;
-            this.cmbTipomaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbTipomaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbTipomaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbTipomaterial.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbTipomaterial.Items.AddRange(new object[] {
-            "Plastico",
-            "Aluminio",
-            "Madera",
-            "Acero",
-            "Hierro"});
-            this.cmbTipomaterial.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbTipomaterial.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbTipomaterial.Location = new System.Drawing.Point(606, 23);
-            this.cmbTipomaterial.MinimumSize = new System.Drawing.Size(200, 42);
-            this.cmbTipomaterial.Name = "cmbTipomaterial";
-            this.cmbTipomaterial.Size = new System.Drawing.Size(228, 42);
-            this.cmbTipomaterial.TabIndex = 79;
-            this.cmbTipomaterial.Texts = "";
-            // 
-            // btnGuardarprove
-            // 
-            this.btnGuardarprove.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnGuardarprove.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnGuardarprove.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGuardarprove.BorderRadius = 20;
-            this.btnGuardarprove.BorderSize = 0;
-            this.btnGuardarprove.FlatAppearance.BorderSize = 0;
-            this.btnGuardarprove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarprove.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarprove.Location = new System.Drawing.Point(336, 193);
-            this.btnGuardarprove.Name = "btnGuardarprove";
-            this.btnGuardarprove.Size = new System.Drawing.Size(150, 40);
-            this.btnGuardarprove.TabIndex = 78;
-            this.btnGuardarprove.Text = "Guardar";
-            this.btnGuardarprove.TextColor = System.Drawing.Color.White;
-            this.btnGuardarprove.UseVisualStyleBackColor = false;
-            this.btnGuardarprove.Click += new System.EventHandler(this.btnGuardarprove_Click);
-            // 
-            // txtprecosto
-            // 
-            this.txtprecosto.BackColor = System.Drawing.Color.Transparent;
-            this.txtprecosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtprecosto.ForeColor = System.Drawing.Color.White;
-            this.txtprecosto.Image = null;
-            this.txtprecosto.Location = new System.Drawing.Point(136, 130);
-            this.txtprecosto.MaxLength = 32767;
-            this.txtprecosto.Multiline = false;
-            this.txtprecosto.Name = "txtprecosto";
-            this.txtprecosto.ReadOnly = false;
-            this.txtprecosto.Size = new System.Drawing.Size(101, 42);
-            this.txtprecosto.TabIndex = 66;
-            this.txtprecosto.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtprecosto.UseSystemPasswordChar = false;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.Color.Transparent;
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCantidad.ForeColor = System.Drawing.Color.White;
-            this.txtCantidad.Image = null;
-            this.txtCantidad.Location = new System.Drawing.Point(136, 82);
-            this.txtCantidad.MaxLength = 32767;
-            this.txtCantidad.Multiline = false;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.ReadOnly = false;
-            this.txtCantidad.Size = new System.Drawing.Size(117, 42);
-            this.txtCantidad.TabIndex = 65;
-            this.txtCantidad.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtCantidad.UseSystemPasswordChar = false;
-            // 
             // txtDescripcionproducto
             // 
             this.txtDescripcionproducto.BackColor = System.Drawing.Color.Transparent;
@@ -505,29 +602,13 @@
             this.txtDescripcionproducto.UseSystemPasswordChar = false;
             this.txtDescripcionproducto.TextChanged += new System.EventHandler(this.txtDescripcionproducto_TextChanged);
             // 
-            // txtUsmodificado
-            // 
-            this.txtUsmodificado.BackColor = System.Drawing.Color.Transparent;
-            this.txtUsmodificado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtUsmodificado.ForeColor = System.Drawing.Color.White;
-            this.txtUsmodificado.Image = null;
-            this.txtUsmodificado.Location = new System.Drawing.Point(136, 32);
-            this.txtUsmodificado.MaxLength = 32767;
-            this.txtUsmodificado.Multiline = false;
-            this.txtUsmodificado.Name = "txtUsmodificado";
-            this.txtUsmodificado.ReadOnly = false;
-            this.txtUsmodificado.Size = new System.Drawing.Size(228, 42);
-            this.txtUsmodificado.TabIndex = 63;
-            this.txtUsmodificado.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtUsmodificado.UseSystemPasswordChar = false;
-            // 
             // txtProducto
             // 
             this.txtProducto.BackColor = System.Drawing.Color.Transparent;
             this.txtProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtProducto.ForeColor = System.Drawing.Color.White;
             this.txtProducto.Image = null;
-            this.txtProducto.Location = new System.Drawing.Point(189, 79);
+            this.txtProducto.Location = new System.Drawing.Point(606, 79);
             this.txtProducto.MaxLength = 32767;
             this.txtProducto.Multiline = false;
             this.txtProducto.Name = "txtProducto";
@@ -550,18 +631,6 @@
             this.labelEdit8.TabIndex = 61;
             this.labelEdit8.Text = "Categoria:";
             // 
-            // labelEdit7
-            // 
-            this.labelEdit7.AutoSize = true;
-            this.labelEdit7.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEdit7.ForeColor = System.Drawing.Color.White;
-            this.labelEdit7.Location = new System.Drawing.Point(33, 143);
-            this.labelEdit7.Name = "labelEdit7";
-            this.labelEdit7.Size = new System.Drawing.Size(100, 20);
-            this.labelEdit7.TabIndex = 60;
-            this.labelEdit7.Text = "Precio costo:";
-            // 
             // labelEdit6
             // 
             this.labelEdit6.AutoSize = true;
@@ -574,61 +643,13 @@
             this.labelEdit6.TabIndex = 59;
             this.labelEdit6.Text = "Descripción:";
             // 
-            // labelEdit5
-            // 
-            this.labelEdit5.AutoSize = true;
-            this.labelEdit5.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEdit5.ForeColor = System.Drawing.Color.White;
-            this.labelEdit5.Location = new System.Drawing.Point(478, 32);
-            this.labelEdit5.Name = "labelEdit5";
-            this.labelEdit5.Size = new System.Drawing.Size(125, 20);
-            this.labelEdit5.TabIndex = 58;
-            this.labelEdit5.Text = "Tipo de material:";
-            // 
-            // labelEdit4
-            // 
-            this.labelEdit4.AutoSize = true;
-            this.labelEdit4.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEdit4.ForeColor = System.Drawing.Color.White;
-            this.labelEdit4.Location = new System.Drawing.Point(447, 83);
-            this.labelEdit4.Name = "labelEdit4";
-            this.labelEdit4.Size = new System.Drawing.Size(153, 20);
-            this.labelEdit4.TabIndex = 57;
-            this.labelEdit4.Text = "Estado de producto:";
-            // 
-            // labelEdit3
-            // 
-            this.labelEdit3.AutoSize = true;
-            this.labelEdit3.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEdit3.ForeColor = System.Drawing.Color.White;
-            this.labelEdit3.Location = new System.Drawing.Point(27, 95);
-            this.labelEdit3.Name = "labelEdit3";
-            this.labelEdit3.Size = new System.Drawing.Size(77, 20);
-            this.labelEdit3.TabIndex = 56;
-            this.labelEdit3.Text = "Cantidad:";
-            // 
-            // labelEdit2
-            // 
-            this.labelEdit2.AutoSize = true;
-            this.labelEdit2.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEdit2.ForeColor = System.Drawing.Color.White;
-            this.labelEdit2.Location = new System.Drawing.Point(16, 45);
-            this.labelEdit2.Name = "labelEdit2";
-            this.labelEdit2.Size = new System.Drawing.Size(117, 20);
-            this.labelEdit2.TabIndex = 55;
-            this.labelEdit2.Text = "Modificado por:";
-            // 
             // labelEdit1
             // 
             this.labelEdit1.AutoSize = true;
             this.labelEdit1.BackColor = System.Drawing.Color.Transparent;
             this.labelEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.labelEdit1.ForeColor = System.Drawing.Color.White;
-            this.labelEdit1.Location = new System.Drawing.Point(25, 90);
+            this.labelEdit1.Location = new System.Drawing.Point(442, 90);
             this.labelEdit1.Name = "labelEdit1";
             this.labelEdit1.Size = new System.Drawing.Size(158, 20);
             this.labelEdit1.TabIndex = 54;
@@ -1313,33 +1334,13 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // pnlespecificaciones
-            // 
-            this.pnlespecificaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.pnlespecificaciones.Controls.Add(this.labelEdit2);
-            this.pnlespecificaciones.Controls.Add(this.txtUsmodificado);
-            this.pnlespecificaciones.Controls.Add(this.cmbTipomaterial);
-            this.pnlespecificaciones.Controls.Add(this.labelEdit5);
-            this.pnlespecificaciones.Controls.Add(this.labelEdit4);
-            this.pnlespecificaciones.Controls.Add(this.labelEdit3);
-            this.pnlespecificaciones.Controls.Add(this.labelEdit7);
-            this.pnlespecificaciones.Controls.Add(this.txtCantidad);
-            this.pnlespecificaciones.Controls.Add(this.txtUbicacion);
-            this.pnlespecificaciones.Controls.Add(this.txtprecosto);
-            this.pnlespecificaciones.Controls.Add(this.labelEdit20);
-            this.pnlespecificaciones.Controls.Add(this.cmbEstproducto);
-            this.pnlespecificaciones.Controls.Add(this.btnGuardarprove);
-            this.pnlespecificaciones.Location = new System.Drawing.Point(0, 318);
-            this.pnlespecificaciones.Name = "pnlespecificaciones";
-            this.pnlespecificaciones.Size = new System.Drawing.Size(906, 266);
-            this.pnlespecificaciones.TabIndex = 88;
-            this.pnlespecificaciones.Visible = false;
-            // 
             // FrmInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(1868, 883);
+            this.Controls.Add(this.pnlespecificaciones);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlListInv);
             this.Controls.Add(this.pnlRegInv);
@@ -1350,6 +1351,8 @@
             this.Load += new System.EventHandler(this.FrmInventario_Load);
             this.pnlRegInv.ResumeLayout(false);
             this.pnlRegInv.PerformLayout();
+            this.pnlespecificaciones.ResumeLayout(false);
+            this.pnlespecificaciones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbleftrinv)).EndInit();
             this.pnlListInv.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ptbaddinv)).EndInit();
@@ -1358,8 +1361,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.pnlespecificaciones.ResumeLayout(false);
-            this.pnlespecificaciones.PerformLayout();
             this.ResumeLayout(false);
 
         }

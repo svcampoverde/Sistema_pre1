@@ -18,7 +18,7 @@ namespace Datos.Models
 
         public virtual CategoriaProducto CategoriaProducto { get; set; }
         public virtual TipoProducto TipoProducto { get; set; }
-        public virtual Inventario Inventario { get; set; }
+        //public virtual Inventario Inventario { get; set; }
         public virtual ICollection<AtributoProducto> AtributosProductos { get; set; }
         public virtual ICollection<PresupuestoDetalle> PresupuestoDetalles { get; set; }
     }

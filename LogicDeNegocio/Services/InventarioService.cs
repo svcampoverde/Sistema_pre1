@@ -32,22 +32,22 @@ namespace LogicDeNegocio.Services
         {
             using (var context = _dbContextFactory())
             {
-                var entidad = _mapper.Map<Inventario>(request);
-                //var inve = new Inventario() {
-                //    TipoMaterial = request.TipoMaterial,
-                //    PrecioVenta = request.PrecioVenta,
-                //    EstadoProducto = request.EstadoProducto,
-                //    Cantidad = request.Cantidad,
-                //    Ubicacion = request.Ubicacion,
-                //    Digitador = request.Digitador,
-                //    ProductoId = request.ProductoId,
-                     
-                //};
+                //var entidad = _mapper.Map<Inventario>(request);
+                var entidad = new Inventario()
+                {
+                    TipoMaterial = request.TipoMaterial,
+                    PrecioVenta = request.PrecioVenta,
+                    EstadoProducto = request.EstadoProducto,
+                    Cantidad = request.Cantidad,
+                    Ubicacion = request.Ubicacion,
+                    Digitador = request.Digitador,
+                    IdProducto = request.ProductoId,
+
+                };
                 await context.Inventarios.AddAsync(entidad);
 
-
-
                 await context.SaveChangesAsync();
+
                 return _mapper.Map<InventarioDto>(entidad);
             }
         }
