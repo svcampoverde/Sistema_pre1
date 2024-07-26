@@ -25,7 +25,7 @@ namespace Datos.AplicationDB.Configurations
             entity.Property(e => e.IdProducto)
                 .HasColumnName("idProducto")
                 .HasColumnType("int");
-              //  .IsRequired();
+            //  .IsRequired();
 
             entity.Property(e => e.Cantidad)
                 .HasColumnName("cantidad")

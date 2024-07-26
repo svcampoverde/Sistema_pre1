@@ -28,11 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroProveedor));
             this.pnlRegprovedor = new System.Windows.Forms.Panel();
+            this.pnlListEmp = new System.Windows.Forms.Panel();
+            this.ptbadd = new System.Windows.Forms.PictureBox();
+            this.txtBproveedor = new ReaLTaiizor.Controls.TextBoxEdit();
+            this.dtgEmpresa = new System.Windows.Forms.DataGridView();
+            this.idproveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ruc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.banco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ncuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnEliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnBproveedor = new ReaLTaiizor.Controls.Button();
+            this.labelEdit31 = new ReaLTaiizor.Controls.LabelEdit();
+            this.cmbFpagoproveedor = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.cmbEmpresap = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.cmbBancoProveedor = new Presentacion.btnpersonalizados.PersonComboBox();
+            this.cmbCuentaproveedor = new Presentacion.btnpersonalizados.PersonComboBox();
             this.labelEdit14 = new ReaLTaiizor.Controls.LabelEdit();
             this.ptbleftm = new System.Windows.Forms.PictureBox();
             this.labelEdit15 = new ReaLTaiizor.Controls.LabelEdit();
@@ -90,44 +115,18 @@
             this.textBoxEdit14 = new ReaLTaiizor.Controls.TextBoxEdit();
             this.labelEdit29 = new ReaLTaiizor.Controls.LabelEdit();
             this.labelEdit30 = new ReaLTaiizor.Controls.LabelEdit();
-            this.pnlListEmp = new System.Windows.Forms.Panel();
-            this.ptbadd = new System.Windows.Forms.PictureBox();
-            this.txtBproveedor = new ReaLTaiizor.Controls.TextBoxEdit();
-            this.dtgEmpresa = new System.Windows.Forms.DataGridView();
-            this.idproveedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ruc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.servicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.banco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ncuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEditar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnEliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnBproveedor = new ReaLTaiizor.Controls.Button();
-            this.cmbEmpresap = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.cmbBancoProveedor = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.cmbCuentaproveedor = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.cmbFpagoproveedor = new Presentacion.btnpersonalizados.PersonComboBox();
-            this.labelEdit31 = new ReaLTaiizor.Controls.LabelEdit();
             this.pnlRegprovedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbleftm)).BeginInit();
-            this.pnlMproveedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlListEmp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbadd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbleftm)).BeginInit();
+            this.pnlMproveedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlRegprovedor
             // 
             this.pnlRegprovedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.pnlRegprovedor.Controls.Add(this.pnlListEmp);
             this.pnlRegprovedor.Controls.Add(this.labelEdit31);
             this.pnlRegprovedor.Controls.Add(this.cmbFpagoproveedor);
             this.pnlRegprovedor.Controls.Add(this.cmbEmpresap);
@@ -165,6 +164,350 @@
             this.pnlRegprovedor.Name = "pnlRegprovedor";
             this.pnlRegprovedor.Size = new System.Drawing.Size(706, 581);
             this.pnlRegprovedor.TabIndex = 1;
+            // 
+            // pnlListEmp
+            // 
+            this.pnlListEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.pnlListEmp.Controls.Add(this.ptbadd);
+            this.pnlListEmp.Controls.Add(this.txtBproveedor);
+            this.pnlListEmp.Controls.Add(this.dtgEmpresa);
+            this.pnlListEmp.Controls.Add(this.btnBproveedor);
+            this.pnlListEmp.Location = new System.Drawing.Point(724, 25);
+            this.pnlListEmp.Name = "pnlListEmp";
+            this.pnlListEmp.Size = new System.Drawing.Size(1397, 236);
+            this.pnlListEmp.TabIndex = 87;
+            this.pnlListEmp.Visible = false;
+            // 
+            // ptbadd
+            // 
+            this.ptbadd.Image = global::Presentacion.Properties.Resources.add;
+            this.ptbadd.Location = new System.Drawing.Point(36, 19);
+            this.ptbadd.Name = "ptbadd";
+            this.ptbadd.Size = new System.Drawing.Size(43, 38);
+            this.ptbadd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ptbadd.TabIndex = 86;
+            this.ptbadd.TabStop = false;
+            // 
+            // txtBproveedor
+            // 
+            this.txtBproveedor.BackColor = System.Drawing.Color.Transparent;
+            this.txtBproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtBproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.txtBproveedor.Image = null;
+            this.txtBproveedor.Location = new System.Drawing.Point(144, 19);
+            this.txtBproveedor.MaxLength = 32767;
+            this.txtBproveedor.Multiline = false;
+            this.txtBproveedor.Name = "txtBproveedor";
+            this.txtBproveedor.ReadOnly = false;
+            this.txtBproveedor.Size = new System.Drawing.Size(259, 42);
+            this.txtBproveedor.TabIndex = 82;
+            this.txtBproveedor.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBproveedor.UseSystemPasswordChar = false;
+            // 
+            // dtgEmpresa
+            // 
+            this.dtgEmpresa.AllowUserToAddRows = false;
+            this.dtgEmpresa.AllowUserToDeleteRows = false;
+            this.dtgEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dtgEmpresa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.dtgEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dtgEmpresa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dtgEmpresa.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dtgEmpresa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgEmpresa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idproveedor,
+            this.ruc,
+            this.nombre,
+            this.apellido,
+            this.telefono,
+            this.celular,
+            this.empresa,
+            this.servicio,
+            this.banco,
+            this.cuenta,
+            this.ncuenta,
+            this.correo,
+            this.direccion,
+            this.btnEditar,
+            this.btnEliminar});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GrayText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgEmpresa.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgEmpresa.EnableHeadersVisualStyles = false;
+            this.dtgEmpresa.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dtgEmpresa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtgEmpresa.Location = new System.Drawing.Point(36, 80);
+            this.dtgEmpresa.Name = "dtgEmpresa";
+            this.dtgEmpresa.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgEmpresa.RowHeadersVisible = false;
+            this.dtgEmpresa.RowHeadersWidth = 40;
+            this.dtgEmpresa.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.dtgEmpresa.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgEmpresa.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.dtgEmpresa.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(1);
+            this.dtgEmpresa.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dtgEmpresa.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.dtgEmpresa.Size = new System.Drawing.Size(1282, 179);
+            this.dtgEmpresa.TabIndex = 81;
+            // 
+            // idproveedor
+            // 
+            this.idproveedor.HeaderText = "Id";
+            this.idproveedor.Name = "idproveedor";
+            this.idproveedor.ReadOnly = true;
+            this.idproveedor.Width = 50;
+            // 
+            // ruc
+            // 
+            this.ruc.HeaderText = "Ruc";
+            this.ruc.Name = "ruc";
+            this.ruc.ReadOnly = true;
+            this.ruc.Width = 65;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 92;
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            this.apellido.Width = 92;
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            this.telefono.Width = 98;
+            // 
+            // celular
+            // 
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            this.celular.Width = 85;
+            // 
+            // empresa
+            // 
+            this.empresa.HeaderText = "Empresa";
+            this.empresa.Name = "empresa";
+            this.empresa.ReadOnly = true;
+            // 
+            // servicio
+            // 
+            this.servicio.HeaderText = "Servicio";
+            this.servicio.Name = "servicio";
+            this.servicio.ReadOnly = true;
+            this.servicio.Width = 91;
+            // 
+            // banco
+            // 
+            this.banco.HeaderText = "Banco";
+            this.banco.Name = "banco";
+            this.banco.ReadOnly = true;
+            this.banco.Width = 82;
+            // 
+            // cuenta
+            // 
+            this.cuenta.HeaderText = "Cuenta";
+            this.cuenta.Name = "cuenta";
+            this.cuenta.ReadOnly = true;
+            this.cuenta.Width = 88;
+            // 
+            // ncuenta
+            // 
+            this.ncuenta.HeaderText = "Nro. cuenta";
+            this.ncuenta.Name = "ncuenta";
+            this.ncuenta.ReadOnly = true;
+            this.ncuenta.Width = 118;
+            // 
+            // correo
+            // 
+            this.correo.HeaderText = "Correo";
+            this.correo.Name = "correo";
+            this.correo.ReadOnly = true;
+            this.correo.Width = 84;
+            // 
+            // direccion
+            // 
+            this.direccion.HeaderText = "Dirección";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            this.direccion.Width = 102;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.HeaderText = "Editar";
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.ReadOnly = true;
+            this.btnEditar.Width = 59;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.HeaderText = "Eliminar";
+            this.btnEliminar.Image = global::Presentacion.Properties.Resources.trash;
+            this.btnEliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.ReadOnly = true;
+            this.btnEliminar.Width = 73;
+            // 
+            // btnBproveedor
+            // 
+            this.btnBproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnBproveedor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
+            this.btnBproveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBproveedor.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnBproveedor.EnteredColor = System.Drawing.Color.Transparent;
+            this.btnBproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnBproveedor.Image = null;
+            this.btnBproveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBproveedor.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnBproveedor.Location = new System.Drawing.Point(400, 19);
+            this.btnBproveedor.Name = "btnBproveedor";
+            this.btnBproveedor.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.btnBproveedor.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
+            this.btnBproveedor.Size = new System.Drawing.Size(71, 42);
+            this.btnBproveedor.TabIndex = 83;
+            this.btnBproveedor.Text = "Buscar";
+            this.btnBproveedor.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // labelEdit31
+            // 
+            this.labelEdit31.AutoSize = true;
+            this.labelEdit31.BackColor = System.Drawing.Color.Transparent;
+            this.labelEdit31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.labelEdit31.ForeColor = System.Drawing.Color.White;
+            this.labelEdit31.Location = new System.Drawing.Point(50, 442);
+            this.labelEdit31.Name = "labelEdit31";
+            this.labelEdit31.Size = new System.Drawing.Size(67, 20);
+            this.labelEdit31.TabIndex = 95;
+            this.labelEdit31.Text = "F. pago:";
+            // 
+            // cmbFpagoproveedor
+            // 
+            this.cmbFpagoproveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbFpagoproveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbFpagoproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbFpagoproveedor.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbFpagoproveedor.BorderRadius = 0;
+            this.cmbFpagoproveedor.BorderSize = 0;
+            this.cmbFpagoproveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbFpagoproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbFpagoproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbFpagoproveedor.IconColor = System.Drawing.Color.MediumPurple;
+            this.cmbFpagoproveedor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbFpagoproveedor.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbFpagoproveedor.Location = new System.Drawing.Point(116, 433);
+            this.cmbFpagoproveedor.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbFpagoproveedor.Name = "cmbFpagoproveedor";
+            this.cmbFpagoproveedor.Size = new System.Drawing.Size(200, 42);
+            this.cmbFpagoproveedor.TabIndex = 94;
+            this.cmbFpagoproveedor.Texts = "";
+            // 
+            // cmbEmpresap
+            // 
+            this.cmbEmpresap.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbEmpresap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbEmpresap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbEmpresap.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbEmpresap.BorderRadius = 0;
+            this.cmbEmpresap.BorderSize = 0;
+            this.cmbEmpresap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbEmpresap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbEmpresap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbEmpresap.IconColor = System.Drawing.Color.MediumPurple;
+            this.cmbEmpresap.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Otro"});
+            this.cmbEmpresap.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbEmpresap.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbEmpresap.Location = new System.Drawing.Point(118, 337);
+            this.cmbEmpresap.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbEmpresap.Name = "cmbEmpresap";
+            this.cmbEmpresap.Size = new System.Drawing.Size(200, 42);
+            this.cmbEmpresap.TabIndex = 91;
+            this.cmbEmpresap.Texts = "";
+            // 
+            // cmbBancoProveedor
+            // 
+            this.cmbBancoProveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbBancoProveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbBancoProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbBancoProveedor.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbBancoProveedor.BorderRadius = 0;
+            this.cmbBancoProveedor.BorderSize = 0;
+            this.cmbBancoProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbBancoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbBancoProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbBancoProveedor.IconColor = System.Drawing.Color.MediumPurple;
+            this.cmbBancoProveedor.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Otro"});
+            this.cmbBancoProveedor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbBancoProveedor.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbBancoProveedor.Location = new System.Drawing.Point(453, 337);
+            this.cmbBancoProveedor.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbBancoProveedor.Name = "cmbBancoProveedor";
+            this.cmbBancoProveedor.Size = new System.Drawing.Size(200, 42);
+            this.cmbBancoProveedor.TabIndex = 92;
+            this.cmbBancoProveedor.Texts = "";
+            // 
+            // cmbCuentaproveedor
+            // 
+            this.cmbCuentaproveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbCuentaproveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbCuentaproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
+            this.cmbCuentaproveedor.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.cmbCuentaproveedor.BorderRadius = 0;
+            this.cmbCuentaproveedor.BorderSize = 0;
+            this.cmbCuentaproveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.cmbCuentaproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cmbCuentaproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
+            this.cmbCuentaproveedor.IconColor = System.Drawing.Color.MediumPurple;
+            this.cmbCuentaproveedor.Items.AddRange(new object[] {
+            "Masculino",
+            "Femenino",
+            "Otro"});
+            this.cmbCuentaproveedor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
+            this.cmbCuentaproveedor.ListTextColor = System.Drawing.Color.DimGray;
+            this.cmbCuentaproveedor.Location = new System.Drawing.Point(118, 385);
+            this.cmbCuentaproveedor.MinimumSize = new System.Drawing.Size(200, 30);
+            this.cmbCuentaproveedor.Name = "cmbCuentaproveedor";
+            this.cmbCuentaproveedor.Size = new System.Drawing.Size(200, 42);
+            this.cmbCuentaproveedor.TabIndex = 93;
+            this.cmbCuentaproveedor.Texts = "";
             // 
             // labelEdit14
             // 
@@ -1010,355 +1353,12 @@
             this.labelEdit30.TabIndex = 52;
             this.labelEdit30.Text = "Ruc:";
             // 
-            // pnlListEmp
-            // 
-            this.pnlListEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.pnlListEmp.Controls.Add(this.ptbadd);
-            this.pnlListEmp.Controls.Add(this.txtBproveedor);
-            this.pnlListEmp.Controls.Add(this.dtgEmpresa);
-            this.pnlListEmp.Controls.Add(this.btnBproveedor);
-            this.pnlListEmp.Location = new System.Drawing.Point(160, 9);
-            this.pnlListEmp.Name = "pnlListEmp";
-            this.pnlListEmp.Size = new System.Drawing.Size(1397, 236);
-            this.pnlListEmp.TabIndex = 87;
-            this.pnlListEmp.Visible = false;
-            // 
-            // ptbadd
-            // 
-            this.ptbadd.Image = global::Presentacion.Properties.Resources.add;
-            this.ptbadd.Location = new System.Drawing.Point(36, 19);
-            this.ptbadd.Name = "ptbadd";
-            this.ptbadd.Size = new System.Drawing.Size(43, 38);
-            this.ptbadd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.ptbadd.TabIndex = 86;
-            this.ptbadd.TabStop = false;
-            // 
-            // txtBproveedor
-            // 
-            this.txtBproveedor.BackColor = System.Drawing.Color.Transparent;
-            this.txtBproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtBproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.txtBproveedor.Image = null;
-            this.txtBproveedor.Location = new System.Drawing.Point(144, 19);
-            this.txtBproveedor.MaxLength = 32767;
-            this.txtBproveedor.Multiline = false;
-            this.txtBproveedor.Name = "txtBproveedor";
-            this.txtBproveedor.ReadOnly = false;
-            this.txtBproveedor.Size = new System.Drawing.Size(259, 42);
-            this.txtBproveedor.TabIndex = 82;
-            this.txtBproveedor.TextAlignment = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBproveedor.UseSystemPasswordChar = false;
-            // 
-            // dtgEmpresa
-            // 
-            this.dtgEmpresa.AllowUserToAddRows = false;
-            this.dtgEmpresa.AllowUserToDeleteRows = false;
-            this.dtgEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dtgEmpresa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.dtgEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dtgEmpresa.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dtgEmpresa.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            this.dtgEmpresa.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgEmpresa.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgEmpresa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idproveedor,
-            this.ruc,
-            this.nombre,
-            this.apellido,
-            this.telefono,
-            this.celular,
-            this.empresa,
-            this.servicio,
-            this.banco,
-            this.cuenta,
-            this.ncuenta,
-            this.correo,
-            this.direccion,
-            this.btnEditar,
-            this.btnEliminar});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GrayText;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgEmpresa.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dtgEmpresa.EnableHeadersVisualStyles = false;
-            this.dtgEmpresa.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dtgEmpresa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtgEmpresa.Location = new System.Drawing.Point(36, 80);
-            this.dtgEmpresa.Name = "dtgEmpresa";
-            this.dtgEmpresa.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgEmpresa.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dtgEmpresa.RowHeadersVisible = false;
-            this.dtgEmpresa.RowHeadersWidth = 40;
-            this.dtgEmpresa.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.dtgEmpresa.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgEmpresa.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.dtgEmpresa.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(1);
-            this.dtgEmpresa.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.dtgEmpresa.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dtgEmpresa.Size = new System.Drawing.Size(1282, 179);
-            this.dtgEmpresa.TabIndex = 81;
-            // 
-            // idproveedor
-            // 
-            this.idproveedor.HeaderText = "Id";
-            this.idproveedor.Name = "idproveedor";
-            this.idproveedor.ReadOnly = true;
-            this.idproveedor.Width = 50;
-            // 
-            // ruc
-            // 
-            this.ruc.HeaderText = "Ruc";
-            this.ruc.Name = "ruc";
-            this.ruc.ReadOnly = true;
-            this.ruc.Width = 65;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 92;
-            // 
-            // apellido
-            // 
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            this.apellido.ReadOnly = true;
-            this.apellido.Width = 92;
-            // 
-            // telefono
-            // 
-            this.telefono.HeaderText = "Teléfono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            this.telefono.Width = 98;
-            // 
-            // celular
-            // 
-            this.celular.HeaderText = "Celular";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            this.celular.Width = 85;
-            // 
-            // empresa
-            // 
-            this.empresa.HeaderText = "Empresa";
-            this.empresa.Name = "empresa";
-            this.empresa.ReadOnly = true;
-            // 
-            // servicio
-            // 
-            this.servicio.HeaderText = "Servicio";
-            this.servicio.Name = "servicio";
-            this.servicio.ReadOnly = true;
-            this.servicio.Width = 91;
-            // 
-            // banco
-            // 
-            this.banco.HeaderText = "Banco";
-            this.banco.Name = "banco";
-            this.banco.ReadOnly = true;
-            this.banco.Width = 82;
-            // 
-            // cuenta
-            // 
-            this.cuenta.HeaderText = "Cuenta";
-            this.cuenta.Name = "cuenta";
-            this.cuenta.ReadOnly = true;
-            this.cuenta.Width = 88;
-            // 
-            // ncuenta
-            // 
-            this.ncuenta.HeaderText = "Nro. cuenta";
-            this.ncuenta.Name = "ncuenta";
-            this.ncuenta.ReadOnly = true;
-            this.ncuenta.Width = 118;
-            // 
-            // correo
-            // 
-            this.correo.HeaderText = "Correo";
-            this.correo.Name = "correo";
-            this.correo.ReadOnly = true;
-            this.correo.Width = 84;
-            // 
-            // direccion
-            // 
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            this.direccion.Width = 102;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.HeaderText = "Editar";
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.ReadOnly = true;
-            this.btnEditar.Width = 59;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.HeaderText = "Eliminar";
-            this.btnEliminar.Image = global::Presentacion.Properties.Resources.trash;
-            this.btnEliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.ReadOnly = true;
-            this.btnEliminar.Width = 73;
-            // 
-            // btnBproveedor
-            // 
-            this.btnBproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
-            this.btnBproveedor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(34)))), ((int)(((byte)(37)))));
-            this.btnBproveedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBproveedor.EnteredBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.btnBproveedor.EnteredColor = System.Drawing.Color.Transparent;
-            this.btnBproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btnBproveedor.Image = null;
-            this.btnBproveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBproveedor.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
-            this.btnBproveedor.Location = new System.Drawing.Point(400, 19);
-            this.btnBproveedor.Name = "btnBproveedor";
-            this.btnBproveedor.PressedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.btnBproveedor.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(14)))), ((int)(((byte)(15)))));
-            this.btnBproveedor.Size = new System.Drawing.Size(71, 42);
-            this.btnBproveedor.TabIndex = 83;
-            this.btnBproveedor.Text = "Buscar";
-            this.btnBproveedor.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // cmbEmpresap
-            // 
-            this.cmbEmpresap.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbEmpresap.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbEmpresap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbEmpresap.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbEmpresap.BorderRadius = 0;
-            this.cmbEmpresap.BorderSize = 0;
-            this.cmbEmpresap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbEmpresap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbEmpresap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbEmpresap.IconColor = System.Drawing.Color.MediumPurple;
-            this.cmbEmpresap.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "Otro"});
-            this.cmbEmpresap.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbEmpresap.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbEmpresap.Location = new System.Drawing.Point(118, 337);
-            this.cmbEmpresap.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbEmpresap.Name = "cmbEmpresap";
-            this.cmbEmpresap.Size = new System.Drawing.Size(200, 42);
-            this.cmbEmpresap.TabIndex = 91;
-            this.cmbEmpresap.Texts = "";
-            // 
-            // cmbBancoProveedor
-            // 
-            this.cmbBancoProveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbBancoProveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbBancoProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbBancoProveedor.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbBancoProveedor.BorderRadius = 0;
-            this.cmbBancoProveedor.BorderSize = 0;
-            this.cmbBancoProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbBancoProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbBancoProveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbBancoProveedor.IconColor = System.Drawing.Color.MediumPurple;
-            this.cmbBancoProveedor.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "Otro"});
-            this.cmbBancoProveedor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbBancoProveedor.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbBancoProveedor.Location = new System.Drawing.Point(453, 337);
-            this.cmbBancoProveedor.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbBancoProveedor.Name = "cmbBancoProveedor";
-            this.cmbBancoProveedor.Size = new System.Drawing.Size(200, 42);
-            this.cmbBancoProveedor.TabIndex = 92;
-            this.cmbBancoProveedor.Texts = "";
-            // 
-            // cmbCuentaproveedor
-            // 
-            this.cmbCuentaproveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbCuentaproveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbCuentaproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbCuentaproveedor.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbCuentaproveedor.BorderRadius = 0;
-            this.cmbCuentaproveedor.BorderSize = 0;
-            this.cmbCuentaproveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbCuentaproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbCuentaproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbCuentaproveedor.IconColor = System.Drawing.Color.MediumPurple;
-            this.cmbCuentaproveedor.Items.AddRange(new object[] {
-            "Masculino",
-            "Femenino",
-            "Otro"});
-            this.cmbCuentaproveedor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbCuentaproveedor.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbCuentaproveedor.Location = new System.Drawing.Point(118, 385);
-            this.cmbCuentaproveedor.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbCuentaproveedor.Name = "cmbCuentaproveedor";
-            this.cmbCuentaproveedor.Size = new System.Drawing.Size(200, 42);
-            this.cmbCuentaproveedor.TabIndex = 93;
-            this.cmbCuentaproveedor.Texts = "";
-            // 
-            // cmbFpagoproveedor
-            // 
-            this.cmbFpagoproveedor.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cmbFpagoproveedor.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbFpagoproveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(76)))), ((int)(((byte)(85)))));
-            this.cmbFpagoproveedor.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.cmbFpagoproveedor.BorderRadius = 0;
-            this.cmbFpagoproveedor.BorderSize = 0;
-            this.cmbFpagoproveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
-            this.cmbFpagoproveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cmbFpagoproveedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(183)))), ((int)(((byte)(191)))));
-            this.cmbFpagoproveedor.IconColor = System.Drawing.Color.MediumPurple;
-            this.cmbFpagoproveedor.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(51)))), ((int)(((byte)(63)))));
-            this.cmbFpagoproveedor.ListTextColor = System.Drawing.Color.DimGray;
-            this.cmbFpagoproveedor.Location = new System.Drawing.Point(116, 433);
-            this.cmbFpagoproveedor.MinimumSize = new System.Drawing.Size(200, 30);
-            this.cmbFpagoproveedor.Name = "cmbFpagoproveedor";
-            this.cmbFpagoproveedor.Size = new System.Drawing.Size(200, 42);
-            this.cmbFpagoproveedor.TabIndex = 94;
-            this.cmbFpagoproveedor.Texts = "";
-            // 
-            // labelEdit31
-            // 
-            this.labelEdit31.AutoSize = true;
-            this.labelEdit31.BackColor = System.Drawing.Color.Transparent;
-            this.labelEdit31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.labelEdit31.ForeColor = System.Drawing.Color.White;
-            this.labelEdit31.Location = new System.Drawing.Point(50, 442);
-            this.labelEdit31.Name = "labelEdit31";
-            this.labelEdit31.Size = new System.Drawing.Size(67, 20);
-            this.labelEdit31.TabIndex = 95;
-            this.labelEdit31.Text = "F. pago:";
-            // 
             // FrmRegistroProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1462, 1055);
+            this.Controls.Add(this.pnlListEmp);
             this.Controls.Add(this.pnlMproveedor);
             this.Controls.Add(this.pnlRegprovedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1367,13 +1367,13 @@
             this.Load += new System.EventHandler(this.FrmRegistroProveedor_Load);
             this.pnlRegprovedor.ResumeLayout(false);
             this.pnlRegprovedor.PerformLayout();
+            this.pnlListEmp.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ptbadd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpresa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbleftm)).EndInit();
             this.pnlMproveedor.ResumeLayout(false);
             this.pnlMproveedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnlListEmp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ptbadd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgEmpresa)).EndInit();
             this.ResumeLayout(false);
 
         }
