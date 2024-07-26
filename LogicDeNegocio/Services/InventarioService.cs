@@ -32,11 +32,11 @@ namespace LogicDeNegocio.Services
         {
             using (var context = _dbContextFactory())
             {
-                //var entidad = _mapper.Map<Inventario>(request);
                 var entidad = new Inventario()
                 {
                     TipoMaterial = request.TipoMaterial,
                     PrecioVenta = request.PrecioVenta,
+                    PrecioCompra = request.PrecioCompra,
                     EstadoProducto = request.EstadoProducto,
                     Cantidad = request.Cantidad,
                     Ubicacion = request.Ubicacion,
@@ -51,40 +51,7 @@ namespace LogicDeNegocio.Services
                 return _mapper.Map<InventarioDto>(entidad);
             }
         }
-        //public async Task<InventarioDto> RegistrarInventario(InventarioRequest request)
-        //{
-        //    using (var context = _dbContextFactory())
-        //    {
-        //        var entidad = _mapper.Map<Inventario>(request);
-
-        //        // Depuración: Verificar entidad antes de añadirla al contexto
-        //        if (entidad == null)
-        //        {
-        //            throw new Exception("El mapeo de la solicitud a la entidad Inventario resultó en un objeto nulo.");
-        //        }
-
-        //        // Depuración: Verificar valores de entidad
-        //        //if (string.IsNullOrEmpty(entidad.Descripcion))
-        //        //{
-        //        //    throw new Exception("El campo Descripcion de la entidad Inventario es nulo o vacío.");
-        //        //}
-
-        //        await context.Inventarios.AddAsync(entidad);
-
-        //        try
-        //        {
-        //            await context.SaveChangesAsync();
-        //        }
-        //        catch (DbUpdateException dbEx)
-        //        {
-        //            // Depuración: Capturar detalles de la excepción interna
-        //            var innerException = dbEx.InnerException?.Message ?? "No hay excepción interna.";
-        //            throw new Exception($"Error al guardar los cambios en la base de datos: {dbEx.Message}. Detalles internos: {innerException}");
-        //        }
-
-        //        return _mapper.Map<InventarioDto>(entidad);
-        //    }
-        //}
+       
 
         public async Task<InventarioDto> ActualizarInventario(int id, InventarioRequest request)
         {
